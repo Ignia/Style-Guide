@@ -6,7 +6,7 @@ CSS-Based languages include CSS itself, as well as CSS preprocessors such as Sas
 - Class identifiers should be in lisp-case (lowercase with hyphens)
 - Class identifiers should aim to be semantic (e.g., `important`) over presentational (e.g., `red`)
 - Hyphens should be use to distinguish concepts not words
-- Class names with multiple hyphens should be avoided; use cascading instead
+- Be wary of compounding concepts via hyphens; cascading may provide more flexibility
 - Begin state classes with `.is-` (e.g., `.is-active`)
 - Begin JavaScript exclusive classes with `.js-`.
 
@@ -15,6 +15,7 @@ CSS-Based languages include CSS itself, as well as CSS preprocessors such as Sas
 - Do not use element identifiers (e.g., `#identifier`) in selectors outside of layout elements (e.g., #Navigation, #Header)
 - Avoid nesting selectors more than three levels deep; this introduces specificity issues
 - Target semantic elements and attributes instead of classes where practical (e.g., `button` not `.button`) to enforce semantic markup
+  - Avoid assigning classes that duplicate semantic tags (e.g., `<button class="button" />`)
 - If class semantics are described by a [Schema.org](http://schema.org/) type, use `[typeof='Type']` and `[property='property'] instead of inventing new class names
 - Only combine class names with elements (e.g., `li.is-active`) if the rule is exclusive to that element type
 - Avoid ancestor selectors when possible; these can be *very* slow
@@ -87,7 +88,7 @@ input:active,
 ```css
 // Level 3 comment
 ```
-> *Note:* When using a CSS pre-processor, the `//` format should be used instead, in order to prevent comments from being compiled with the CSS. See [Sass Style Guide](./Sass.md).
+> *Note:* When using a CSS preprocessor, the `//` format should be used instead, in order to prevent comments from being compiled with the CSS. See [Sass Style Guide](./Sass.md).
 
 ## Capitalization
 - Class identifiers should be in lisp-case (lowercase with hyphens)
@@ -96,8 +97,13 @@ input:active,
 ## Declaration Order
 - Declarations should be ordered by:
   1. Positioning (e.g., z-index, top, right,
-  2. Display and box model (e.g., display, overflow, width, margin), then
-  3. Styling elements (e.g., color, font, background)
+  2. Box model (e.g., display, overflow, width, margin),
+  3. Typographic (e.g., font, font-family, font-size), then
+  4. Visual elements (e.g., color, background)
+
+## Language Features
+- Do not use `@import`, unless using a preprocessor; it adds extra time to the page load
+- Avoid ancestor selectors when possible; these can be *very* slow
 
 ## No Opinion
 - Indentation of related rule-sets
@@ -109,3 +115,4 @@ input:active,
 - [Pedantic CSS](http://pedantic-css.readme.io/v1.0)
 - [Idiomatic CSS](https://github.com/necolas/idiomatic-css)
 - [Google HTML/CSS Style Guide](http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml)
+- [Code Guide by @mdo](http://mdo.github.io/code-guide/#css)
