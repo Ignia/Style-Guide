@@ -11,6 +11,9 @@ While C#, Java, and JavaScript are very different languages, they do share one t
 - Define one class per file; the filename should be the same as the class name (including casing)
 - Boolean identifiers should begin with a present indicative (e.g., `is`, `has`, etc.)
 
+## Variables
+- Constants and configuration variables should be placed at the top of the file, and clearly identified via a comment
+
 ## Spacing
 - Place one space before leading braces
 - Pad all operators (e.g., `=`, `+`, `\`) with spaces (e.g., 'x = y * 2')
@@ -25,6 +28,8 @@ While C#, Java, and JavaScript are very different languages, they do share one t
 - `if` and `else` should always be on the same column; same with `try`, `catch`, `finally`
   - i.e., do not place `else`, `catch`, or `finally` on the same line as the previous close brace (`}`)
 - Do not use leading commas; commas should always appear *after* their preceding statement
+- Any `;` used as a statement terminator must be at the end of the line
+- The `?` and `:` in a ternary conditional must have space on both sides
 
 > *Note:* Prior to 2015, Ignia used the [Banner Indent Style](http://en.wikipedia.org/wiki/Indent_style#Banner_style), which uses an indented trailing brace. Any legacy code being used should be updated to the above standards in bulk before implementation.
 
@@ -32,6 +37,7 @@ While C#, Java, and JavaScript are very different languages, they do share one t
 
 ### Line Wrapping
 - If one element is placed on a new line, consider moving each element to a new line for consistency
+- Follow standard indentation rules; subsequent lines should not be indented more than two spaces (e.g., to align with a `(`, for instance)
 - Function arguments should be on the same line as the function
   - If this is not possible, function arguments should each be placed on their own line and indented two spaces
 - If expressions must be placed on multiple lines, each new line should begin with the operator (e.g., `+`) and be indented two spaces
@@ -48,6 +54,7 @@ While C#, Java, and JavaScript are very different languages, they do share one t
 - Avoid excessive nesting; if a method requires more than three layers of nesting, consider refactoring
   - Consider
 - Do not use an `else` statement after a `return`; it is unnecessary
+
 
 
 
