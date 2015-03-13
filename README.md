@@ -6,7 +6,7 @@ Code may need to be executed by computers, but it also needs to be maintained by
 
 ## Styles
 - [Common Rules](#common-rules) (see below)
-- [C-Based Languages](./#C-Based%20Languages/)
+- [C-Based Languages](./C-Based%20Languages/)
   - [JavaScript](./C-Based%20Languages/JavaScript)
     - [TypeScript](./C-Based%20Languages/JavaScript/TypeScript.md)
     - [JSON](./C-Based%20Languages/JavaScript/JSON.md)
