@@ -1,1 +1,71 @@
+# Sass Style Guide
+
+Sass provides a preprocessor environment for simplifying the creating and maintenance of CSS.
+
+> *Note:* Unless otherwise specified below, Sass follows the [CSS style guide](./README.md).
+
+## Structure
+- Break styles up into logically organized files; e.g.,
+  - Base (for global overrides for elements)
+  - Components (for styling reusable components or controls)
+  - Helpers (for functional code, such as mixins, placeholders, and functions)
+  - Layout (for structural code, such as grids, positioning, and dimensions)
+  - Overrides (for any overrides required of third-party stylesheets)
+  - Vendor (for any third-party stylesheets)
+  - Views (for any page-specific styles)
+- When practical, separate mixinns, placeholders, and functions into their own files
+- Compile distinct themes, layouts, and page-level CSS independent of the main CSS file
+
+> *Note:* For more information, see [Ignia's Sass Structure](https://github.com/Ignia/Sass-Structure).
+
+## Spacing
+- Indent nested selectors by two spaces
+
+> *Note:* Avoid more than three levels of nesting for both readability and specificity
+
+## Variables
+- When introducing a new variable, also add it to the `_variables.scss` in the Sass root directory
+- When introducing a new variable in a file, declare the variable at the top of the file with a `! default` flag
+
+> *Note:* The `! default` value will only be used if the variable isn't otherwise defined; this ensures that the styles will work correctly even if their corresponding variables are removed from `_variables.scss`.
+
+
+## Comments
+- Favor single-line comment format (`//`) over the multi-line comment format (`/* */`)
+
+### Level 1
+```css
+//==============================================================================================
+// LEVEL 1
+//----------------------------------------------------------------------------------------------
+// Optional description
+//==============================================================================================
+```
+### Level 2
+```css
+//----------------------------------------------------------------------------------------------
+// LEVEL 2
+//----------------------------------------------------------------------------------------------
+```
+### Level 2
+```css
+// Level 3
+```
+
+> *Note:* Single-line comments (`//`) are not compiled to the resulting CSS and thus ensure comments are private and not contributing to the size of the CSS file.
+
+## Declaration Order
+- Place `@extend` statement on the first line of a declaration block
+- When possible, place `@include` statements after `@extend`
+- When possible, place `@import` statements at the top of the file
+
+```css
+.selector {
+  @extend %placeholder;
+  @include clearfix();
+  @include border-radius(10px);
+  padding: 10px;
+  background-color: $background-color;
+}
+```
 
