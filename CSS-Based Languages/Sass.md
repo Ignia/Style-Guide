@@ -15,6 +15,7 @@ Sass provides a preprocessor environment for simplifying the creating and mainte
   - Views (for any page-specific styles)
 - When practical, separate mixinns, placeholders, and functions into their own files
 - Compile distinct themes, layouts, and page-level CSS independent of the main CSS file
+- Do *not* group media queries into a single file (e.g., `_mobile.scss`); they should be associated with the styles they effect
 
 > *Note:* For more information, see [Ignia's Sass Structure](https://github.com/Ignia/Sass-Structure).
 
@@ -28,7 +29,6 @@ Sass provides a preprocessor environment for simplifying the creating and mainte
 - When introducing a new variable in a file, declare the variable at the top of the file with a `! default` flag
 
 > *Note:* The `! default` value will only be used if the variable isn't otherwise defined; this ensures that the styles will work correctly even if their corresponding variables are removed from `_variables.scss`.
-
 
 ## Comments
 - Favor single-line comment format (`//`) over the multi-line comment format (`/* */`)
@@ -68,4 +68,8 @@ Sass provides a preprocessor environment for simplifying the creating and mainte
   background-color: $background-color;
 }
 ```
+
+## Language Features
+- Do not manually prefix declarations or use mixins exclusively for this purpose; this is a task best suited for build tools
+- Be wary of excessive nesting; this is a useful feature, but can lead to excessive specificity or granularity
 
