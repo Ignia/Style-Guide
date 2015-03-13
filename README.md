@@ -21,6 +21,7 @@ Code may need to be executed by computers, but it also needs to be maintained by
 - Be consistent
 - Do not be afraid of whitespace; it greatly encourages readability
 - Leverage well-established conventions; break with convention only with good rationale
+- When working with existing code bases, always follow any established conventions (i.e., ignore this document)
 
 ## Common Rules
 
