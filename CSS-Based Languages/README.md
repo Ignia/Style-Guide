@@ -86,7 +86,7 @@ input:active,
 ### Level 3
 ```css
 // Level 3 comment
-
+```
 > *Note:* When using a CSS pre-processor, the `//` format should be used instead, in order to prevent comments from being compiled with the CSS. See [Sass Style Guide](./Sass.md).
 
 ## Capitalization
