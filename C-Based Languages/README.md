@@ -2,10 +2,17 @@
 
 While C#, Java, and JavaScript are very different languages, they do share one thing in common: C-based syntax. For this reason, many style preferences can be applied to both. Indeed, since developers may be switching back and forth between these languages, maintaining consistency between each is not only important for readability but also developer productivity.
 
+## Identifiers
+- Class, type and enum names should use PascalCase (e.g., `ClassName`)
+- Private properties (or fields) should begin with a single underscore (e.g., `this._privateProperty`)
+- Local variables should use camelCase (e.g., `localVariable`)
+- Constants should use UPPER_CASE separated by underscores (e.g., `SOME_CONSTANT`)
+- Identifiers should *not* contain underscores (except as noted above), hyphens, or letters
+- Define one class per file; the filename should be the same as the class name (including casing)
+
 ## Spacing
 - Place one space before leading braces
 - Pad all operators (e.g., `=`, `+`, `\`) with spaces (e.g., 'x = y * 2')
--
 
 ## Formatting
 - Object initializers should place one property per line, indented two spaces
@@ -15,6 +22,7 @@ While C#, Java, and JavaScript are very different languages, they do share one t
 - Always use braces with multi-line blocks (may skip for single-line, single-statement expressions)
 - `if` and `else` should always be on the same column; same with `try`, `catch`, `finally`
   - i.e., do not place `else`, `catch`, or `finally` on the same line as the previous close brace (`}`)
+- Do not use leading commas; commas should always appear *after* their preceding statement
 
 > *Note:* Prior to 2015, Ignia used the [Banner Indent Style](http://en.wikipedia.org/wiki/Indent_style#Banner_style), which uses an indented trailing brace. Any legacy code being used should be updated to the above standards in bulk before implementation.
 
@@ -26,13 +34,6 @@ http://en.wikipedia.org/wiki/Indent_style#Variant:_Stroustrup
 - If expressions must be placed on multiple lines, each new line should begin with the operator (e.g., `+`) and be indented two spaces
 - If method chains must be placed on multiple lines, each new line should begin with the period (i.e., `.`) and be indented two spaces
 
-## Identifiers
-- Class, type and enum names should use PascalCase (e.g., `ClassName`)
-- Private properties (or fields) should begin with a single underscore (e.g., `this._privateProperty`)
-- Local variables should use camelCase (e.g., `localVariable`)
-- Constants should use UPPER_CASE separated by underscores (e.g., `SOME_CONSTANT`)
-- Identifiers should *not* contain underscores (except as noted above), hyphens, or letters
-
 ## Comments
 - Use documentation style comments as permitted by each language
 - Use `/* ... */` syntax for multi-line comments *unless required otherwise by documentation format*
@@ -42,6 +43,7 @@ http://en.wikipedia.org/wiki/Indent_style#Variant:_Stroustrup
 
 ## Syntax
 - Always assign variables at the top of their scope; assignments can come later, if needed
--
+
+
 
 
