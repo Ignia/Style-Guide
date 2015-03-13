@@ -27,6 +27,7 @@
 - When possible, use JavaScript's boolean expressions (e.g., `if (variable) {}`) ([source](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml?showone=Tips_and_Tricks#Tips_and_Tricks))
 - Use the literal syntax for creating objects (e.g., `{}` not `new Object()`) and arrays (e.g., `[]` not `new Array()`)
 - Assign methods to the prototype object, instead of overwriting the prototype with a new object
+- Use proper feature detection instead of relying on user agents; [Modernizr](http://modernizr.com/) encouraged
 
 ## Comments
 - Use JSDoc-style comments to allow for optional generation of documentation
@@ -51,5 +52,6 @@
 <!--
 - [Mozilla Coding Style](https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Coding_Style)
 - [WordPress JavaScript Coding Standards](https://make.wordpress.org/core/handbook/coding-standards/javascript/)
+- [Code Conventions for the JavaScript Programming Language](http://javascript.crockford.com/code.html) by Douglas Crockford
 -->
 
