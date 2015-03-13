@@ -37,7 +37,6 @@ http://en.wikipedia.org/wiki/Indent_style#Variant:_Stroustrup
 ## Comments
 - Use documentation style comments as permitted by each language
 - Use `/* ... */` syntax for multi-line comments *unless required otherwise by documentation format*
--
 
 > *Note:* Prior to 2015, Ignia used flower-boxes for comments. These should be replaced with documentation-style comments when updating legacy code.
 
