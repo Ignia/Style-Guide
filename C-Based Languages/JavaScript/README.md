@@ -3,7 +3,7 @@
 ## Identifiers
 - Class members (e.g., properties, functions) should be camelCase (e.g., `doSomething()`)
 - Namespaces should be PascalCase
-- Use `_this` as the variable name when saving a reference to `this`
+- Use `_this` as the variable name when saving a reference to `this` (although `.bind()` for scoping is preferred)
 
 ## Variables
 - Always declare variables using `var` (enforced in `use strict`)
@@ -48,10 +48,12 @@
 ## Acknowledgments
 - [Google JavaScript Style Guide](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml)
 - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+- [jQuery JavaScript Style Guide](http://contribute.jquery.org/style-guide/js/)
 
 <!--
 - [Mozilla Coding Style](https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Coding_Style)
 - [WordPress JavaScript Coding Standards](https://make.wordpress.org/core/handbook/coding-standards/javascript/)
 - [Code Conventions for the JavaScript Programming Language](http://javascript.crockford.com/code.html) by Douglas Crockford
+- [Idiomatic JavaScript](https://github.com/rwaldron/idiomatic.js/#whitespace)
 -->
 
