@@ -19,6 +19,7 @@ Code may need to be executed by computers, but it also needs to be maintained by
 
 ## General Principles
 - Be consistent
+- Do not be afraid of whitespace; it greatly encourages readability
 - Leverage well-established conventions; break with convention only with good rationale
 
 ## Common Rules
@@ -49,6 +50,10 @@ Code may need to be executed by computers, but it also needs to be maintained by
 
 ### Encoding
 - Use UTF-8 encoding
+
+### No Opinion
+- Unix-style carriage returns (i.e., `\n`) v. Windows-style (`\r\n`)
+
 
 <!--
 ## Acknowledgments
