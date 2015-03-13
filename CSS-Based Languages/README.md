@@ -9,6 +9,7 @@ CSS-Based languages include CSS itself, as well as CSS preprocessors such as Sas
 - Be wary of compounding concepts via hyphens; cascading may provide more flexibility
 - Begin state classes with `.is-` (e.g., `.is-active`)
 - Begin JavaScript exclusive classes with `.js-`.
+- If lack of JavaScript support is a concern, use a `js-hidden` class to provide fallback content (and hide using JavaScript)
 
 ## Selectors
 - One selector per line (i.e., place a line-break after a `,` in a selector)
@@ -34,6 +35,7 @@ CSS-Based languages include CSS itself, as well as CSS preprocessors such as Sas
 - Include one declaration per line in a declaration block
 - Use one level of indentation for each declaration
 - Use single quotation marks for attribute selectors and property values
+- Always use quotations when optional (e.g., for attribute selectors, file locations)
 - Always specify a leading 0 for decimals (e.g., 0.25, not .25)
 - End each declaration with a semi-colon
 
@@ -102,8 +104,11 @@ input:active,
   4. Visual elements (e.g., color, background)
 
 ## Language Features
+- Use `rem` units for fonts with a `px` fallback for backward compatibility; do not use `em`
 - Do not use `@import`, unless using a preprocessor; it adds extra time to the page load
 - Avoid ancestor selectors when possible; these can be *very* slow
+- Only use Internet Explorer hacks like `_` and `*` if absolutely required for compatibility (rare)
+- Do not set height on elements containing text (and *especially* when used with a CMS or localization)
 
 ## No Opinion
 - Indentation of related rule-sets
@@ -116,3 +121,4 @@ input:active,
 - [Idiomatic CSS](https://github.com/necolas/idiomatic-css)
 - [Google HTML/CSS Style Guide](http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml)
 - [Code Guide by @mdo](http://mdo.github.io/code-guide/#css)
+- [OOCSS Code Standards](https://github.com/stubbornella/oocss-code-standards)
