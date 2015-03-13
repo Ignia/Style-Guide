@@ -15,7 +15,7 @@
 - Namespaces should be used when possible, using either library features or an object wrapper
 - Do not use `eval()` or Internet Explorer's conditional comments (e.g., `/*@cc_on ... @*/`)
 - Do not use `for in` loops for arrays ([source](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml?showone=for-in_loop#for-in_loop))
-- Use function expressions (e.g., `var callback = `function() {}` over function declarations (e.g., `function callback() {}`)
+- Use function expressions (e.g., `var callback = function() {}` over function declarations (e.g., `function callback() {}`)
   - The exception is constructors, which should use function declarations with the object name
 - Do not use wrapper objects for primitive types (e.g., `new Boolean(true)`); casting is fine
 - When possible, use JavaScript's boolean expressions (e.g., `if (variable) {}`) ([source](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml?showone=Tips_and_Tricks#Tips_and_Tricks))
