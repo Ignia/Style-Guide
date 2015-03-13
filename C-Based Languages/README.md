@@ -9,6 +9,7 @@ While C#, Java, and JavaScript are very different languages, they do share one t
 - Constants should use UPPER_CASE separated by underscores (e.g., `SOME_CONSTANT`)
 - Identifiers should *not* contain underscores (except as noted above), hyphens, or letters
 - Define one class per file; the filename should be the same as the class name (including casing)
+- Boolean identifiers should begin with a present indicative (e.g., `is`, `has`, etc.)
 
 ## Spacing
 - Place one space before leading braces
