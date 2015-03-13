@@ -13,6 +13,7 @@ While C#, Java, and JavaScript are very different languages, they do share one t
 ## Spacing
 - Place one space before leading braces
 - Pad all operators (e.g., `=`, `+`, `\`) with spaces (e.g., 'x = y * 2')
+- Do not pad arguments to function calls or control flow expressions
 
 ## Formatting
 - Object initializers should place one property per line, indented two spaces
@@ -26,9 +27,10 @@ While C#, Java, and JavaScript are very different languages, they do share one t
 
 > *Note:* Prior to 2015, Ignia used the [Banner Indent Style](http://en.wikipedia.org/wiki/Indent_style#Banner_style), which uses an indented trailing brace. Any legacy code being used should be updated to the above standards in bulk before implementation.
 
-http://en.wikipedia.org/wiki/Indent_style#Variant:_Stroustrup
+<!-- http://en.wikipedia.org/wiki/Indent_style#Variant:_Stroustrup -->
 
 ### Line Wrapping
+- If one element is placed on a new line, consider moving each element to a new line for consistency
 - Function arguments should be on the same line as the function
   - If this is not possible, function arguments should each be placed on their own line and indented two spaces
 - If expressions must be placed on multiple lines, each new line should begin with the operator (e.g., `+`) and be indented two spaces
@@ -42,7 +44,9 @@ http://en.wikipedia.org/wiki/Indent_style#Variant:_Stroustrup
 
 ## Syntax
 - Always assign variables at the top of their scope; assignments can come later, if needed
-
+- Avoid excessive nesting; if a method requires more than three layers of nesting, consider refactoring
+  - Consider
+- Do not use an `else` statement after a `return`; it is unnecessary
 
 
 
