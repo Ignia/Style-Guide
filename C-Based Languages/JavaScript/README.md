@@ -47,3 +47,9 @@
 ## Acknowledgments
 - [Google JavaScript Style Guide](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml)
 - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+
+<!--
+- [Mozilla Coding Style](https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Coding_Style)
+- [WordPress JavaScript Coding Standards](https://make.wordpress.org/core/handbook/coding-standards/javascript/)
+-->
+
