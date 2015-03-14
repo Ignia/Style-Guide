@@ -27,6 +27,8 @@
 - Every page should have *at least* one `<header>`, `<footer>`, `<nav>`, and `<article>` element
 - For a detail page, the `<main>` element will typically include an `<article>` element, which may include multiple `<section>` elements
 - For an index of pages or comments, use an `<article>` element for each item; in this case, the `<article>` elements may be wrapped in a `<section>` element
+- Headings (e.g., `h1`-`h6`) should be used to denote outline, not (just) style; use a class modifier to alter a style rather than skipping a heading
+- The `<section>`, `<article>`, and `<aside>` effectively encapsulate a node in the outline; headings can optionally be "reset" within them (i.e., start back at `h1`) if preferred (not required)
 - At minimum, set ARIA `role` attributes on HTML5 semantic elements (e.g., `<header role="Header">`) (acknowledging the redundancy)
 - When no meaningful semantic tags are otherwise available, authors are *strongly encouraged* to decorate markup with [Schema.org](http://schema.org) types
   - Prefer using [RDFa lite](http://rdfa.info/) syntax over [Microdata](http://www.w3.org/TR/microdata/) or [Microformats](http://microformats.org/); RDFa is extensible into other vocabularies, and is no more verbose than Microdata
@@ -36,6 +38,11 @@
 ## Encoding
 - Always set encoding to UTF-8 (i.e., via `<meta charset="utf-8">`)
 - Take advantage of UTF-8 encoding; do not use entity-references unless required (e.g., for HTML escaping)
+
+## Images
+- For repeating images, smaller isn't necessarily better; a larger image may take more time to download, but less time to render
+- CSS sprites are recommended for commonly repeated UI elements, such as iconography and layout adornments (such as graphical backgrounds, borders, bullets, etc)
+- Never embed a color profile when exporting images; not all browsers honor these, resulting in inconsistent colors
 
 ## Acknowledgments
 - [Code Guide by @mdo](http://mdo.github.io/code-guide/) by [Mark Otto](http://markdotto.com/about/)
