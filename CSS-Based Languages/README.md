@@ -125,3 +125,5 @@ input:active,
 - [Google HTML/CSS Style Guide](http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml)
 - [Code Guide by @mdo](http://mdo.github.io/code-guide/#css)
 - [OOCSS Code Standards](https://github.com/stubbornella/oocss-code-standards)
+- [Front-end Code Standards & Best Practices](http://isobar-idev.github.io/code-standards/) by [isobar](http://www.isobar.com/)
+
