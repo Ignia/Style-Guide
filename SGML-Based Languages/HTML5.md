@@ -24,7 +24,7 @@
 - Always use semantic tags when available (e.g., `<button>` over `<div class="button" />`)
 - Every page should have one (and exactly one) `<main>` element identifying the primary content
 - Every page should have *at least* one `<header>`, `<footer>`, `<nav>`, and `<article>` element
-- For a detail page, the '<main>' element will typically include an `<article>` element, which may include multiple `<section>` elements
+- For a detail page, the `<main>` element will typically include an `<article>` element, which may include multiple `<section>` elements
 - For an index of pages or comments, use an `<article>` element for each item; in this case, the `<article>` elements may be wrapped in a `<section>` element
 - At minimum, set ARIA `role` attributes on HTML5 semantic elements (e.g., `<header role="Header">`) (acknowledging the redundancy)
 - When no meaningful semantic tags are otherwise available, authors are *strongly encouraged* to decorate markup with [Schema.org](http://schema.org) types
