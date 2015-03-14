@@ -19,6 +19,7 @@
 - Always define `rel` attribute for `<link>` element; define when appropriate for `<a>` element
 - Always define a `lang` attribute on the `<html>` element
 - Always wrap `<input>` elements with a `<label>` element (no need for the `for` attribute in this usage)
+- Elements that must exist no more than one time should be identified using `id`; otherwise `class`
 
 ## Semantics
 - Always use semantic tags when available (e.g., `<button>` over `<div class="button" />`)
