@@ -2,6 +2,9 @@
 
 CSS-Based languages include CSS itself, as well as CSS preprocessors such as Sass, Less, and Stylus.
 
+## Performance
+With a few exceptions, maintainability trumps performance with CSS. While performance is a priority, CSS optimizations tend to be trivial in results compared to JavaScript and even HTML optimizations. That said, ancestor and wildcard selectors should be avoided, as should the `@import` directive.
+
 ## Identifiers
 - Class identifiers should be in lisp-case (lowercase with hyphens)
 - Class identifiers should aim to be semantic (e.g., `important`) over presentational (e.g., `red`)
