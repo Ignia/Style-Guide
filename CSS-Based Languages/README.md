@@ -101,7 +101,7 @@ input:active,
 
 ## Declaration Order
 - Declarations should be ordered by:
-  1. Positioning (e.g., z-index, top, right,
+  1. Positioning (e.g., z-index, top, right),
   2. Box model (e.g., display, overflow, width, margin),
   3. Typographic (e.g., font, font-family, font-size), then
   4. Visual elements (e.g., color, background)
