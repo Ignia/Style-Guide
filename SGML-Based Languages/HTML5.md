@@ -29,7 +29,7 @@
 - For an index of pages or comments, use an `<article>` element for each item; in this case, the `<article>` elements may be wrapped in a `<section>` element
 - Headings (e.g., `h1`-`h6`) should be used to denote outline, not (just) style; use a class modifier to alter a style rather than skipping a heading
 - The `<section>`, `<article>`, and `<aside>` effectively encapsulate a node in the outline; headings can optionally be "reset" within them (i.e., start back at `h1`) if preferred (not required)
-- At minimum, set ARIA `role` attributes on HTML5 semantic elements (e.g., `<header role="Header">`) (acknowledging the redundancy)
+- At minimum, set ARIA `role` attributes on HTML5 semantic elements (e.g., `<header role="banner">`)
 - When no meaningful semantic tags are otherwise available, authors are *strongly encouraged* to decorate markup with [Schema.org](http://schema.org) types
   - Prefer using [RDFa lite](http://rdfa.info/) syntax over [Microdata](http://www.w3.org/TR/microdata/) or [Microformats](http://microformats.org/); RDFa is extensible into other vocabularies, and is no more verbose than Microdata
 - Attempt to limit `<div>` elements for presentational requirements (e.g., changing positioning); otherwise, prefer semantic elements
