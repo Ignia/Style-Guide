@@ -5,7 +5,7 @@ JSON (JavaScript Object Notation) is a data format supported natively in JavaScr
 > *Note:* Technically, JSON is a subset of the object literal notation that appears within JavaScript. This style guide addressed both. Where the two diverge, the differences will be noted.
 
 ## Identifiers
-- Property names ("keys") should always be in double quotes (some libraries do not enforce this, but it is a requirement of the [specification](http://tools.ietf.org/html/rfc7159)); this is not required for object literal notation
+- Property names ("keys") must *always* be in double quotes (some libraries do not enforce this, but it is a requirement of the [specification](http://tools.ietf.org/html/rfc7159)); this is *not* a requirement for object literal notation
 
 ## Spacing
 - Objects in arrays should each begin on a new line
@@ -13,7 +13,7 @@ JSON (JavaScript Object Notation) is a data format supported natively in JavaScr
 ## Formatting
 - Commas should immediately follow the closing brace (for objects) or bracket (for arrays)
 
-> *Note:* Spacing and formatting rules are not enforced for JSON delivered externally (e.g., by a REST API); it is expected such JSON will be minified.
+> *Note:* While spacing and formatting rules should be maintained as part of any statically maintained JSON files, they are not enforced for JSON delivered externally (e.g., by a REST API); it is expected such JSON will be minified.
 
 ## Comments
 - Comments are *not* supported in JSON files; if comments are required, it is recommended that they be placed in a property with the name `__comment`
