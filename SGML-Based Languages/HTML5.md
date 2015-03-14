@@ -18,6 +18,7 @@
 - Omit `type` attribute for `<link>`, `<script>` or `<style>` elements
 - Always define `rel` attribute for `<link>` element; define when appropriate for `<a>` element
 - Always define a `lang` attribute on the `<html>` element
+- Always wrap `<input>` elements with a `<label>` element (no need for the `for` attribute in this usage)
 
 ## Semantics
 - Always use semantic tags when available (e.g., `<button>` over `<div class="button" />`)
@@ -27,6 +28,7 @@
 - For an index of pages or comments, use an `<article>` element for each item; in this case, the `<article>` elements may be wrapped in a `<section>` element
 - At minimum, set ARIA `role` attributes on HTML5 semantic elements (e.g., `<header role="Header">`) (acknowledging the redundancy)
 - When no meaningful semantic tags are otherwise available, authors are *strongly encouraged* to decorate markup with [Schema.org](http://schema.org) types
+  - Prefer using [RDFa lite](http://rdfa.info/) syntax over [Microdata](http://www.w3.org/TR/microdata/) or [Microformats](http://microformats.org/); RDFa is extensible into other vocabularies, and is no more verbose than Microdata
 - Attempt to limit `<div>` elements for presentational requirements (e.g., changing positioning); otherwise, prefer semantic elements
 - Use [HTML5 Shim](https://github.com/aFarkas/html5shiv) to ensure backward compatibility with Internet Explorer
 
@@ -37,3 +39,4 @@
 ## Acknowledgments
 - [Code Guide by @mdo](http://mdo.github.io/code-guide/) by [Mark Otto](http://markdotto.com/about/)
 - [Google HTML/CSS Style Guide](http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml)
+- [Front-end Code Standards & Best Practices](http://isobar-idev.github.io/code-standards/) by [isobar](http://www.isobar.com/)
