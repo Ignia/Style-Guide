@@ -10,8 +10,8 @@ While Angular follows best-practices for [JavaScript](./Readme.md), it introduce
 - Separate source files into a `Directives`, `Services`, and `Controllers` directories
 
 ## Language Features
-- Do not store modules in a global variable; instead, instantiate them using `Angular.module('Name', [])` and extend them using `Angular.module('Name')`
-- Always include dependency inject parameters using optional array format (e.g., `Angular.controller('name', ['$service', function ($service) { ... }])`); this ensures compatibility with code obfuscation (e.g., [UglifyJS](http://lisperator.net/uglifyjs/))
+- Do not store modules in a global variable; instead, instantiate them using `angular.module('Name', [])` and extend them using `Angular.module('Name')`
+- Always include dependency inject parameters using optional array format (e.g., `angular.controller('name', ['$service', function ($service) { ... }])`); this ensures compatibility with code obfuscation (e.g., [UglifyJS](http://lisperator.net/uglifyjs/))
 - Centralize reusable logic in services; controllers should only contain minimal view-specific logic
 
 ## Acknowledgments
