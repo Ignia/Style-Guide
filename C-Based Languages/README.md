@@ -1,13 +1,13 @@
 # C-Based Languages
 
-While C#, Java, and JavaScript are very different languages, they do share one thing in common: C-based syntax. For this reason, many style preferences can be applied to both. Indeed, since developers may be switching back and forth between these languages, maintaining consistency between each is not only important for readability but also developer productivity.
+While C#, Java, and JavaScript are very different languages, they do share one thing in common: C-based syntax. For this reason, many style preferences can be applied to each. Indeed, since developers may be switching back and forth among these languages, maintaining consistency between each is not only important for readability but also developer productivity.
 
 ## Identifiers
 - Class, type and enum names should use PascalCase (e.g., `ClassName`)
 - Private properties (or fields) should begin with a single underscore (e.g., `this._privateProperty`)
 - Local variables should use camelCase (e.g., `localVariable`)
 - Constants should use UPPER_CASE separated by underscores (e.g., `SOME_CONSTANT`)
-- Identifiers should *not* contain underscores (except as noted above), hyphens, or letters
+- Identifiers should *not* contain underscores (except as noted above), hyphens, or numbers
 - Identifiers should *not* use Hungarian notation (i.e., arbitrary 2-3 character type prefixes)
 - Define one class per file; the filename should be the same as the class name (including casing)
 - Boolean identifiers should begin with a present indicative (e.g., `is`, `has`, etc.)
@@ -15,7 +15,7 @@ While C#, Java, and JavaScript are very different languages, they do share one t
 
 ## Variables
 - Constants and configuration variables should be placed at the top of the file, and clearly identified via a comment
-- Variables in constructors should have defaults assigned (e.g., using ?? syntax in c# or || in JavaScript)
+- Variables in constructors should have defaults assigned (e.g., using ?? syntax in C# or || in JavaScript)
 
 ## Spacing
 - Place one space before opening braces
@@ -48,7 +48,7 @@ While C#, Java, and JavaScript are very different languages, they do share one t
 - If method chains must be placed on multiple lines, each new line should begin with the period (i.e., `.`) and be indented two spaces
 
 ## Comments
-- Use documentation style comments as permitted by each language (e.g., XmlDoc in c#)
+- Use documentation-style comments as permitted by each language (e.g., XmlDoc in C#)
 - Use `/* ... */` syntax for multi-line comments *unless required otherwise by documentation format*
 
 > *Note:* Prior to 2015, Ignia used flower-boxes for comments. These should be replaced with documentation-style comments when updating legacy code.
