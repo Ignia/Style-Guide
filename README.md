@@ -19,7 +19,7 @@ Code may need to be executed by computers, but it also needs to be maintained by
 
 ## General Principles
 - Be consistent
-- Do not be afraid of whitespace; it greatly encourages readability
+- Do not be afraid of whitespace; it greatly enhances readability
 - Leverage well-established conventions; break with convention only with good rationale
 - When working with existing code bases, always follow any established conventions (i.e., ignore this document)
 
@@ -28,7 +28,7 @@ Code may need to be executed by computers, but it also needs to be maintained by
 ### Identifiers
 - Avoid arbitrary abbreviations in identifiers (e.g., variables, class names, etc.)
 - Only use abbreviations that are well-established and understood (e.g., ID, XML, HTML)
-- When abbreviations are used, they should be follow the casing standards (e.g., Html in PascalCase)
+- When abbreviations are used, they should follow the casing standards (e.g., Html in PascalCase)
 - Use consistent casing for identifiers of each type (e.g., all variables should be camelCase)
 
 ### Spacing
