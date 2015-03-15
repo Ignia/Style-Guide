@@ -11,7 +11,8 @@ While C#, Java, and JavaScript are very different languages, they do share one t
 - Identifiers should *not* use [Hungarian notation](https://msdn.microsoft.com/en-us/library/aa260976%28v=vs.60%29.aspx) (i.e., 1-3 character type prefixes)
 - Define one class per file; the filename should be the same as the class name (including casing)
 - Boolean identifiers should begin with a present indicative (e.g., `is`, `has`, etc.)
-- If only one object instance is expected to exist in scope, and the class name describes its purpose, the instance variable may be named after the class (except in `camelCase`)
+- If only one object instance is expected to exist in scope, and the class name describes its purpose, the instance variable may be named after the class (except the variable name will be in `camelCase`; e.g., a class named `DatabaseConnection` may have an instance called `databaseConnection`)
+
 
 > *Note:* C# and JavaScript vary in casing requirements for class members (such as properties and methods) and namespaces; in C# they use `PascalCase`; in JavaScript they use `camelCase`.
 
