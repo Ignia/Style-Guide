@@ -2,6 +2,9 @@
 
 CSS-Based languages include CSS itself, as well as CSS preprocessors such as Sass, Less, and Stylus.
 
+## Style Guides
+- [Sass](./CSS-Based%20Languages/Sass.md)
+
 ## Performance
 With a few exceptions, maintainability trumps performance with CSS. While performance is a priority, CSS optimizations tend to be trivial in results compared to JavaScript and even HTML optimizations. That said, ancestor and wildcard selectors should be avoided, as should the `@import` directive.
 

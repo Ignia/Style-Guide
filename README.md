@@ -4,7 +4,7 @@ Ignia's internal style guide for languages and formats we work in most frequentl
 ## Motivation
 Code may need to be executed by computers, but it also needs to be maintained by humans. For this reason, Ignia places high value on code that is readable, uniformly formatted, and consistent with emerging conventions. Ignia has not only maintained rigid coding standards since our inception in 1998, but continues to evolve them to keep pace with both technology and market trends.
 
-## Styles
+## Style Guides
 - [Common Rules](#common-rules) (see below)
 - [C-Based Languages](./C-Based%20Languages/)
   - [JavaScript](./C-Based%20Languages/JavaScript)
