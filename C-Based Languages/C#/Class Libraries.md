@@ -25,7 +25,6 @@ As class libraries are typically intended to be used by a broad selection of dev
 - Do not use the same identifier for a namespace as well as a class ([source](https://msdn.microsoft.com/en-us/library/ms229026(v=vs.110).aspx))
 - Avoid generic identifier names that are likely to introduce conflicts with other class names ([source](https://msdn.microsoft.com/en-us/library/ms229026(v=vs.110).aspx))
 - Interfaces should begin with `I` and use adjective phrases; nouns are more appropriate for abstract classes ([source](https://msdn.microsoft.com/en-us/library/ms229040(v=vs.110).aspx))
-- Enums should be singular, unless they implement the `[flag]` attribute; enums should *not* be suffixed with `Enum` or `Flags` ([source](https://msdn.microsoft.com/en-us/library/ms229040(v=vs.110).aspx))
 - `Attribute`, `EventHandler`, `EventArgs`, `Exception`, `Collection`, and `Permission` are all expected suffixes for corresponding class types ([source](https://msdn.microsoft.com/en-us/library/ms229040(v=vs.110).aspx))
 
 ## Spacing
@@ -46,11 +45,14 @@ As class libraries are typically intended to be used by a broad selection of dev
 - Validate arguments, and throw `ArgumentException`, `ArgumentNullException`, or derived classes on error ([source](https://msdn.microsoft.com/en-us/library/ms229015(v=vs.110).aspx))
 - Avoid using `out` or `ref` types for parameters ([source](https://msdn.microsoft.com/en-us/library/ms229015(v=vs.110).aspx))
 - Consider using the `params` keyword for short array parameters; otherwise, place arrays as the last parameter in a method so this can be applied in the future ([source](https://msdn.microsoft.com/en-us/library/ms229015(v=vs.110).aspx))
+- Prefer events to callbacks (e.g., `Func<>`, `Action<>`, and `Expression<>`) because they are easier to understand and implement across languages ([source](https://msdn.microsoft.com/en-us/library/ms229041(v=vs.110).aspx))
+-
 - Avoid use of nested types
 
 ### Enums
 - Prefer enums over arbitrary strings (e.g., `Status="Complete"`) or static constants to set or receive values from a set of predefined (non-dynamic) choices
 - Prefer enums as method parameters to multiple Boolean arguments, or Boolean arguments which may have more options in the future ([source](https://msdn.microsoft.com/en-us/library/ms229015(v=vs.110).aspx))
+- Enums should be singular, unless they implement the `[flag]` attribute; enums should *not* be suffixed with `Enum` or `Flags` ([source](https://msdn.microsoft.com/en-us/library/ms229040(v=vs.110).aspx))
 - Only set enum values for capabilities currently supported; do not reserve values for future use ([source](https://msdn.microsoft.com/en-us/library/ms229058(v=vs.110).aspx))
 - Always provide an enum value for `None` (or the semantic equivalent) ([source](https://msdn.microsoft.com/en-us/library/ms229058(v=vs.110).aspx))
 - Flag enums can be used to allow multiple values; assigned integers should be based on powers of two (2, 4, 8...) ([source](https://msdn.microsoft.com/en-us/library/ms229058(v=vs.110).aspx))
