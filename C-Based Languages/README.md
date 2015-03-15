@@ -35,7 +35,7 @@ While C#, Java, and JavaScript are very different languages, they do share one t
 | Parameters                    | `camelCase`                   | `checkoutStatus`
 | Constants                     | `UPPER_SNAKE_CASE`            | `IMAGES_DIRECTORY`
 
-> *Note:* C# and JavaScript vary in casing requirements for class members (such as properties and methods) and namespaces; in C# they use `PascalCase`; in JavaScript they use `camelCase`.
+> *Note:* [C#](./C%23/README.md) and [JavaScript](./JavaScript/README.md) vary in casing requirements for class members (such as properties and methods) and namespaces; in C# they use `PascalCase`; in JavaScript they use `camelCase`.
 
 ### Naming Conventions
 - Identifiers should *not* contain underscores (except as noted above), hyphens, or numbers
