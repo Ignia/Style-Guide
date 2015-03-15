@@ -11,6 +11,8 @@ As class libraries are typically intended to be used by a broad selection of dev
 - [Spacing](#spacing)
 - [Formatting](#formatting)
 - [Language Features](#language-features)
+  - [Collection](#colletions)
+  - [Exceptions](#exceptions)
   - [Enums](#enums)
 - [Acknowledgments](#acknowledgments)
 
@@ -34,7 +36,6 @@ As class libraries are typically intended to be used by a broad selection of dev
 - Each attribute should be placed on its own line
 
 ## Language Features
-- `Dictionary<>` and `List<>` objects should not be exposed publicly; instead, use `Collection<>` or `KeyedCollection<>`
 - Local variables *should* use type inference (i.e., the `var` keyword for declaring variables)
 - Any `using` directives should be placed inside the `namespace`, not outside of it
 - Prefer default arguments to overloading unless default arguments will cause unintuitive combinations of parameters
@@ -49,6 +50,19 @@ As class libraries are typically intended to be used by a broad selection of dev
 - Consider providing reference tests for `abstract` classes and `interface` definitions to allow first- and third-party developers to easily test their implementations ([source](https://msdn.microsoft.com/en-us/library/ms229019(v=vs.110).aspx))
 - Avoid use of nested types
 
+### Collections
+- `Dictionary<>`, `Hashtable`, `ArrayList`, `List<>`, and `IEnumerator` objects should not be exposed publicly ([source](https://msdn.microsoft.com/en-us/library/dn169389(v=vs.110).aspx))
+ - `IEnumerator` may be returned as the result of a `GetEnumerator()` method
+ - Arrays should be avoided for similar reasons ([source](https://msdn.microsoft.com/en-us/library/k2604h5s(v=vs.110).aspx))
+- Use the least derived collection type for parameters; ideally, this will be the `IEnumerable<T>` interface ([source](https://msdn.microsoft.com/en-us/library/dn169389(v=vs.110).aspx))
+- Do not expose setters for collection properties ([source](https://msdn.microsoft.com/en-us/library/dn169389(v=vs.110).aspx))
+- For writable properties and return values, prefer `Collection<>`, `ObservableCollection<>` (or a derived class); otherwise, use classes that implement `ICollection<>`, `IList<>`, or `IEnumerable<>` ([source](https://msdn.microsoft.com/en-us/library/dn169389(v=vs.110).aspx))
+  - When practical, use a custom derived class for clarity of purpose, and to allow additional functionality to be added in the future
+  - When creating custom derived classes, prefer the naming convention `TypeCollection` where `Type` maps to the item type (e.g., `AuthorCollection` is a collection of `Author` objects)
+- For volatile collections (e.g., a file system object), return a snapshot (via a method) or an `IEnumerable<>` (via a property)
+- For read-only collections, always use `ReadOnlyCollection<>` (or a derived class)
+- Never return a `null` value for collection types; always return an empty collection instead
+
 ### Exceptions
 - Avoid throwing exceptions from properties; any state checking should be done when an action is performed (e.g., by calling a method)
 - Validate arguments, and throw `ArgumentException`, `ArgumentNullException`, `InvalidOperationException`, or a derived class on error ([source](https://msdn.microsoft.com/en-us/library/ms229015(v=vs.110).aspx))
@@ -58,7 +72,6 @@ As class libraries are typically intended to be used by a broad selection of dev
   - Fall back to the Try-Parse pattern for scenarios where providing pre-condition checks is not performant ([source](https://msdn.microsoft.com/en-us/library/ms229009(v=vs.110).aspx))
 - Never throw a `NullReferenceException`, `AccessViolationException`, or `IndexOutOfRangeException`; these should be caught as part of argument checking ([source](https://msdn.microsoft.com/en-us/library/ms229007(v=vs.110).aspx)).
 - Do not throw or catch `Exception` or `SystemException`; use more specific exceptions instead (exception: top-level exception handlers) ([source](https://msdn.microsoft.com/en-us/library/ms229007(v=vs.110).aspx))
-
 
 ### Enums
 - Prefer enums over arbitrary strings (e.g., `Status="Complete"`) or static constants to set or receive values from a set of predefined (non-dynamic) choices
