@@ -1,6 +1,8 @@
 # JavaScript Style Guide
 
 ## Style Guides
+- [Angular](./Angular.md)
+- [ECMAScript 6.0](./ECMAScript%206.md)
 - [TypeScript](./TypeScript.md)
 - [JSON](./JSON.md)
 
