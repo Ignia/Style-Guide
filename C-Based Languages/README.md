@@ -26,6 +26,15 @@ While C#, Java, and JavaScript are very different languages, they do share one t
 ## Identifiers
 
 ### Capitalization
+| Type                          | Case                          | Example
+| ------------------------------|-------------------------------|-------------------------------
+| Class                         | `PascalCase`                  | `ClassName`
+| Enum                          | `PascalCase`                  | `FontFamily`
+| Private Properties            | `_camelCase`                  | `_privateProperty`
+| Local Variables               | `camelCase`                   | `localVariable`
+| Parameters                    | `camelCase`                   | `parameterName`
+| Constants                     | `UPPER_SNAKE_CASE`            | `IMAGES_DIRECTORY`
+
 - Class, type and enum names should use `PascalCase` (e.g., `ClassName`)
 - Private properties should begin with a single underscore (e.g., `this._privateProperty`)
 - Local variables and parameters should use `camelCase` (e.g., `localVariable`)
