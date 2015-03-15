@@ -5,13 +5,15 @@ While C#, Java, and JavaScript are very different languages, they do share one t
 ## Identifiers
 - Class, type and enum names should use `PascalCase` (e.g., `ClassName`)
 - Private properties (or fields) should begin with a single underscore (e.g., `this._privateProperty`)
-- Local variables should use `camelCase` (e.g., `localVariable`)
+- Local variables and parameters should use `camelCase` (e.g., `localVariable`)
 - Constants should use `UPPER_CASE` separated by underscores (e.g., `SOME_CONSTANT`)
 - Identifiers should *not* contain underscores (except as noted above), hyphens, or numbers
 - Identifiers should *not* use [Hungarian notation](https://msdn.microsoft.com/en-us/library/aa260976%28v=vs.60%29.aspx) (i.e., 1-3 character type prefixes)
 - Define one class per file; the filename should be the same as the class name (including casing)
 - Boolean identifiers should begin with a present indicative (e.g., `is`, `has`, etc.)
 - If only one object instance is expected to exist in scope, and the class name describes its purpose, the instance variable may be named after the class (except in `camelCase`)
+
+> *Note:* C# and JavaScript vary in casing requirements for class members (such as properties and methods) and namespaces; in C# they use `PascalCase`; in JavaScript they use `camelCase`.
 
 ## Variables
 - Constants and configuration variables should be placed at the top of the file, and clearly identified via a comment

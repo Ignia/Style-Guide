@@ -1,8 +1,7 @@
 # JavaScript Style Guide
 
 ## Identifiers
-- Class members (e.g., properties, functions) should be camelCase (e.g., `doSomething()`)
-- Namespaces should be PascalCase
+- Class members (e.g., properties, functions) and namespaces should be `camelCase` (e.g., `doSomething()`)
 - Use `_this` as the variable name when saving a reference to `this` (although `.bind()` for scoping is preferred)
 
 ## Variables
