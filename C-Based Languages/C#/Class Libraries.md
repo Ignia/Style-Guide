@@ -10,7 +10,7 @@ As class libraries are typically intended to be used by a broad selection of dev
 - Assemblies (DLLs) should generally be named `<Company>.(<Product>|<Technology>)[.<Feature>].dll` for consistency with namespaces
 - Ignia uses `Ignia` for the `<company>` on internal projects and reusable libraries, but the client name for custom client code
 - "If your brand employs nontraditional casing, you should follow the casing defined by your brand, even if it deviates from normal namespace casing" ([source](https://msdn.microsoft.com/en-us/library/ms229026(v=vs.110).aspx))
-- Use plurals for namespaces where it makes sense (exceptions: proper names, abbreviations) ([source](https://msdn.microsoft.com/en-us/library/ms229026(v=vs.110).aspx))
+- Namespace identifiers should typically be pluralized (exceptions: proper names, abbreviations) ([source](https://msdn.microsoft.com/en-us/library/ms229026(v=vs.110).aspx))
 - Do not use the same identifier for a namespace as well as a class ([source](https://msdn.microsoft.com/en-us/library/ms229026(v=vs.110).aspx))
 - Avoid generic identifier names that are likely to introduce conflicts with other class names ([source](https://msdn.microsoft.com/en-us/library/ms229026(v=vs.110).aspx))
 - Interfaces should begin with `I` and use adjective phrases; nouns are more appropriate for abstract (base) classes ([source](https://msdn.microsoft.com/en-us/library/ms229040(v=vs.110).aspx))
