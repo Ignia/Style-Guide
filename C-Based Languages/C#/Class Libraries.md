@@ -11,6 +11,7 @@ As class libraries are typically intended to be used by a broad selection of dev
 - [Spacing](#spacing)
 - [Formatting](#formatting)
 - [Language Features](#language-features)
+  - [Enums](#enums)
 - [Acknowledgments](#acknowledgments)
 
 ## Identifiers
@@ -37,6 +38,17 @@ As class libraries are typically intended to be used by a broad selection of dev
 - `Dictionary<>` and `List<>` objects should not be exposed publicly; instead, use `Collection<>` or `KeyedCollection<>`
 - Local variables *should* use type inference (i.e., the `var` keyword for declaring variables)
 - Any `using` directives should be placed inside the `namespace`, not outside of it
+- Prefer default arguments to overloading unless default arguments will cause unintuitive combinations of parameters
+- Avoid throwing exceptions from properties; any state checking should be done when an action is performed (e.g., by calling a method)
+- Only use public fields for constants; otherwise, expose properties ([source](https://msdn.microsoft.com/en-us/library/ms229057(v=vs.110).aspx))
+- Consider using extension methods as a means of providing concrete implementations for general interface methods ([source](https://msdn.microsoft.com/en-us/library/dn169395(v=vs.110).aspx))
+- Avoid use of nested types
+
+### Enums
+- Prefer enums over arbitrary strings (e.g., `Status="Complete"`) or static constants to set or receive values from a set of predefined (non-dynamic) choices
+- Only set enum values for capabilities currently supported; do not reserve values for future use ([source](https://msdn.microsoft.com/en-us/library/ms229058(v=vs.110).aspx))
+- Always provide an enum value for `None` (or the semantic equivalent) ([source](https://msdn.microsoft.com/en-us/library/ms229058(v=vs.110).aspx))
+- Flag enums can be used to allow multiple values; assigned integers should be based on powers of two (2, 4, 8...) ([source](https://msdn.microsoft.com/en-us/library/ms229058(v=vs.110).aspx))
 
 ## Acknowledgments
 - [Microsoft Framework Design Guidelines](https://msdn.microsoft.com/en-us/library/ms229042(v=vs.110).aspx)
