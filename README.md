@@ -55,7 +55,7 @@ Code may need to be executed by computers, but it also needs to be maintained by
 - Author notes should be prefixed with `### {ABCD} {EFG}{012349}: ` where:
   - `ABCD` is `NOTE`, `TODO`, or `HACK`
   - `{EFG}` is the author's initials (e.g., `JJC`)
-  - `012349` is the date in the format DDMMYY (e.g., `031315`)
+  - `012349` is the date in the format `DDMMYY` (e.g., `031315`)
   - E.g., `### TODO JJC031315: Fix Internet Explorer 9 compatibility issue with CSS3 selectors.`
 
 ## Encoding
