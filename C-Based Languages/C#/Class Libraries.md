@@ -38,16 +38,27 @@ As class libraries are typically intended to be used by a broad selection of dev
 - Local variables *should* use type inference (i.e., the `var` keyword for declaring variables)
 - Any `using` directives should be placed inside the `namespace`, not outside of it
 - Prefer default arguments to overloading unless default arguments will cause unintuitive combinations of parameters
-- Avoid throwing exceptions from properties; any state checking should be done when an action is performed (e.g., by calling a method)
 - Only use public fields for constants; otherwise, expose properties ([source](https://msdn.microsoft.com/en-us/library/ms229057(v=vs.110).aspx))
 - Consider using extension methods as a means of providing concrete implementations for general interface methods ([source](https://msdn.microsoft.com/en-us/library/dn169395(v=vs.110).aspx))
 - Use the least derived type for method parameters; e.g., use an interface or base class when its properties are sufficient ([source](https://msdn.microsoft.com/en-us/library/ms229015(v=vs.110).aspx))
-- Validate arguments, and throw `ArgumentException`, `ArgumentNullException`, or derived classes on error ([source](https://msdn.microsoft.com/en-us/library/ms229015(v=vs.110).aspx))
 - Avoid using `out` or `ref` types for parameters ([source](https://msdn.microsoft.com/en-us/library/ms229015(v=vs.110).aspx))
 - Consider using the `params` keyword for short array parameters; otherwise, place arrays as the last parameter in a method so this can be applied in the future ([source](https://msdn.microsoft.com/en-us/library/ms229015(v=vs.110).aspx))
 - Prefer events to callbacks (e.g., `Func<>`, `Action<>`, and `Expression<>`) because they are easier to understand and implement across languages ([source](https://msdn.microsoft.com/en-us/library/ms229041(v=vs.110).aspx))
--
+- Be wary of `virtual` members, as they provide potential security risks; when used, consider moving extensible functionality to a `protected` method to restrict scope ([source](https://msdn.microsoft.com/en-us/library/ms229044(v=vs.110).aspx))
+- Provide concrete classes for both `abstract` classes as well as `interface` definitions; this helps validate the design, and provides simpler options for casual implementations ([source](https://msdn.microsoft.com/en-us/library/ms229019(v=vs.110).aspx))
+- Consider providing reference tests for `abstract` classes and `interface` definitions to allow first- and third-party developers to easily test their implementations ([source](https://msdn.microsoft.com/en-us/library/ms229019(v=vs.110).aspx))
 - Avoid use of nested types
+
+### Exceptions
+- Avoid throwing exceptions from properties; any state checking should be done when an action is performed (e.g., by calling a method)
+- Validate arguments, and throw `ArgumentException`, `ArgumentNullException`, `InvalidOperationException`, or a derived class on error ([source](https://msdn.microsoft.com/en-us/library/ms229015(v=vs.110).aspx))
+  - Always set the `paramName` property when throwing `ArgumentException` or `ArgumentNullException`; use `value` when validating property setters ([source](https://msdn.microsoft.com/en-us/library/ms229007(v=vs.110).aspx))
+- With the exception of unforeseeable problems (e.g., system failures), users should be able to pre-check conditions without throwing an exception via the Tester-Doer pattern ([source](https://msdn.microsoft.com/en-us/library/ms229030(v=vs.110).aspx))
+  - e.g., the `FileStream` class offers a `CanWrite` property to conditionally determine if a stream can be written to
+  - Fall back to the Try-Parse pattern for scenarios where providing pre-condition checks is not performant ([source](https://msdn.microsoft.com/en-us/library/ms229009(v=vs.110).aspx))
+- Never throw a `NullReferenceException`, `AccessViolationException`, or `IndexOutOfRangeException`; these should be caught as part of argument checking ([source](https://msdn.microsoft.com/en-us/library/ms229007(v=vs.110).aspx)).
+- Do not throw or catch `Exception` or `SystemException`; use more specific exceptions instead (exception: top-level exception handlers) ([source](https://msdn.microsoft.com/en-us/library/ms229007(v=vs.110).aspx))
+
 
 ### Enums
 - Prefer enums over arbitrary strings (e.g., `Status="Complete"`) or static constants to set or receive values from a set of predefined (non-dynamic) choices
