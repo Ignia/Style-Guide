@@ -64,6 +64,8 @@ Code may need to be executed by computers, but it also needs to be maintained by
 ## No Opinion
 - Unix-style carriage returns (i.e., `\n`) v. Windows-style (`\r\n`)
 
+## Feedback
+If you find errors in this guide, or feel we should reevaluate a particular standard, feel free to [open an issue](https://github.com/Ignia/Style-Guide/issues).
 
 <!--
 ## Acknowledgments
