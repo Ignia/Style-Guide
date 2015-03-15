@@ -17,15 +17,22 @@ Code may need to be executed by computers, but it also needs to be maintained by
 - [SGML-Based Languages](./SGML-Based%20Languages/)
   - [HTML5](./SGML-Based%20Languages/HTML5.md)
 
+## Contents
+- [General Principles](#general-principles)
+- [Identifiers](#identifiers)
+- [Variables](#variables)
+- [Spacing](#spacing)
+- [Comments](#comments)
+- [Encoding](#encoding)
+- [No Opinion](#no-opinion)
+
 ## General Principles
 - Be consistent
 - Do not be afraid of whitespace; it greatly enhances readability
 - Leverage well-established conventions; break with convention only with good rationale
 - When working with existing code bases, always follow any established conventions (i.e., ignore this document)
 
-## Common Rules
-
-### Identifiers
+## Identifiers
 - Avoid arbitrary abbreviations in identifiers (e.g., variables, class names, etc.)
 - Only use abbreviations that are well-established and widely understood (e.g., ID, XML, HTML)
 - When abbreviations are used, they should follow the casing standards (e.g., `Html` in `PascalCase`, not `HTML`)
@@ -33,7 +40,7 @@ Code may need to be executed by computers, but it also needs to be maintained by
 - Use consistent casing for identifiers of each type (e.g., all variables should be `camelCase`)
 - Do not use identifiers that conflict with keywords in commonly used programming languages ([source](https://msdn.microsoft.com/en-us/library/ms229045(v=vs.110).aspx))
 
-### Spacing
+## Spacing
 - Use soft tabs set to two spaces
 - Use tab stops set to eight spaces
 - Place empty lines to create visual groupings between related code
@@ -41,7 +48,7 @@ Code may need to be executed by computers, but it also needs to be maintained by
 - Lines should be no longer than 96 characters, and must not exceed 128
 - End files with a single newline character
 
-### Comments
+## Comments
 - Comments are always preceded by a blank line
 - Comments start with a capital letter; full sentences end with a period.
 - There must be a single space between the comment token and the comment text
@@ -51,10 +58,10 @@ Code may need to be executed by computers, but it also needs to be maintained by
   - `012349` is the date in the format DDMMYY (e.g., `031315`)
   - E.g., `### TODO JJC031315: Fix Internet Explorer 9 compatibility issue with CSS3 selectors.`
 
-### Encoding
+## Encoding
 - Use UTF-8 encoding
 
-### No Opinion
+## No Opinion
 - Unix-style carriage returns (i.e., `\n`) v. Windows-style (`\r\n`)
 
 

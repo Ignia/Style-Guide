@@ -6,6 +6,14 @@
 
 > *Note:* This style guide inherits rules from the [C-Based Languages Style Guide](../README.md), and the [Global Style Guide](../../README.md)
 
+## Contents
+- [Identifiers](#identifiers)
+- [Variables](#variables)
+- [Syntax](#syntax)
+- [Language Features](#language-features)
+- [Comments](#comments)
+- [Acknowledgments](#acknowledgments)
+
 ## Identifiers
 - Class members (e.g., properties, functions) and namespaces should be `camelCase` (e.g., `doSomething()`)
 - Use `_this` as the variable name when saving a reference to `this` (although `.bind()` for scoping is preferred)

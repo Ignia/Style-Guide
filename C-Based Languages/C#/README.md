@@ -10,5 +10,22 @@ While most of Ignia's front-end code is written exclusively in HTML5 (without an
 > # Placeholder Content
 > This page is a placeholder; additional content will be provided at a later date.
 
+<!--
+## Contents
+- [Identifiers](#identifiers)
+- [Spacing](#spacing)
+- [Formatting](#formatting)
+- [Language Features](#language-features)
+- [Acknowledgments](#acknowledgments)
+
 ## Identifiers
 - Class members (e.g., properties, functions) and namespaces should be `PascalCase` (e.g., `DoSomething()`)
+
+## Spacing
+
+## Formatting
+
+## Language Features
+
+## Acknowledgments
+-->

@@ -6,6 +6,13 @@ As class libraries are typically intended to be used by a broad selection of dev
 
 > *Note:* The majority of the items below are from the (excellent) book "[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries (2nd Edition)](http://www.amazon.com/Framework-Design-Guidelines-Conventions-Libraries/dp/0321545613) (Krzysztof Cwalina, Brad Abrams; 2012) which is required reading for all developers at Ignia. The items highlighted below are some of the most important and common conventions from the book.
 
+## Contents
+- [Identifiers](#identifiers)
+- [Spacing](#spacing)
+- [Formatting](#formatting)
+- [Language Features](#language-features)
+- [Acknowledgments](#acknowledgments)
+
 ## Identifiers
 - Namespaces should use `<Company>.(<Product>|<Technology>)[.<Feature>][.<Subnamespace>]` convention ([source](https://msdn.microsoft.com/en-us/library/ms229026%28v=vs.110%29.aspx))
 - Assemblies (DLLs) should generally be named `<Company>.(<Product>|<Technology>)[.<Feature>].dll` for consistency with namespaces

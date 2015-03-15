@@ -6,6 +6,14 @@ JSON (JavaScript Object Notation) is a data format supported natively in JavaScr
 
 > *Note:* Technically, JSON is a subset of the object literal notation that appears within JavaScript. This style guide addressed both. Where the two diverge, the differences will be noted.
 
+## Contents
+- [Identifiers](#identifiers)
+- [Spacing](#spacing)
+- [Formatting](#formatting)
+- [Comments](#comments)
+- [Language Features](#language-features)
+- [Acknowledgments](#acknowledgments)
+
 ## Identifiers
 - Property names ("keys") must *always* be in double quotes (some libraries do not enforce this, but it is a requirement of the [specification](http://tools.ietf.org/html/rfc7159)); this is *not* a requirement for object literal notation
 

@@ -4,6 +4,16 @@ Sass provides a preprocessor environment for simplifying the creating and mainte
 
 > *Note:* This style guide inherits rules from the [CSS-Based Languages Style Guide](./README.md) and the [Global Style Guide](../README.md)
 
+## Contents
+- [Structure](#structure)
+- [Identifiers](#identifiers)
+- [Spacing](#spacing)
+- [Variables](#variables)
+- [Comments](#comments)
+- [Language Features](#language-features)
+- [Declaration Order](#declaration-order)
+- [Acknowledgments](#acknowledgments)
+
 ## Structure
 - Break up styles into logically organized files; e.g.,
   - Base (for global overrides for elements)

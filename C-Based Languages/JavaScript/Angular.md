@@ -7,6 +7,17 @@ While Angular follows best practices for [JavaScript](./Readme.md), it introduce
 > # Placeholder Content
 > This page is a placeholder; additional content will be provided at a later date.
 
+## Contents
+- [Identifiers](#identifiers)
+- [Files](#files)
+- [Formatting](#formatting)
+- [Language Features](#language-features)
+- [Acknowledgments](#acknowledgments)
+
+## Identifiers
+
+## Formatting
+
 ## Files
 - Place each module, directive, service, and controller in its own file
 - Separate source files into a `Directives`, `Services`, and `Controllers` directories

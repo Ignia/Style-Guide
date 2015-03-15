@@ -8,6 +8,15 @@
 > This page is a placeholder; additional content will be provided at a later date.
 
 <!--
+
+## Contents
+- [Identifiers](#identifiers)
+- [Spacing](#spacing)
+- [Formatting](#formatting)
+- [Comments](#comments)
+- [Language Features](#language-features)
+- [Acknowledgments](#acknowledgments)
+
 ## Identifiers
 
 ## Spacing

@@ -11,6 +11,18 @@ While C#, Java, and JavaScript are very different languages, they do share one t
 
 > *Note:* This style guide inherits rules from the [Global Style Guide](../README.md)
 
+## Contents
+- [Identifiers](#identifiers)
+  - [Capitalization](#capitalization)
+  - [Naming Conventions](#naming-conventions)
+- [Variables](#variables)
+- [Spacing](#spacing)
+- [Formatting](#formatting)
+  - [Line Wrapping](#line-wrapping)
+- [Comments](#comments)
+- [Language Features](#language-features)
+- [Acknowledgments](#acknowledgments)
+
 ## Identifiers
 
 ### Capitalization

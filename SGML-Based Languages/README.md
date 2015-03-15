@@ -7,6 +7,12 @@ SGML is, loosely speaking, the parent language of HTML and XML. While HTML5 tech
 
 > *Note:* This style guide inherits rules from the [Global Style Guide](../README.md)
 
+## Contents
+- [Spacing](#spacing)
+- [Formatting](#formatting)
+- [Comments](#comments)
+- [Capitalization](#capitalization)
+
 ## Spacing
 - Child elements should always be nested *exactly* two spaces from their parent (this includes `<body>` and `<head>` in relation to `<html>`)
 
