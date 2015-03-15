@@ -3,6 +3,8 @@
 While C#, Java, and JavaScript are very different languages, they do share one thing in common: C-based syntax. For this reason, many style preferences can be applied to each. Indeed, since developers may be switching back and forth among these languages, maintaining consistency between each is not only important for readability but also developer productivity.
 
 ## Identifiers
+
+### Capitalization
 - Class, type and enum names should use `PascalCase` (e.g., `ClassName`)
 - Private properties should begin with a single underscore (e.g., `this._privateProperty`)
 - Local variables and parameters should use `camelCase` (e.g., `localVariable`)
@@ -10,15 +12,16 @@ While C#, Java, and JavaScript are very different languages, they do share one t
 
 > *Note:* C# and JavaScript vary in casing requirements for class members (such as properties and methods) and namespaces; in C# they use `PascalCase`; in JavaScript they use `camelCase`.
 
+### Naming Conventions
 - Identifiers should *not* contain underscores (except as noted above), hyphens, or numbers
 - Identifiers should *not* use [Hungarian notation](https://msdn.microsoft.com/en-us/library/aa260976%28v=vs.60%29.aspx) (i.e., 1-3 character type prefixes)
-- Define one class per file; the filename should be the same as the class name (including casing)
 - Boolean identifiers should begin with a present indicative (e.g., `is`, `has`, etc.)
 - Classes, namespaces, and non-Boolean properties should use nouns (or noun phrases); methods and events should use verbs (or verb phrases)
 - Events should use present (e.g., `loading`) and past tenses (e.g., `loading`) to indicate before and after states
 - Identifiers representing collections (e.g., arrays) should be pluralized (e.g., `author.books` may represent a collection of books an author has written)
 - If only one object instance is expected to exist in scope, and the class name describes its purpose, the instance variable may be named after the class (e.g., a class named `DatabaseConnection` may have an instance called `databaseConnection`)
 - If a type (reference) property has no additional contextual meaning beyond that of its type, use the name of the type
+- Define one class per file; the filename should be the same as the class name (including casing)
 
 > **Important**: Do not invent new identifiers arbitrarily; `Author`, `book.Author`, `_author`, `author`, and `addAuthor()` all clearly represent the same object type.
 
