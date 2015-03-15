@@ -42,10 +42,15 @@ As class libraries are typically intended to be used by a broad selection of dev
 - Avoid throwing exceptions from properties; any state checking should be done when an action is performed (e.g., by calling a method)
 - Only use public fields for constants; otherwise, expose properties ([source](https://msdn.microsoft.com/en-us/library/ms229057(v=vs.110).aspx))
 - Consider using extension methods as a means of providing concrete implementations for general interface methods ([source](https://msdn.microsoft.com/en-us/library/dn169395(v=vs.110).aspx))
+- Use the least derived type for method parameters; e.g., use an interface or base class when its properties are sufficient ([source](https://msdn.microsoft.com/en-us/library/ms229015(v=vs.110).aspx))
+- Validate arguments, and throw `ArgumentException`, `ArgumentNullException`, or derived classes on error ([source](https://msdn.microsoft.com/en-us/library/ms229015(v=vs.110).aspx))
+- Avoid using `out` or `ref` types for parameters ([source](https://msdn.microsoft.com/en-us/library/ms229015(v=vs.110).aspx))
+- Consider using the `params` keyword for short array parameters; otherwise, place arrays as the last parameter in a method so this can be applied in the future ([source](https://msdn.microsoft.com/en-us/library/ms229015(v=vs.110).aspx))
 - Avoid use of nested types
 
 ### Enums
 - Prefer enums over arbitrary strings (e.g., `Status="Complete"`) or static constants to set or receive values from a set of predefined (non-dynamic) choices
+- Prefer enums as method parameters to multiple Boolean arguments, or Boolean arguments which may have more options in the future ([source](https://msdn.microsoft.com/en-us/library/ms229015(v=vs.110).aspx))
 - Only set enum values for capabilities currently supported; do not reserve values for future use ([source](https://msdn.microsoft.com/en-us/library/ms229058(v=vs.110).aspx))
 - Always provide an enum value for `None` (or the semantic equivalent) ([source](https://msdn.microsoft.com/en-us/library/ms229058(v=vs.110).aspx))
 - Flag enums can be used to allow multiple values; assigned integers should be based on powers of two (2, 4, 8...) ([source](https://msdn.microsoft.com/en-us/library/ms229058(v=vs.110).aspx))
