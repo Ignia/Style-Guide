@@ -3,15 +3,15 @@
 While C#, Java, and JavaScript are very different languages, they do share one thing in common: C-based syntax. For this reason, many style preferences can be applied to each. Indeed, since developers may be switching back and forth among these languages, maintaining consistency between each is not only important for readability but also developer productivity.
 
 ## Identifiers
-- Class, type and enum names should use PascalCase (e.g., `ClassName`)
+- Class, type and enum names should use `PascalCase` (e.g., `ClassName`)
 - Private properties (or fields) should begin with a single underscore (e.g., `this._privateProperty`)
-- Local variables should use camelCase (e.g., `localVariable`)
-- Constants should use UPPER_CASE separated by underscores (e.g., `SOME_CONSTANT`)
+- Local variables should use `camelCase` (e.g., `localVariable`)
+- Constants should use `UPPER_CASE` separated by underscores (e.g., `SOME_CONSTANT`)
 - Identifiers should *not* contain underscores (except as noted above), hyphens, or numbers
-- Identifiers should *not* use Hungarian notation (i.e., arbitrary 2-3 character type prefixes)
+- Identifiers should *not* use [Hungarian notation](https://msdn.microsoft.com/en-us/library/aa260976%28v=vs.60%29.aspx) (i.e., 1-3 character type prefixes)
 - Define one class per file; the filename should be the same as the class name (including casing)
 - Boolean identifiers should begin with a present indicative (e.g., `is`, `has`, etc.)
-- If only one object instance is expected to exist in scope, and the class name describes its purpose, the instance variable may be named after the class (except in camelCase)
+- If only one object instance is expected to exist in scope, and the class name describes its purpose, the instance variable may be named after the class (except in `camelCase`)
 
 ## Variables
 - Constants and configuration variables should be placed at the top of the file, and clearly identified via a comment
