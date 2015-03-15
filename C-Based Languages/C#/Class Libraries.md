@@ -4,7 +4,7 @@ As class libraries are typically intended to be used by a broad selection of dev
 
 > *Note:* This style guide inherits rules from the [C# Style Guide](../C%23/README.md), [C-Based Languages Style Guide](../README.md), and the [Global Style Guide](../../README.md)
 
-> *Note:* The majority of the items below are from the (excellent) book "[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries (2nd Edition)](http://www.amazon.com/Framework-Design-Guidelines-Conventions-Libraries/dp/0321545613) (Krzysztof Cwalina, Brad Abrams; 2012) which is required reading for all developers at Ignia. The items highlighted below are some of the most important and common conventions from the book.
+> *Note:* The majority of the items below are from the (excellent) book "[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries (2nd Edition)](http://www.amazon.com/Framework-Design-Guidelines-Conventions-Libraries/dp/0321545613) (Krzysztof Cwalina, Brad Abrams; 2008) which is required reading for all developers at Ignia. The items highlighted below are some of the most important and common conventions from the book.
 
 ## Contents
 - [Identifiers](#identifiers)
@@ -48,6 +48,7 @@ As class libraries are typically intended to be used by a broad selection of dev
 - Be wary of `virtual` members, as they provide potential security risks; when used, consider moving extensible functionality to a `protected` method to restrict scope ([source](https://msdn.microsoft.com/en-us/library/ms229044(v=vs.110).aspx))
 - Provide concrete classes for both `abstract` classes as well as `interface` definitions; this helps validate the design, and provides simpler options for casual implementations ([source](https://msdn.microsoft.com/en-us/library/ms229019(v=vs.110).aspx))
 - Consider providing reference tests for `abstract` classes and `interface` definitions to allow first- and third-party developers to easily test their implementations ([source](https://msdn.microsoft.com/en-us/library/ms229019(v=vs.110).aspx))
+- For serialization, prefer [Data Contract Serialization](https://msdn.microsoft.com/en-us/library/system.runtime.serialization.datacontractattribute(v=vs.110).aspx) unless control over the XML schema is needed (then use [XmlSerializer](https://msdn.microsoft.com/en-us/library/system.xml.serialization.xmlserializer(v=vs.110).aspx)) or the objects will be used via .NET Remoting (then use [Runtime Serialization](https://msdn.microsoft.com/en-us/library/system.serializableattribute(v=vs.110).aspx)) ([source](https://msdn.microsoft.com/en-us/library/dn169405(v=vs.110).aspx))
 - Avoid use of nested types
 
 ### Collections
