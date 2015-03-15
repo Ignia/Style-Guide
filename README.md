@@ -31,6 +31,7 @@ Code may need to be executed by computers, but it also needs to be maintained by
 - When abbreviations are used, they should follow the casing standards (e.g., `Html` in `PascalCase`)
   - An exception is granted for two letter acronyms (e.g., `ID`, `IO` in `PascalCase`) ([source](https://msdn.microsoft.com/en-us/library/ms229043(v=vs.110).aspx))
 - Use consistent casing for identifiers of each type (e.g., all variables should be `camelCase`)
+- Do not use identifiers that conflict with keywords in commonly used programming languages ([source](https://msdn.microsoft.com/en-us/library/ms229045(v=vs.110).aspx))
 
 ### Spacing
 - Use soft tabs set to two spaces
