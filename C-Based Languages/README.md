@@ -4,17 +4,23 @@ While C#, Java, and JavaScript are very different languages, they do share one t
 
 ## Identifiers
 - Class, type and enum names should use `PascalCase` (e.g., `ClassName`)
-- Private properties (or fields) should begin with a single underscore (e.g., `this._privateProperty`)
+- Private properties should begin with a single underscore (e.g., `this._privateProperty`)
 - Local variables and parameters should use `camelCase` (e.g., `localVariable`)
 - Constants should use `UPPER_CASE` separated by underscores (e.g., `SOME_CONSTANT`)
+
+> *Note:* C# and JavaScript vary in casing requirements for class members (such as properties and methods) and namespaces; in C# they use `PascalCase`; in JavaScript they use `camelCase`.
+
 - Identifiers should *not* contain underscores (except as noted above), hyphens, or numbers
 - Identifiers should *not* use [Hungarian notation](https://msdn.microsoft.com/en-us/library/aa260976%28v=vs.60%29.aspx) (i.e., 1-3 character type prefixes)
 - Define one class per file; the filename should be the same as the class name (including casing)
 - Boolean identifiers should begin with a present indicative (e.g., `is`, `has`, etc.)
-- If only one object instance is expected to exist in scope, and the class name describes its purpose, the instance variable may be named after the class (except the variable name will be in `camelCase`; e.g., a class named `DatabaseConnection` may have an instance called `databaseConnection`)
+- Classes, namespaces, and non-Boolean properties should use nouns (or noun phrases); methods and events should use verbs (or verb phrases)
+- Events should use present (e.g., `loading`) and past tenses (e.g., `loading`) to indicate before and after states
+- Identifiers representing collections (e.g., arrays) should be pluralized (e.g., `author.books` may represent a collection of books an author has written)
+- If only one object instance is expected to exist in scope, and the class name describes its purpose, the instance variable may be named after the class (e.g., a class named `DatabaseConnection` may have an instance called `databaseConnection`)
+- If a type (reference) property has no additional contextual meaning beyond that of its type, use the name of the type
 
-
-> *Note:* C# and JavaScript vary in casing requirements for class members (such as properties and methods) and namespaces; in C# they use `PascalCase`; in JavaScript they use `camelCase`.
+> **Important**: Do not invent new identifiers arbitrarily; `Author`, `book.Author`, `_author`, `author`, and `addAuthor()` all clearly represent the same object type.
 
 ## Variables
 - Constants and configuration variables should be placed at the top of the file, and clearly identified via a comment
