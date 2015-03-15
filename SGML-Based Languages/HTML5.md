@@ -1,5 +1,7 @@
 # HTML5 Style Guide
 
+> *Note:* This style guide inherits rules from the [SGML-Based Languages Style Guide](./README.md) and the [Global Style Guide](../README.md)
+
 ## General Principles
 > "Strive to maintain HTML standards and semantics, but not at the expense of practicality. Use the least amount of markup with the fewest intricacies whenever possible." - [Mark Otto](http://markdotto.com/about/) ([source](http://mdo.github.io/code-guide/#html-practicality))
 

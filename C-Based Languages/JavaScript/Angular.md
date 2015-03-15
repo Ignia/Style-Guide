@@ -2,6 +2,8 @@
 
 While Angular follows best practices for [JavaScript](./Readme.md), it introduces some unique considerations with regard to Angular-specific concepts such as service, controllers, and $scope variables.
 
+> *Note:* This style guide inherits rules from the [JavaScript Style Guide](./README.md), [C-Based Languages Style Guide](../README.md), and the [Global Style Guide](../../README.md)
+
 > # Placeholder Content
 > This page is a placeholder; additional content will be provided at a later date.
 

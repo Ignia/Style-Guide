@@ -3,11 +3,13 @@
 While C#, Java, and JavaScript are very different languages, they do share one thing in common: C-based syntax. For this reason, many style preferences can be applied to each. Indeed, since developers may be switching back and forth among these languages, maintaining consistency between each is not only important for readability but also developer productivity.
 
 ## Style Guides
-- [JavaScript](./C-Based%20Languages/JavaScript)
-  - [TypeScript](./C-Based%20Languages/JavaScript/TypeScript.md)
-  - [JSON](./C-Based%20Languages/JavaScript/JSON.md)
-- [C#](./C-Based%20Languages/C%23)
-  - [Class Libraries](./C-Based%20Languages/C%23/Class%20Libraries.md)
+- [JavaScript](./JavaScript)
+  - [TypeScript](./JavaScript/TypeScript.md)
+  - [JSON](./JavaScript/JSON.md)
+- [C#](./C%23)
+  - [Class Libraries](./C%23/Class%20Libraries.md)
+
+> *Note:* This style guide inherits rules from the [Global Style Guide](../../README.md)
 
 ## Identifiers
 

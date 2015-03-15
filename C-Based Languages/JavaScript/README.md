@@ -1,8 +1,10 @@
 # JavaScript Style Guide
 
 ## Style Guides
-- [TypeScript](./C-Based%20Languages/JavaScript/TypeScript.md)
-- [JSON](./C-Based%20Languages/JavaScript/JSON.md)
+- [TypeScript](./TypeScript.md)
+- [JSON](./JSON.md)
+
+> *Note:* This style guide inherits rules from the [C-Based Languages Style Guide](../README.md), and the [Global Style Guide](../../README.md)
 
 ## Identifiers
 - Class members (e.g., properties, functions) and namespaces should be `camelCase` (e.g., `doSomething()`)

@@ -3,7 +3,9 @@
 SGML is, loosely speaking, the parent language of HTML and XML. While HTML5 technically broke away from SGML compliance it nonetheless provides the best umbrella term for styles related to these two technologies.
 
 ## Style Guides
-- [HTML5](./SGML-Based%20Languages/HTML5.md)
+- [HTML5](./HTML5.md)
+
+> *Note:* This style guide inherits rules from the [Global Style Guide](../README.md)
 
 ## Spacing
 - Child elements should always be nested *exactly* two spaces from their parent (this includes `<body>` and `<head>` in relation to `<html>`)
