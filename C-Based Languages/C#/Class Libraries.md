@@ -1,6 +1,6 @@
 # C# Class Libraries
 
-As class libraries are typically intended to be used by a broad selection of developers who may not have any insight (or access to) the internal workings of the library, they introduce their own unique challenges. While these are documented separately from our general [C# Style Guide](../C%23/README.md), Ignia considers these guidelines a best practice for all C# development.
+As class libraries are typically intended to be used by a broad selection of developers who may not have insight (or access to) the internal workings of the library, they introduce their own unique challenges. While these are documented separately from our general [C# Style Guide](../C%23/README.md), Ignia considers these guidelines a best practice for all C# development.
 
 > *Note:* This style guide inherits rules from the [C# Style Guide](../C%23/README.md), [C-Based Languages Style Guide](../README.md), and the [Global Style Guide](../../README.md)
 
