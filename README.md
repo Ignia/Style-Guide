@@ -43,7 +43,7 @@ Code may need to be executed by computers, but it also needs to be maintained by
 ## Spacing
 - Use soft tabs set to two spaces
 - Use tab stops set to eight spaces
-- Place empty lines to create visual groupings between related code
+- Insert empty lines to create visual groupings among related code blocks
 - Consecutive variable assignments should have their values set at line 33 (indented 32 characters)
 - Lines should be no longer than 96 characters, and must not exceed 128
 - End files with a single newline character
