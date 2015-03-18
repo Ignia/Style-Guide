@@ -22,15 +22,15 @@ As class libraries are typically intended to be used by a broad selection of dev
 
 > *Note:* Ignia uses `Ignia` for the `<company>` on internal projects and reusable libraries, but the client name for custom client code
 
-- "If your brand employs nontraditional casing, you should follow the casing defined by your brand, even if it deviates from normal namespace casing" ([source](https://msdn.microsoft.com/en-us/library/ms229026(v=vs.110).aspx))
 - Namespace identifiers should typically be pluralized (exceptions: proper names, abbreviations) ([source](https://msdn.microsoft.com/en-us/library/ms229026(v=vs.110).aspx))
 - Do not use the same identifier for a namespace as well as a class ([source](https://msdn.microsoft.com/en-us/library/ms229026(v=vs.110).aspx))
+- "If your brand employs nontraditional casing, you should follow the casing defined by your brand, even if it deviates from normal namespace casing" ([source](https://msdn.microsoft.com/en-us/library/ms229026(v=vs.110).aspx))
 - Avoid generic identifier names that are likely to introduce conflicts with other class names ([source](https://msdn.microsoft.com/en-us/library/ms229026(v=vs.110).aspx))
 - Interfaces should begin with `I` and use adjective phrases; nouns are more appropriate for abstract classes ([source](https://msdn.microsoft.com/en-us/library/ms229040(v=vs.110).aspx))
 - `Attribute`, `EventHandler`, `EventArgs`, `Exception`, `Collection`, and `Permission` are all expected suffixes for corresponding class types ([source](https://msdn.microsoft.com/en-us/library/ms229040(v=vs.110).aspx))
 
 ## Spacing
-- The `namespace` may be introduce above a file header; this allows the file header to document the `class`, not the `namespace` (which is usually not unique to the file)
+- The `namespace` may be introduced above a file header; this allows the file header to document the `class`, not the `namespace` (which is usually not unique to the file)
 
 ## Formatting
 - Each attribute should be placed on its own line
