@@ -27,10 +27,10 @@ Code may need to be executed by computers, but it also needs to be maintained by
 - [No Opinion](#no-opinion)
 
 ## General Principles
-- Be consistent
 - Do not be afraid of whitespace; it greatly enhances readability
 - Leverage well-established conventions; break with convention only with good rationale
 - When working with existing code bases, always follow any established conventions (i.e., ignore this document)
+- Be consistent!
 
 ## Identifiers
 - Avoid arbitrary abbreviations in identifiers (e.g., variables, class names, etc.)
@@ -42,18 +42,18 @@ Code may need to be executed by computers, but it also needs to be maintained by
 
 ## Spacing
 - Use soft tabs set to two spaces
-- Use tab stops set to eight spaces
+- Use tab stops set to eight spaces, when supported
 - Insert empty lines to create visual groupings among related code blocks
 - Consecutive variable assignments should have their values set at line 33 (indented 32 characters)
-- Lines should be no longer than 96 characters, and must not exceed 128
+- Lines should be no longer than 96 characters, and must not exceed 128 (including indentation)
 - End files with a single newline character
 
 ## Comments
-- Comments are always preceded by a blank line
-- Comments start with a capital letter; full sentences end with a period.
+- Comments are always preceded by a blank line, unless they are on the same line as code
 - There must be a single space between the comment token and the comment text
+- Comments start with a capital letter; full sentences end with a period
 - Author notes should be prefixed with `### {ABCD} {EFG}{012349}: ` where:
-  - `ABCD` is `NOTE`, `TODO`, or `HACK`
+  - `ABCD` is `NOTE`, `TODO`, `HACK`, `EDIT`, or `REM`
   - `{EFG}` is the author's initials (e.g., `JJC`)
   - `012349` is the date in the format `DDMMYY` (e.g., `031315`)
   - E.g., `### TODO JJC031315: Fix Internet Explorer 9 compatibility issue with CSS3 selectors.`
@@ -65,7 +65,7 @@ Code may need to be executed by computers, but it also needs to be maintained by
 - Unix-style carriage returns (i.e., `\n`) v. Windows-style (`\r\n`)
 
 ## Feedback
-If you find errors in this guide, or feel we should reevaluate a particular standard, feel free to [open an issue](https://github.com/Ignia/Style-Guide/issues).
+If you find errors in this guide, or feel we should reevaluate a particular standard, feel free to [open an issue](https://github.com/Ignia/Style-Guide/issues). We welcome feedback.
 
 <!--
 ## Acknowledgments
