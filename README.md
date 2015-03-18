@@ -69,7 +69,7 @@ body {
   - `{EFG}` is the author's initials (e.g., `JJC`)
   - `012349` is the date in the format `DDMMYY` (e.g., `031315`)
 ```js
-// ### TODO JJC031315: Fix Internet Explorer 9 compatibility issue with CSS3 selectors.
+//### TODO JJC031315: Fix Internet Explorer 9 compatibility issue with CSS3 selectors.
 ```
 
 ## Encoding
