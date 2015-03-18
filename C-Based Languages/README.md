@@ -86,7 +86,6 @@ var author {
 - Always use braces with multi-line blocks (may skip for single-line, single-statement expressions)
 - `if` and `else` should always be on the same column; same with `try`, `catch`, `finally`
   - i.e., do not place `else`, `catch`, or `finally` on the same line as the previous closing brace (`}`)
-- Do not use leading commas; commas should always appear *after* their preceding statement
 - Any `;` used as a statement terminator must be at the end of the line (i.e., only one statement per line)
 - The `?` and `:` in a ternary conditional must have space on *both* sides
 
@@ -124,6 +123,7 @@ var addAuthor = function(author) {
   - If this is not possible, function arguments should each be placed on their own line and indented two spaces
 - If expressions must be placed on multiple lines, each new line should begin with the operator (e.g., `+`) and be indented two spaces
 - If method chains must be placed on multiple lines, each new line should begin with the period (i.e., `.`) and be indented two spaces
+- Do not use leading commas; commas should always appear *after* their preceding statement
 
 ```js
 var book = new Book(
