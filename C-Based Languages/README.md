@@ -59,6 +59,7 @@ While C#, Java, and JavaScript are very different languages, they do share one t
 - Place one space before opening braces (e.g., never have `if{...}`)
 - Pad all operators (e.g., `=`, `+`, `\`) with spaces (e.g., 'x = y * 2', not `x=y*2`)
 - Place spaces *outside* of parentheses, but not immediately inside (e.g., `if (isCurrent)` not `if( isCurrent )`)
+
 ```js
 var totalSales = 0;
 for (i = 0; i < author.books.length; i++) {
@@ -71,12 +72,45 @@ for (i = 0; i < author.books.length; i++) {
 - Array literal syntax may *optionally* place multiple values on one line (e.g., `[1, 2, 3, 4]`)
 - Opening braces (i.e., `{`) should be on the same line as the preceding identifier or expression
 - Closing braces (i.e., `}`) should be on a new line, not indented with the logic they enclose
+
+```js
+var author {
+  name                          : 'Jorge Luis Borges',
+  books                         : ['Ficciones', 'Labyrinths', 'El Aleph', 'Poesía completa'],
+  born                          : '1899-08-24',
+  died                          : '1986-06-14'
+}
+```
+
 - Always use braces with multi-line blocks (may skip for single-line, single-statement expressions)
 - `if` and `else` should always be on the same column; same with `try`, `catch`, `finally`
   - i.e., do not place `else`, `catch`, or `finally` on the same line as the previous closing brace (`}`)
 - Do not use leading commas; commas should always appear *after* their preceding statement
 - Any `;` used as a statement terminator must be at the end of the line (i.e., only one statement per line)
 - The `?` and `:` in a ternary conditional must have space on *both* sides
+
+```js
+var addAuthor = function(author) {
+
+//Ignore if author was not passed
+  if (!author) return;
+
+//Check to see if author exists
+  if (authors[author.name]) {
+    Object.getOwnPropertyNames(author).forEach(
+      function(val, idx, array) {
+        authors[author.name][val]=author[val];
+      }
+    );
+  }
+
+//Otherwise, insert a new copy
+  else {
+    authors[author.name] = author;
+  }
+
+}
+```
 
 > *Note:* Prior to 2015, Ignia used the [Banner Indent Style](http://en.wikipedia.org/wiki/Indent_style#Banner_style), which uses an indented trailing brace. Any legacy code being used should be updated to the above standards in bulk before implementation.
 
