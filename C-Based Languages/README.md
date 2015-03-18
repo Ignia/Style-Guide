@@ -119,11 +119,38 @@ var addAuthor = function(author) {
 
 ### Line Wrapping
 - If *any* elements must be placed on a new line, consider moving *all* elements to new lines for consistency
-- Follow standard indentation rules; subsequent lines should not be indented more than two spaces (e.g., to align with a `(`, for instance)
+- Follow standard indentation rules; subsequent lines should *not* be indented more than two spaces (e.g., to align with a `(`, for instance)
 - Function arguments should be on the same line as the function
   - If this is not possible, function arguments should each be placed on their own line and indented two spaces
 - If expressions must be placed on multiple lines, each new line should begin with the operator (e.g., `+`) and be indented two spaces
 - If method chains must be placed on multiple lines, each new line should begin with the period (i.e., `.`) and be indented two spaces
+
+```js
+var book = new Book(
+  'Ficcionnes',
+  'Jorge Luis Borges',
+  '1994-02-01',
+  180
+);
+
+var excerpt =
+  'Nosotros, de un vistazo, percibimos tres copas en una mesa; Funes, todos los vástagos y racimos y frutos que comprende una parra. '
+  + 'Sabía las formas de las nubes australes del amanecer del 30 de abril de 1882 y podía com- pararlas en el recuerdo con las vetas '
+  + 'de un libro en pasta española que sólo había mirado una vez y con las líneas de la espuma que un remo levantó en el Río Negro la víspera de la acción del Quebracho.';
+
+book
+  .save()
+  .success(
+    function(
+      data,
+      status,
+      headers,
+      config
+    ) {
+    ...
+    }
+  )
+```
 
 ## Comments
 - Use documentation-style comments as permitted by each language (e.g., XmlDoc in C#)
