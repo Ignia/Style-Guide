@@ -47,7 +47,7 @@ Code may need to be executed by computers, but it also needs to be maintained by
 - Consecutive variable or property assignments should have their values set at line 33 (indented 32 characters), e.g.,
 ```css
 body {
-  background-color:             : '#fff';
+  background-color:             : rgba(255, 255, 255, 1);
   font-family:                  : 'Helvetica',                  // Optional multi-line format
                                   'Arial',
                                   sans-serif;
