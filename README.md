@@ -48,13 +48,14 @@ Code may need to be executed by computers, but it also needs to be maintained by
 ```css
 body {
   background-color:             : '#fff';
-  font-family:                  : 'Helvetica', 'Arial', sans-serif;
+  font-family:                  : 'Helvetica',                  // Optional multi-line format
+                                  'Arial',
+                                  sans-serif;
   font-size:                    : 12px;
   font-size:                    : 1.2rem;
   line-height:                  : 14px;
-  line-height:                  : 1.4rem;
+  line-height:                  : 1.3rem;
 }
-
 ```
 - Lines should be no longer than 96 characters, and must not exceed 128 (including indentation)
 - End files with a single newline character
