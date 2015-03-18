@@ -133,14 +133,14 @@ var book = new Book(
   180
 );
 
-var excerpt =
+book.excerpt =
   'Nosotros, de un vistazo, percibimos tres copas en una mesa; Funes, todos los vástagos y racimos y frutos '
   + 'que comprende una parra. Sabía las formas de las nubes australes del amanecer del 30 de abril de 1882 '
   + 'y podía compararlas en el recuerdo con las vetas de un libro en pasta española que sólo había mirado '
   + 'una vez y con las líneas de la espuma que un remo levantó en el Río Negro la víspera de la acción del '
   + 'Quebracho.';
 
-book
+books
   .save()
   .success(
     function(
