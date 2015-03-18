@@ -46,7 +46,7 @@ While C#, Java, and JavaScript are very different languages, they do share one t
 - Identifiers representing collections (e.g., arrays) should be pluralized (e.g., `author.books` may represent a collection of books an author has written)
 - If only one object instance is expected to exist in scope, and the class name describes its purpose, the instance variable may be named after the class (e.g., a class named `DatabaseConnection` may be represented by instance variable `databaseConnection`)
 - If a type (reference) property has no additional contextual meaning beyond that of its type, use the name of the type (e.g., `book.author` to represent an `Author` type)
-  - An exception to this is for cases where there is clear contextual meaning beyond the type name (e.g., `book.editor` or `book.PrimaryAuthor`)
+  - An exception to this is for cases where there is clear contextual meaning beyond the type name (e.g., `book.editor` or `book.primaryAuthor`)
 - Define one class per file; the filename should be the same as the class name, including casing (e.g., an `Author` class should be in an `Author.js` file)
 
 > **Important**: Do not invent new identifiers arbitrarily; `Author`, `book.Author`, `_author`, `author`, and `addAuthor()` all represent the same object type.
