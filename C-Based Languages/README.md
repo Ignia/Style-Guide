@@ -69,10 +69,10 @@ for (i = 0; i < author.books.length; i++) {
 ```
 
 ## Formatting
-- Object literal syntax should place one property per line, indented two spaces
-- Array literal syntax may *optionally* place multiple values on one line (e.g., `[1, 2, 3, 4]`)
 - Opening braces (i.e., `{`) should be on the same line as the preceding identifier or expression
 - Closing braces (i.e., `}`) should be on a new line, not indented with the logic they enclose
+- Object literal syntax should place one property per line, indented two spaces
+- Array literal syntax may *optionally* place multiple values on one line (e.g., `[1, 2, 3, 4]`)
 
 ```js
 var author {
