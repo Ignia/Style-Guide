@@ -59,6 +59,7 @@ While C#, Java, and JavaScript are very different languages, they do share one t
 - Place one space before opening braces (e.g., never have `if{...}`)
 - Pad all operators (e.g., `=`, `+`, `\`) with spaces (e.g., 'x = y * 2', not `x=y*2`)
 - Place spaces *outside* of parentheses, but not immediately inside (e.g., `if (isCurrent)` not `if( isCurrent )`)
+- Do not place spaces outside parenthesis for method calls or brackets for indexers
 
 ```js
 var totalSales = 0;
@@ -99,7 +100,7 @@ var addAuthor = function(author) {
   if (authors[author.name]) {
     Object.getOwnPropertyNames(author).forEach(
       function(val, idx, array) {
-        authors[author.name][val]=author[val];
+        authors[author.name][val] = author[val];
       }
     );
   }
