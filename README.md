@@ -62,13 +62,15 @@ body {
 
 ## Comments
 - Comments are always preceded by a blank line, unless they are on the same line as code
-- There must be a single space between the comment token and the comment text
+- When using multi-line comments, there must be a single space between the comment token and the comment text
 - Comments start with a capital letter; full sentences end with a period
 - Author notes should be prefixed with `### {ABCD} {EFG}{012349}: ` where:
   - `ABCD` is `NOTE`, `TODO`, `HACK`, `EDIT`, or `REM`
   - `{EFG}` is the author's initials (e.g., `JJC`)
   - `012349` is the date in the format `DDMMYY` (e.g., `031315`)
-  - E.g., `### TODO JJC031315: Fix Internet Explorer 9 compatibility issue with CSS3 selectors.`
+```js
+// ### TODO JJC031315: Fix Internet Explorer 9 compatibility issue with CSS3 selectors.
+```
 
 ## Encoding
 - Use UTF-8 encoding

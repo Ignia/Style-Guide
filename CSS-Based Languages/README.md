@@ -108,7 +108,7 @@ input:active,
 | LEVEL 2 COMMENT
 \---------------------------------------------------------------------------------------------*/
 
-// Level 3 comment
+//Level 3 comment
 ```
 > *Note:* When using a CSS preprocessor, the `//` format should be used instead, in order to prevent comments from being compiled with the CSS. See [Sass Style Guide](./Sass.md).
 
