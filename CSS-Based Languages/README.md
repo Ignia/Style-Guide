@@ -10,11 +10,11 @@ CSS-Based languages include CSS itself, as well as CSS preprocessors such as Sas
 ## Contents
 - [Performance](#performance)
 - [Identifiers](#identifiers)
+  - [Capitalization](#capitalization)
 - [Selectors](#selectors)
 - [Spacing](#spacing)
 - [Formatting](#formatting)
 - [Comments](#comments)
-- [Capitalization](#capitalization)
 - [Declaration Order](#declaration-order)
 - [Language Features](#language-features)
 - [No Opinion](#no-opinion)
@@ -31,6 +31,10 @@ With a few exceptions, maintainability trumps performance with CSS. While perfor
 - Begin state classes with `.is-` (e.g., `.is-active`)
 - Begin JavaScript exclusive classes with `.js-`.
 - If lack of JavaScript support is a concern, use a `js-hidden` class to provide fallback content (and hide using JavaScript)
+
+### Capitalization
+- Class identifiers should be in lisp-case (lowercase with hyphens)
+- Declaration properties and values should be lowercase (e.g., `color: #f1f1f1`)
 
 ## Selectors
 - One selector per line (i.e., place a line-break after a `,` in a selector)
@@ -93,29 +97,20 @@ input:active,
 - Level 1 and 2 comments should have capitalized titles; optional descriptions should be sentence case
 - Comments should always be on their own line(s)
 
-### Level 1
 ```css
 /*==============================================================================================
 | LEVEL 1 COMMENT
 >-----------------------------------------------------------------------------------------------
 | With optional description
 \=============================================================================================*/
-```
-### Level 2
-```css
+
 /*----------------------------------------------------------------------------------------------
 | LEVEL 2 COMMENT
 \---------------------------------------------------------------------------------------------*/
-```
-### Level 3
-```css
+
 // Level 3 comment
 ```
 > *Note:* When using a CSS preprocessor, the `//` format should be used instead, in order to prevent comments from being compiled with the CSS. See [Sass Style Guide](./Sass.md).
-
-## Capitalization
-- Class identifiers should be in lisp-case (lowercase with hyphens)
-- Declaration properties and values should be lowercase (e.g., `color: #f1f1f1`)
 
 ## Declaration Order
 - Declarations should be ordered by:
@@ -133,9 +128,9 @@ input:active,
 
 ## No Opinion
 - Indentation of related rule-sets
-- Omit unit specification after 0 values
-- Use of shorthand syntax
-- Use of 3 v. 6 hexadecimal color format
+- Omission of unit specification after 0 values (e.g., `0` v. `0px`)
+- Use of shorthand syntax (e.g., `border-color: #000` v. `border: 1px solid #000`)
+- Use of 3 v. 6 hexadecimal color format (e.g., `#fff` v. `#ffffff`)
 
 ## Acknowledgments
 - [Pedantic CSS](http://pedantic-css.readme.io/v1.0)
