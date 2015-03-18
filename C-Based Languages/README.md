@@ -41,12 +41,13 @@ While C#, Java, and JavaScript are very different languages, they do share one t
 - Identifiers should *not* contain underscores (except as noted above), hyphens, or numbers
 - Identifiers should *not* use [Hungarian notation](https://msdn.microsoft.com/en-us/library/aa260976%28v=vs.60%29.aspx) (i.e., `strName`, `btnPassword`)
 - Boolean identifiers should begin with a present indicative (e.g., `isVisible`, `hasReplies`, etc.)
-- Classes, namespaces, and non-Boolean properties should use nouns (e.g., `Author`, `Connection`); methods and events should use verbs (e.g., `addAuthor()`, `connect()`)
+- Classes, namespaces, and non-Boolean properties should use nouns (e.g., `Author`, `Connection`)
+- Methods and events should use verbs (e.g., `addAuthor()`, `connect()`)
 - Events should use present (e.g., `loading`) and past tenses (e.g., `loading`) to indicate before and after states
-- Identifiers representing collections (e.g., arrays) should be pluralized (e.g., `author.books` may represent a collection of books an author has written)
-- If only one object instance is expected to exist in scope, and the class name describes its purpose, the instance variable may be named after the class (e.g., a class named `DatabaseConnection` may be represented by instance variable `databaseConnection`)
-- If a type (reference) property has no additional contextual meaning beyond that of its type, use the name of the type (e.g., `book.author` to represent an `Author` type)
-  - An exception to this is for cases where there is clear contextual meaning beyond the type name (e.g., `book.editor` or `book.primaryAuthor`)
+- Identifiers representing collections (e.g., arrays) should be pluralized (e.g., `author.books`)
+- If a type (reference) property has no additional contextual meaning beyond that of its type, give it the name of the type (e.g., `book.author` to represent an `Author` type)
+  - If there *is* a clear contextual meaning beyond the type name, reflect that in the name (e.g., `book.editor` or `book.primaryAuthor`)
+- If only one object instance is expected to exist in scope, and the type name describes its purpose, the instance variable may be named after the type (e.g., using `databaseConnection` to represent the type `DatabaseConnection`)
 - Define one class per file; the filename should be the same as the class name, including casing (e.g., an `Author` class should be in an `Author.js` file)
 
 > **Important**: Do not invent new identifiers arbitrarily; `Author`, `book.Author`, `_author`, `author`, and `addAuthor()` all represent the same object type.
