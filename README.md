@@ -30,7 +30,7 @@ Code may need to be executed by computers, but it also needs to be maintained by
 - Do not be afraid of whitespace; it greatly enhances readability
 - Leverage well-established conventions; break with convention only with good rationale
 - When working with existing code bases, always follow any established conventions (i.e., ignore this document)
-- Be consistent!
+- ***Be consistent!***
 
 ## Identifiers
 - Avoid arbitrary abbreviations in identifiers (e.g., variables, class names, etc.)
