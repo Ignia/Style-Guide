@@ -42,7 +42,8 @@ While most of Ignia's front-end code is written exclusively in HTML5 (without an
   *   Adds an instance of Book to the Books collection.
   * </summary>
   * <remarks>
-  *   Adding a Book object to the Books collection does not automatically save the instance of the Book to the database. To save the update, call <see cref="Save()" />.
+  *   Adding a Book object to the Books collection does not automatically save the instance of the Book to the
+  *   database. To save the update, call <see cref="Save()" />.
   * </remarks>
   * <param name="book">The reference to the instance of the Book to be added to the Books collection.</param>
   * <returns>Returns a reference to <paramref name="book" />.</returns>
