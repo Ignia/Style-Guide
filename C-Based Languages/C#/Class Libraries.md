@@ -29,16 +29,7 @@ As class libraries are typically intended to be used by a broad selection of dev
 - Interfaces should begin with `I` and use adjective phrases; nouns are more appropriate for abstract classes ([source](https://msdn.microsoft.com/en-us/library/ms229040(v=vs.110).aspx))
 - `Attribute`, `EventHandler`, `EventArgs`, `Exception`, `Collection`, and `Permission` are all expected suffixes for corresponding class types ([source](https://msdn.microsoft.com/en-us/library/ms229040(v=vs.110).aspx))
 
-## Spacing
-- The `namespace` may be introduced above a file header; this allows the file header to document the `class`, not the `namespace` (which is usually not unique to the file)
-
-## Formatting
-- Each attribute should be placed on its own line
-
 ## Language Features
-- Local variables *should* use type inference (i.e., the `var` keyword for declaring variables)
-- Any `using` directives should be placed inside the `namespace`, not outside of it
-- Prefer default arguments to overloading unless default arguments will cause unintuitive combinations of parameters
 - Only use public fields for constants; otherwise, expose properties ([source](https://msdn.microsoft.com/en-us/library/ms229057(v=vs.110).aspx))
 - Consider using extension methods as a means of providing concrete implementations for general interface methods ([source](https://msdn.microsoft.com/en-us/library/dn169395(v=vs.110).aspx))
 - Use the least derived type for method parameters; e.g., use an interface or base class when its properties are sufficient ([source](https://msdn.microsoft.com/en-us/library/ms229015(v=vs.110).aspx))
