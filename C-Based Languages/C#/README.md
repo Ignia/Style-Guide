@@ -12,11 +12,15 @@ While most of Ignia's front-end code is written exclusively in HTML5 (without an
 - [Spacing](#spacing)
 - [Formatting](#formatting)
 - [Comments](#comments)
+  - [XML Documentation](#xml-documentation)
 - [Language Features](#language-features)
   - [ASP.NET](#aspnet)
     - [Caching](#caching)
     - [ASP.NET Web Forms](#aspnet-web-forms)
-- [Acknowledgments](#acknowledgments)
+
+<!--
+  - [Acknowledgments](#acknowledgments)
+  -->
 
 ## Identifiers
 - Class members (e.g., properties, functions) and namespaces should be `PascalCase` (e.g., `DoSomething()`)
@@ -28,14 +32,16 @@ While most of Ignia's front-end code is written exclusively in HTML5 (without an
 - Each attribute should be placed on its own line
 
 ## Comments
+
+### XML Documentation
 - Classes and class members should be documented using Microsoft's [XML Documentation Features](https://msdn.microsoft.com/en-us/library/z04awywx.aspx)
-  - XML elements within comments should follow Ignia's [SGML formatting rules](../../SGML-Based%20Languages/README.md)
-  - XML documentation should use the multi-line comment format with each line prefixed with two spaces and and asterisk
-  - The closing comment tag should be on its own line and indented two spaces
-  - XML comments should be indented one space from the preceding asterisk, thus starting at column 5 (four spaces from the start of the line)
-  - The first element (typically the `summary` element) should begin on the same line as the opening comment (i.e., `/** <summary>`)
-  - If the documentation requires more than one line, it should start on a new line, and be indented two spaces from the parent XML element (i.e., three spaces from the preceding asterisk)
-  - All members should define `summary`; members should define `returns` if they are not `void`; methods should define `param`; `remarks` is optional, but encouraged
+- XML elements within comments should follow Ignia's [SGML formatting rules](../../SGML-Based%20Languages/README.md)
+- XML documentation should use the multi-line comment format with each line prefixed with two spaces and and asterisk
+- The closing comment tag should be on its own line and indented two spaces
+- XML comments should be indented one space from the preceding asterisk, thus starting at column 5 (four spaces from the start of the line)
+- The first element (typically the `summary` element) should begin on the same line as the opening comment (i.e., `/** <summary>`)
+- If the documentation requires more than one line, it should start on a new line, and be indented two spaces from the parent XML element (i.e., three spaces from the preceding asterisk)
+- All members should define `summary`; members should define `returns` if they are not `void`; methods should define `param`; `remarks` is optional, but encouraged
 
 ```c#
 /** <summary>
