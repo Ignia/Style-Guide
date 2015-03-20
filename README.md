@@ -9,7 +9,7 @@ Code may need to be executed by computers, but it also needs to be maintained by
 - [C-Based Languages](./C-Based%20Languages/)
   - [JavaScript](./C-Based%20Languages/JavaScript)
     - [TypeScript](./C-Based%20Languages/JavaScript/TypeScript.md)
-    - [JSON](./C-Based%20Languages/JavaScript/JSON.md)
+    - [JSON](./C-Based%20Languages/JavaScript/JSON.md) (and JavaScript object literal notation)
   - [C#](./C-Based%20Languages/C%23)
     - [Class Libraries](./C-Based%20Languages/C%23/Class%20Libraries.md)
 - [CSS-Based Languages](./CSS-Based%20Languages/)
