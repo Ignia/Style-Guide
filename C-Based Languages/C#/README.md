@@ -57,8 +57,8 @@ While most of Ignia's front-end code is written exclusively in HTML5 (without an
 ```
 
 ## Language Features
-- Local variables *should* use type inference (i.e., the `var` keyword for declaring variables)
 - Any `using` directives should be placed inside the `namespace`, not outside of it
+- Local variables *should* use type inference (i.e., the `var` keyword for declaring variables)
 - Prefer default arguments to overloading unless default arguments will cause unintuitive combinations of parameters
 
 ### ASP.NET
