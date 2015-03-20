@@ -13,9 +13,9 @@ While most of Ignia's front-end code is written exclusively in HTML5 (without an
 - [Formatting](#formatting)
 - [Comments](#comments)
 - [Language Features](#language-features)
-  - [ASP.NET](#asp-net)
+  - [ASP.NET](#aspnet)
     - [Caching](#caching)
-    - [ASP.NET Web Forms](#asp-net-web-forms)
+    - [ASP.NET Web Forms](#aspnet-web-forms)
 - [Acknowledgments](#acknowledgments)
 
 ## Identifiers
