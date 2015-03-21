@@ -2,7 +2,7 @@
 Ignia's internal style guide for languages and formats we work in most frequently.
 
 ## Motivation
-Code may need to be executed by computers, but it also needs to be maintained by humans. For this reason, Ignia places high value on code that is readable, uniformly formatted, and consistent with emerging conventions. Ignia has not only maintained rigid coding standards since our inception in 1998, but continues to evolve them to keep pace with both technology and market trends.
+Code needs to be executed by computers, but it also needs to be maintained by humans. For this reason, Ignia places high value on code that is readable, uniformly formatted, and consistent with emerging conventions. Ignia has not only maintained rigid coding standards since our inception in 1998, but continues to evolve them to keep pace with both technology and market trends.
 
 ## Style Guides
 - [Common Rules](#contents) (see below)
