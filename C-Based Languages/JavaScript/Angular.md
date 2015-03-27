@@ -28,6 +28,8 @@ While Angular follows best practices for [JavaScript](./Readme.md), it introduce
 - Centralize reusable logic in services; controllers should only contain minimal view-specific logic
 - Prefer to enclose Angular scripts in self-executing anonymous functions in order to prevent unnecessary polluting of the global scope
 - When using `ng-route`, prefer `controllerAs` to relying on `$scope` (this allows scope variables to be assigned to `this`)
+- When chaining multiple promises, consider adding a `catch()` handler to centralize error handling
+- Prefer `ng-bind` to `{{interpolation}}` in views to ensure that binding expressions are not temporarily displayed while loading the Angular controller
 
 ```js
 (function() {
@@ -48,4 +50,4 @@ While Angular follows best practices for [JavaScript](./Readme.md), it introduce
 
 ## Acknowledgments
 - [AngularJS Style Guide](https://github.com/mgechev/angularjs-style-guide) by [Minko Gechev](https://github.com/mgechev)
-
+- [Angular Style Guide](https://github.com/johnpapa/angular-styleguide) by [John Papa](https://github.com/johnpapa)
