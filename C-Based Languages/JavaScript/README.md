@@ -36,16 +36,21 @@
 - Namespaces should be used when possible, using either library features or an object wrapper
 - Do not use `eval()` or Internet Explorer's conditional comments (e.g., `/*@cc_on ... @*/`)
 - Do not use `for in` loops for arrays ([source](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml?showone=for-in_loop#for-in_loop))
-- Use function expressions (e.g., `var callback = function() {}` over function declarations (e.g., `function callback() {}`)
-  - The exception is constructors, which should use function declarations with the object name
 - Do not use wrapper objects for primitive types (e.g., `new Boolean(true)`); casting is fine
 - When possible, use JavaScript's boolean expressions (e.g., `if (variable) {}`) ([source](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml?showone=Tips_and_Tricks#Tips_and_Tricks))
 - Use the literal syntax for creating objects (e.g., `{}` not `new Object()`) and arrays (e.g., `[]` not `new Array()`)
 - Assign methods to the prototype object, instead of overwriting the prototype with a new object
 - Use proper feature detection instead of relying on user agents; [Modernizr](http://modernizr.com/) encouraged
 
+<!--
+- Use function expressions (e.g., `var callback = function() {}` over function declarations (e.g., `function callback() {}`)
+  - The exception is constructors, which  use function declarations with the object name
+  Consider: JSCS for code style consistency? https://github.com/johnpapa/angular-styleguide#use-an-options-file-1
+-->
+
 ## Comments
 - Use JSDoc-style comments to allow for optional generation of documentation
+- If namespaces are used (e.g., with framework modules) use `namespace` and `memberOf` to provide documentation
 
 ```
 /**
