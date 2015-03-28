@@ -8,6 +8,7 @@ Code needs to be executed by computers, but it also needs to be maintained by hu
 - [Common Rules](#contents) (see below)
 - [C-Based Languages](./C-Based%20Languages/)
   - [JavaScript](./C-Based%20Languages/JavaScript)
+    - [Angular](./C-Based%20Languages/JavaScript/Angular.md)
     - [TypeScript](./C-Based%20Languages/JavaScript/TypeScript.md)
     - [JSON](./C-Based%20Languages/JavaScript/JSON.md) (and JavaScript object literal notation)
   - [C#](./C-Based%20Languages/C%23)
