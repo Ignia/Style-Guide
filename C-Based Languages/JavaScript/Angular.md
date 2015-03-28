@@ -9,6 +9,7 @@ While Angular follows best practices for [JavaScript](./Readme.md), it introduce
 - [Formatting](#formatting)
 - [Files](#files)
 - [Language Features](#language-features)
+  - [Data Binding](#data-binding)
   - [Controllers and Routes](#controllers-and-routes)
   - [Services](#services)
   - [Directives](#directives)
@@ -39,10 +40,6 @@ While Angular follows best practices for [JavaScript](./Readme.md), it introduce
 - Always include dependency injection parameters using optional array format (e.g., `angular.controller('Name', ['$service', function ($service) { ... }])`), `$inject` *or* [ngAnnotate](https://github.com/olov/ng-annotate)'s `/* @ngInject */` annotation; these methods ensure compatibility with code obfuscation (e.g., [UglifyJS](http://lisperator.net/uglifyjs/))
 - Do not use function expressions (e.g., `function() {}`) for public methods; instead, use function declarations (e.g., `function methodName() {}`) ([source](https://github.com/johnpapa/angular-styleguide#style-y034))
 - When chaining multiple promises, consider adding a `catch()` handler to centralize error handling
-- Prefer `ng-bind` (or `ng-cloak`) to `{{interpolation}}` in views to ensure that binding expressions are not temporarily displayed while loading the Angular controller
-- Always use the `ng-src`, `ng-href` or `ng-style` directives when binding dynamic content to images, links, or styled elements respectively
-- If data-bound attributes do not need to be updated after the initial digest cycle, use the [one-time binding](https://docs.angularjs.org/guide/expression#one-time-binding) syntax (e.g., `::property`); this improves performance
-- For performance reasons, avoid using `$watch` unless absolutely necessary; for collections, prefer `$watchCollection` unless deep watching is required by the application; for very large collections, consider using [angular-immutable](http://blog.mgechev.com/2015/03/02/immutability-in-angularjs-immutablejs/)
 
 > *Consider* using a thin app module with features being broken out into sub-modules ([source](https://github.com/johnpapa/angular-styleguide#keep-the-app-module-thin)), each with their own app manifest ([source](https://github.com/johnpapa/angular-styleguide#module-dependencies))
 
@@ -73,6 +70,12 @@ While Angular follows best practices for [JavaScript](./Readme.md), it introduce
 
 }());
 ```
+
+### Data Binding
+- Prefer `ng-bind` (or `ng-cloak`) to `{{interpolation}}` in views to ensure that binding expressions are not temporarily displayed while loading the Angular controller
+- Always use the `ng-src`, `ng-href` or `ng-style` directives when binding dynamic content to images, links, or styled elements respectively
+- If data-bound attributes do not need to be updated after the initial digest cycle, use the [one-time binding](https://docs.angularjs.org/guide/expression#one-time-binding) syntax (e.g., `::property`); this improves performance
+- For performance reasons, avoid using `$watch` unless absolutely necessary; for collections, prefer `$watchCollection` unless deep watching is required by the application; for very large collections, consider using [angular-immutable](http://blog.mgechev.com/2015/03/02/immutability-in-angularjs-immutablejs/)
 
 ### Controllers and Routes
 - Centralize reusable logic in services; controllers should only contain minimal view-specific logic
