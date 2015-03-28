@@ -9,6 +9,9 @@ While Angular follows best practices for [JavaScript](./Readme.md), it introduce
 - [Formatting](#formatting)
 - [Files](#files)
 - [Language Features](#language-features)
+  - [Controllers and Routes](#controllers-and-routes)
+  - [Services](#services)
+  - [Directives](#directives)
 - [Acknowledgments](#acknowledgments)
 
 ## Identifiers
@@ -29,33 +32,13 @@ While Angular follows best practices for [JavaScript](./Readme.md), it introduce
 
 ## Language Features
 - Do not store modules in a global variable; instead, instantiate them using `angular.module('Name', [])` and extend them using `angular.module('Name')`
+- Enclose Angular scripts in an immediately-invoked function expression (IIFE) in order to prevent unnecessary polluting of the global scope
 - Always include dependency injection parameters using optional array format (e.g., `angular.controller('Name', ['$service', function ($service) { ... }])`), `$inject` *or* [ngAnnotate](https://github.com/olov/ng-annotate)'s `/* @ngInject */` annotation; these methods ensure compatibility with code obfuscation (e.g., [UglifyJS](http://lisperator.net/uglifyjs/))
-- Prefer passing references to named functions as callbacks to directly defining anonymous functions
-- Centralize reusable logic in services; controllers should only contain minimal view-specific logic
-- Prefer to enclose Angular scripts in an immediately-invoked function expression (IIFE) in order to prevent unnecessary polluting of the global scope
-- When using `ng-route`, prefer `controllerAs` to relying on `$scope` (this allows scope variables to be assigned to `this`)
-  - Use a consistent object name for `ControllerAs` (e.g., `model`), and assign it to `this` within controllers; e.g., `var model = this;`
+- Do not use function expressions (e.g., `function() {}`) for public methods; instead, use function declarations (e.g., `function methodName() {}`) ([source](https://github.com/johnpapa/angular-styleguide#style-y034))
 - When chaining multiple promises, consider adding a `catch()` handler to centralize error handling
 - Prefer `ng-bind` to `{{interpolation}}` in views to ensure that binding expressions are not temporarily displayed while loading the Angular controller
-- Do not use function expressions (e.g., `function() {}`) for public methods; instead, use function declarations (e.g., `function methodName() {}`) ([source](https://github.com/johnpapa/angular-styleguide#style-y034))
-- Wrap intialization logic in an `init()` method within controllers to keep logic centralized and simplify refresh requirements ([source](https://github.com/johnpapa/angular-styleguide#controller-activation-promises))
-- Use factories instead of services
-- Define the returnable object at the top of a factory or directive, to establish its public interface; all methods should point to function declarations after the returned object
-- If a service method executes a promise, prefer returning the promise so it can be chained by the caller
-- Do not provide DOM manipulation from a controller; use directives instead (e.g., existing directives such as `ng-show` or custom directives)
-- Prefer assigning directives to elements (`restrict: 'E'`) and optionally attributes (`restrict: 'A'`) over classes (`restrict: 'S'`) ([source](https://github.com/johnpapa/angular-styleguide#restrict-to-elements-and-attributes))
-- Decorate the `$exceptionHandler` service using the `$provide` service to institute global custom exception handling ([source](https://github.com/johnpapa/angular-styleguide#decorators))
-- *Consider* using a thin app module with features being broken out into sub-modules ([source](https://github.com/johnpapa/angular-styleguide#keep-the-app-module-thin)), each with their own app manifest ([source](https://github.com/johnpapa/angular-styleguide#module-dependencies))
-- Reusable blocks (e.g., exception handling, logging, security, and local data storage) are needed across multiple applications, and should be stored in their own modules ([source](https://github.com/johnpapa/angular-styleguide#reusable-blocks-are-modules))
-- Use [AngularUI Router](http://angular-ui.github.io/ui-router/) for routing, as it supports nested views (if needed)
-- When using Bootstrap, use the [AngularUI Bootstrap directives](https://angular-ui.github.io/bootstrap/); this provides more succinct coverage of Bootstrap markup and classes
 
-
-<!--
-Consider: Mocha, Chai, Karma (test, assert, runner); sinon for stubbing and spying? from John Papa; PhantomJS for "headless browser" ; i.e., server-side w/out browsers installed
-https://github.com/johnpapa/angular-styleguide#testing
--->
-
+> *Consider* using a thin app module with features being broken out into sub-modules ([source](https://github.com/johnpapa/angular-styleguide#keep-the-app-module-thin)), each with their own app manifest ([source](https://github.com/johnpapa/angular-styleguide#module-dependencies))
 
 ```js
 (function() {
@@ -84,6 +67,29 @@ https://github.com/johnpapa/angular-styleguide#testing
 
 }());
 ```
+
+### Controllers and Routes
+- Centralize reusable logic in services; controllers should only contain minimal view-specific logic
+- When using `ng-route`, prefer `controllerAs` to relying on `$scope` (this allows scope variables to be assigned to `this`)
+  - Use a consistent object name for `ControllerAs` (e.g., `model`), and assign it to `this` within controllers; e.g., `var model = this;`
+- Wrap intialization logic in an `init()` method within controllers to keep logic centralized and simplify refresh requirements ([source](https://github.com/johnpapa/angular-styleguide#controller-activation-promises))
+- Use [AngularUI Router](http://angular-ui.github.io/ui-router/) for routing, as it supports nested views (if needed)
+
+### Services
+- Use factories instead of services; the syntax is similar, but factories are more flexible
+- Define the returnable object at the top of a factory or directive, to establish its public interface; all methods should point to function declarations after the returned object
+- If a service method executes a promise, prefer returning the promise so it can be chained by the caller
+- Decorate the `$exceptionHandler` service using the `$provide` service to institute global custom exception handling ([source](https://github.com/johnpapa/angular-styleguide#decorators))
+- Reusable blocks (e.g., exception handling, logging, security, and local data storage) are needed across multiple applications, and should be stored in their own modules ([source](https://github.com/johnpapa/angular-styleguide#reusable-blocks-are-modules))
+
+### Directives
+- Do not provide DOM manipulation from a controller; use directives instead (e.g., existing directives such as `ng-show` or custom directives)
+- Prefer assigning directives to elements (`restrict: 'E'`) and optionally attributes (`restrict: 'A'`) over classes (`restrict: 'S'`) ([source](https://github.com/johnpapa/angular-styleguide#restrict-to-elements-and-attributes))
+- When using Bootstrap, use the [AngularUI Bootstrap directives](https://angular-ui.github.io/bootstrap/); this provides more succinct coverage of Bootstrap markup and classes
+
+<!--
+Consider using: Mocha (testing), Chai (assertions), Karma (test runner), and Sinon (stubbing), and PhantomJS ("headless browser"); see https://github.com/johnpapa/angular-styleguide#testing
+-->
 
 ## Acknowledgments
 - [AngularJS Style Guide](https://github.com/mgechev/angularjs-style-guide) by [Minko Gechev](https://github.com/mgechev)
