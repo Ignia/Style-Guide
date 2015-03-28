@@ -4,32 +4,58 @@ While Angular follows best practices for [JavaScript](./Readme.md), it introduce
 
 > *Note:* This style guide inherits rules from the [JavaScript Style Guide](./README.md), [C-Based Languages Style Guide](../README.md), and the [Global Style Guide](../../README.md)
 
-> # Placeholder Content
-> This page is a placeholder; additional content will be provided at a later date.
-
 ## Contents
 - [Identifiers](#identifiers)
-- [Files](#files)
 - [Formatting](#formatting)
+- [Files](#files)
 - [Language Features](#language-features)
 - [Acknowledgments](#acknowledgments)
 
 ## Identifiers
+- Controllers should be PascalCase (as they represent a constructor); all other identifiers should be camelCase
+- Controllers should be suffixed with `Controller` (e.g., `HomeController`)
+- The primary module for an application should be named `app`; if, later, sub-modules are needed, they should be named `app.subModule` (e.g., `app.admin`)
+- Use a (short) prefix for directives to avoid naming conflicts; *do not use the `ng-` prefix (this is reserved for Angular)*
+- Do not prefix methods or properties in controllers or services with `$` (this is reserved for ANgular)
 
 ## Formatting
 
 ## Files
 - Place each module, directive, service, and controller in its own file
 - Separate source files into a `Directives`, `Services`, and `Controllers` directories
+- Module definitions should occur in the root of the application's `scripts` directory and should be named with the suffix `.Module.js` (e.g., `app.Module.js`); this makes it easy to target them first as part of a concatenation process
+- Module files should only contain the module declaration and any global configuration settings or constants for that module
+- Routes should be placed in their own file (e.g., `app.Routes.js`) and be placed in the roof of the application's `scripts` directory; this provides a convenient "directory" of controllers
 
 ## Language Features
 - Do not store modules in a global variable; instead, instantiate them using `angular.module('Name', [])` and extend them using `angular.module('Name')`
-- Always include dependency injection parameters using optional array format (e.g., `angular.controller('Name', ['$service', function ($service) { ... }])`) or `$inject`; this ensures compatibility with code obfuscation (e.g., [UglifyJS](http://lisperator.net/uglifyjs/))
+- Always include dependency injection parameters using optional array format (e.g., `angular.controller('Name', ['$service', function ($service) { ... }])`), `$inject` *or* [ngAnnotate](https://github.com/olov/ng-annotate)'s `/* @ngInject */` annotation; these methods ensure compatibility with code obfuscation (e.g., [UglifyJS](http://lisperator.net/uglifyjs/))
+- Prefer passing references to named functions as callbacks to directly defining anonymous functions
 - Centralize reusable logic in services; controllers should only contain minimal view-specific logic
-- Prefer to enclose Angular scripts in self-executing anonymous functions in order to prevent unnecessary polluting of the global scope
+- Prefer to enclose Angular scripts in an immediately-invoked function expression (IIFE) in order to prevent unnecessary polluting of the global scope
 - When using `ng-route`, prefer `controllerAs` to relying on `$scope` (this allows scope variables to be assigned to `this`)
+  - Use a consistent object name for `ControllerAs` (e.g., `model`), and assign it to `this` within controllers; e.g., `var model = this;`
 - When chaining multiple promises, consider adding a `catch()` handler to centralize error handling
 - Prefer `ng-bind` to `{{interpolation}}` in views to ensure that binding expressions are not temporarily displayed while loading the Angular controller
+- Do not use function expressions (e.g., `function() {}`) for public methods; instead, use function declarations (e.g., `function methodName() {}`) ([source](https://github.com/johnpapa/angular-styleguide#style-y034))
+- Wrap intialization logic in an `init()` method within controllers to keep logic centralized and simplify refresh requirements ([source](https://github.com/johnpapa/angular-styleguide#controller-activation-promises))
+- Use factories instead of services
+- Define the returnable object at the top of a factory or directive, to establish its public interface; all methods should point to function declarations after the returned object
+- If a service method executes a promise, prefer returning the promise so it can be chained by the caller
+- Do not provide DOM manipulation from a controller; use directives instead (e.g., existing directives such as `ng-show` or custom directives)
+- Prefer assigning directives to elements (`restrict: 'E'`) and optionally attributes (`restrict: 'A'`) over classes (`restrict: 'S'`) ([source](https://github.com/johnpapa/angular-styleguide#restrict-to-elements-and-attributes))
+- Decorate the `$exceptionHandler` service using the `$provide` service to institute global custom exception handling ([source](https://github.com/johnpapa/angular-styleguide#decorators))
+- *Consider* using a thin app module with features being broken out into sub-modules ([source](https://github.com/johnpapa/angular-styleguide#keep-the-app-module-thin)), each with their own app manifest ([source](https://github.com/johnpapa/angular-styleguide#module-dependencies))
+- Reusable blocks (e.g., exception handling, logging, security, and local data storage) are needed across multiple applications, and should be stored in their own modules ([source](https://github.com/johnpapa/angular-styleguide#reusable-blocks-are-modules))
+- Use [AngularUI Router](http://angular-ui.github.io/ui-router/) for routing, as it supports nested views (if needed)
+- When using Bootstrap, use the [AngularUI Bootstrap directives](https://angular-ui.github.io/bootstrap/); this provides more succinct coverage of Bootstrap markup and classes
+
+
+<!--
+Consider: Mocha, Chai, Karma (test, assert, runner); sinon for stubbing and spying? from John Papa; PhantomJS for "headless browser" ; i.e., server-side w/out browsers installed
+https://github.com/johnpapa/angular-styleguide#testing
+-->
+
 
 ```js
 (function() {
@@ -37,12 +63,23 @@ While Angular follows best practices for [JavaScript](./Readme.md), it introduce
 
   angular
     .module('app', [])
-    .controller('pageController', pageController)
+    .factory('bookService', bookService)
 
-  pageController.$inject = ['$resource'];
+  bookService.$inject = ['$resource'];
 
-  function pageController($resource) {
-    this.author = 'Jorge Luis Borges'
+  function bookService($resource) {
+
+    var service = {
+      this.total = 0;
+      this.getBooks = getBooks;
+    }
+
+    return service;
+
+    function getBooks(authorName) {
+      ...
+    }
+
   }
 
 }());
