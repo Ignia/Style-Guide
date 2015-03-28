@@ -163,6 +163,7 @@ books
 
 ## Syntax
 - Always assign variables at the top of their scope; assignments can come later, if needed
+- Define class or prototype members by order of: constructors, properties, methods, events
 - Avoid excessive nesting; if a method requires more than three layers of nesting, consider refactoring
   - Effective use of return, break, continue, and exceptions can help prevent excessive nesting
 - Do not use an `else` statement after a `return`; it is unnecessary
