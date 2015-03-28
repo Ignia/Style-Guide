@@ -19,16 +19,16 @@ While Angular follows best practices for [JavaScript](./Readme.md), it introduce
 - Controllers should be suffixed with `Controller` (e.g., `HomeController`)
 - The primary module for an application should be named `app`; if, later, sub-modules are needed, they should be named `app.subModule` (e.g., `app.admin`)
 - Use a (short) prefix for directives to avoid naming conflicts; *do not use the `ng-` prefix (this is reserved for Angular)*
-- Do not prefix methods or properties in controllers or services with `$` (this is reserved for ANgular)
+- Do not prefix methods or properties in controllers or services with `$` (this is reserved for Angular)
 
 ## Formatting
 
 ## Files
 - Place each module, directive, service, and controller in its own file
-- Separate source files into a `Directives`, `Services`, and `Controllers` directories
+- Separate source files into `Directives`, `Services`, and `Controllers` directories
 - Module definitions should occur in the root of the application's `scripts` directory and should be named with the suffix `.Module.js` (e.g., `app.Module.js`); this makes it easy to target them first as part of a concatenation process
 - Module files should only contain the module declaration and any global configuration settings or constants for that module
-- Routes should be placed in their own file (e.g., `app.Routes.js`) and be placed in the roof of the application's `scripts` directory; this provides a convenient "directory" of controllers
+- Routes should be placed in their own file (e.g., `app.Routes.js`) and be placed in the roof of the application's `scripts` directory; this provides a convenient "manifest" of controllers
 
 ## Language Features
 - Do not store modules in a global variable; instead, instantiate them using `angular.module('Name', [])` and extend them using `angular.module('Name')`
