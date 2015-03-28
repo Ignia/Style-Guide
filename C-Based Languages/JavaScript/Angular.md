@@ -25,7 +25,10 @@ While Angular follows best practices for [JavaScript](./Readme.md), it introduce
 
 ## Files
 - Place each module, directive, service, and controller in its own file
-- Separate source files into `Directives`, `Services`, and `Controllers` directories
+- Separate shared source files into `Directives`, `Services`, and `Controllers` directories
+
+> *Alternatively* consider organizing files according to feature (e.g., Home, Account, Profile), instead of type (e.g., Directives, Services, Controllers) ([source](https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub))
+
 - Module definitions should occur in the root of the application's `scripts` directory and should be named with the suffix `.Module.js` (e.g., `app.Module.js`); this makes it easy to target them first as part of a concatenation process
 - Module files should only contain the module declaration and any global configuration settings or constants for that module
 - Routes should be placed in their own file (e.g., `app.Routes.js`) and be placed in the root of the application's `scripts` directory; this provides a convenient "manifest" of controllers
