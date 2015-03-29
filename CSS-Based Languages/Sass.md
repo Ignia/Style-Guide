@@ -41,7 +41,7 @@ Sass provides a preprocessor environment for simplifying the creating and mainte
 ## Comments
 - Favor single-line comment format (`//`) over the multi-line comment format (`/* */`)
 
-```css
+```sass
 //==============================================================================================
 // LEVEL 1
 //----------------------------------------------------------------------------------------------
@@ -62,7 +62,7 @@ Sass provides a preprocessor environment for simplifying the creating and mainte
 - When possible, place `@include` statements after `@extend`
 - When possible, place `@import` statements at the top of the file
 
-```css
+```sass
 .selector {
   @extend %placeholder;
   @include clearfix();
