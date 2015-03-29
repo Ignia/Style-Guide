@@ -19,7 +19,7 @@ While Angular follows best practices for [JavaScript](./Readme.md), it introduce
 - Controllers and factories should be PascalCase (as they represent a constructor); all other object identifiers (e.g., directives, services) should be camelCase
 - Controllers should be suffixed with `Controller` (e.g., `HomeController`)
 - The primary module for an application should be named `app`; if, later, sub-modules are needed, they should be named `app.subModule` (e.g., `app.admin`)
-- Use a (short) prefix for directives to avoid naming conflicts; do not use the `ng-` or `ui-` prefixes (these are reserved for Angular and Angular UI respectively)
+- Use a (short) namespace prefix for directives to avoid naming conflicts; do not use the `ng-` or `ui-` prefixes (these are reserved for Angular and Angular UI respectively)
 - Do not prefix methods or properties in controllers or services with `$` (this is reserved for Angular)
 
 ## Formatting
@@ -28,8 +28,9 @@ While Angular follows best practices for [JavaScript](./Readme.md), it introduce
 - Place each module, directive, service, and controller in its own file
 - Separate any centralized source files into `Directives`, `Services`, and `Controllers` directories
 
-> Alternatively, consider organizing files according to feature (e.g., Home, Account, Profile) instead of by type (e.g., Directives, Services, Controllers) ([source](https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub))
+> For larger applications, organize files according to feature (e.g., Home, Account, Profile) instead of by type (e.g., Directives, Services, Controllers) ([source](https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub)) so that applications can be assembled (or disassembled) using modules as functional blocks
 
+- When using multiple modules, the folder structure should mirror the module structure
 - Module definitions should occur in the root of the application's `scripts` directory and should be named with the suffix `.Module.js` (e.g., `app.Module.js`); this makes it easy to target them first as part of a concatenation process
 - Module files should only contain the module declaration and any global configuration settings or constants for that module
 - Routes should be placed in their own file (e.g., `app.Routes.js`) and be placed in the root of the application's `scripts` directory; this provides a convenient "manifest" of controllers
@@ -40,6 +41,8 @@ While Angular follows best practices for [JavaScript](./Readme.md), it introduce
 - Always include dependency injection parameters using optional array format (e.g., `angular.controller('Name', ['$service', function ($service) { ... }])`), `$inject` *or* [ngAnnotate](https://github.com/olov/ng-annotate)'s `/* @ngInject */` annotation; these methods ensure compatibility with code obfuscation (e.g., [UglifyJS](http://lisperator.net/uglifyjs/))
 - Do not use function expressions (e.g., `function() {}`) for public methods; instead, use function declarations (e.g., `function methodName() {}`) ([source](https://github.com/johnpapa/angular-styleguide#style-y034))
 - When chaining multiple promises, consider adding a `catch()` handler to centralize error handling
+- Only use `$broadcast()`, `$emit()` and `$on()` for events that need to be globally accessible; prefer using `$scope.$watch`, services, or directive controllers for internal communication ([source](https://github.com/angular/angular.js/wiki/Best-Practices))
+- Use `$scope.$on('$destroy', ...)` for garbage collection on controllers and directives to remove plugins and listeners in single-page applications
 
 > *Consider* using a thin app module with features being broken out into sub-modules ([source](https://github.com/johnpapa/angular-styleguide#keep-the-app-module-thin)), each with their own app manifest ([source](https://github.com/johnpapa/angular-styleguide#module-dependencies))
 
@@ -96,7 +99,8 @@ While Angular follows best practices for [JavaScript](./Readme.md), it introduce
 - Do not provide DOM manipulation from a controller; use directives instead (e.g., existing directives such as `ng-show` or custom directives)
 - Prefer assigning directives to elements (`restrict: 'E'`) and optionally attributes (`restrict: 'A'`) over classes (`restrict: 'S'`) ([source](https://github.com/johnpapa/angular-styleguide#restrict-to-elements-and-attributes))
 - When using Bootstrap, use the [AngularUI Bootstrap directives](https://angular-ui.github.io/bootstrap/); this provides more succinct coverage of Bootstrap markup and classes
-- Always use the [$sce service](https://docs.angularjs.org/api/ng/service/$sce) and, if appropriate, the [`ngSanitize` module](https://docs.angularjs.org/api/ngSanitize) when relying on user inputted code (these are accounted for by default in first-party directives, such as [`ngBindHtml`](https://docs.angularjs.org/api/ng/directive/ngBindHtml))
+- Always use the [$sce service](https://docs.angularjs.org/api/ng/service/$sce) and, if appropriate, the [`ngSanitize` module](https://docs.angularjs.org/api/ngSanitize) when relying on user inputted markup or script (these are accounted for by default in first-party directives, such as [`ngBindHtml`](https://docs.angularjs.org/api/ng/directive/ngBindHtml))
+- Use the [`$observe()` method](https://docs.angularjs.org/api/ng/type/$compile.directive.Attributes#$observe) to ensure expressions can be effectively used in attribute values
 
 <!--
 Consider using: Mocha (testing), Chai (assertions), Karma (test runner), and Sinon (stubbing), and PhantomJS ("headless browser"); see https://github.com/johnpapa/angular-styleguide#testing
@@ -110,3 +114,5 @@ Consider using: Mocha (testing), Chai (assertions), Karma (test runner), and Sin
 ## Acknowledgments
 - [Angular Style Guide](https://github.com/johnpapa/angular-styleguide) by [John Papa](https://github.com/johnpapa)
 - [AngularJS Style Guide](https://github.com/mgechev/angularjs-style-guide) by [Minko Gechev](https://github.com/mgechev)
+- [AngularJS Style Guide for Closure Users at Google](https://google-styleguide.googlecode.com/svn/trunk/angularjs-google-style.html)
+- [AngularJS Best Practices](https://github.com/angular/angular.js/wiki/Best-Practices)
