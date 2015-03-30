@@ -60,6 +60,7 @@ While most of Ignia's front-end code is written exclusively in HTML5 (without an
 - Any `using` directives should be placed inside the `namespace`, not outside of it
 - Local variables *should* use type inference (i.e., the `var` keyword for declaring variables)
 - Prefer default arguments to overloading unless default arguments will cause unintuitive combinations of parameters
+- When repeatedly using a regular expression (e.g., on a frequently requested page or within a loop), make use of the [`RegexOptions.Compiled` flag](https://msdn.microsoft.com/en-us/library/system.text.regularexpressions.regexoptions(v=vs.110).aspx)
 
 ### ASP.NET
 - Use (or extend) the ASP.NET Identity libraries for authentication (including single-sign-on), roles-based authorization, and, where practical, profile management
