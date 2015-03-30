@@ -4,6 +4,8 @@ ECMAScript is the standard behind JavaScript. ECMAScript 6.0 (sometimes, incorre
 
 > *Note:* This style guide inherits rules from the [JavaScript Style Guide](./README.md), [C-Based Languages Style Guide](../README.md), and the [Global Style Guide](../../README.md)
 
+> *Note:* The ECMAScript 6 standard is not yet finalized, and some implementation details are expected to change before publication; the guidance below will be reevaluated at that point to ensure consistency with the final direction.
+
 ## Contents
 - [Language Features](#language-features)
   - [Variables](#variables)
