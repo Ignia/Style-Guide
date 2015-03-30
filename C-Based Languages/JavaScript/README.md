@@ -23,7 +23,6 @@
 ## Variables
 - Always declare variables using `var` (enforced in `use strict`)
 
-
 ## Syntax
 - Always end lines with semicolons; do not rely on implicit insertion ([source](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml?showone=Semicolons#Semicolons))
 - Use single quotes for string values, not double quotes; this helps avoid the need for escaping
@@ -31,8 +30,8 @@
 - Use `===` and `!==` over `==` and `!=` as these are more precise and predictable
 - Name functions to aid in debugging (i.e., so functions are identified in stack traces)
 
-
 ## Language Features
+- Always set `use strict`
 - Namespaces should be used when possible, using either library features or an object wrapper
 - Do not use `eval()` or Internet Explorer's conditional comments (e.g., `/*@cc_on ... @*/`)
 - Do not use `for in` loops for arrays ([source](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml?showone=for-in_loop#for-in_loop))
