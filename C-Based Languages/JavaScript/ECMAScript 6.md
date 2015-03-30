@@ -7,7 +7,7 @@ ECMAScript is the standard behind JavaScript. ECMAScript 6.0 (sometimes, incorre
 ## Contents
 - [Language Features](#language-features)
   - [Variables](#variables)
-  - [Classes, Objects, and Prototypes](#classes-objects-and-prototypes)
+  - [Classes, Objects, and Prototypes](#classes-prototypes-and-objects)
   - [Functions and Methods](#functions-and-methods)
   - [Collections and Arrays](#collections-and-arrays)
 - [Acknowledgments](#acknowledgments)
