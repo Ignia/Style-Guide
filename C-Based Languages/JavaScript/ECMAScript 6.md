@@ -25,6 +25,7 @@ ECMAScript is the standard behind JavaScript. ECMAScript 6.0 (sometimes, incorre
 
 ```js
 let users = [['Jeremy', 'Caney', 'Architect'], ['Katherine', 'Trunkey', 'Developer']];
+
 for (let i=0; i < users.length; i++) {
   let [firstName, lastName, title] = users[i];
   console.log(firstName + " " + lastName + "(" + title + ")");
