@@ -1,8 +1,8 @@
 # Ignia Style Guide
-Ignia's internal style guide for languages and formats we work in most frequently.
+Ignia's internal style guide for languages and formats we work in most frequently. For brevity, this style guide focuses more on guidelines and less on the reasons.
 
 ## Motivation
-Code needs to be executed by computers, but it also needs to be maintained by humans. For this reason, Ignia places high value on code that is readable, uniformly formatted, and consistent with emerging conventions. Ignia has not only maintained rigid coding standards since our inception in 1998, but continues to evolve them to keep pace with both technology and market trends.
+Code needs to be executed by computers, but it also needs to be maintained by humans. For this reason, Ignia places high value on code that is readable, uniformly formatted, and consistent with emerging conventions. This is especially important since Ignia works with a diverse set of clients, partners, and contractors. Ignia has not only maintained rigid coding standards since our inception in 1998, but continues to evolve them to keep pace with both technology and market trends.
 
 ## Style Guides
 - [Common Rules](#contents) (see below)
@@ -34,18 +34,19 @@ Code needs to be executed by computers, but it also needs to be maintained by hu
 - ***Be consistent!***
 
 ## Identifiers
-- Avoid arbitrary abbreviations in identifiers (e.g., variables, class names, etc.)
+- Identifiers should be descriptive (e.g., `userProfile` not `u`)
+- Avoid arbitrary abbreviations in identifiers (e.g., in variable names, class names, etc.)
 - Only use abbreviations that are well-established and widely understood (e.g., ID, XML, HTML)
 - When abbreviations are used, they should follow the casing standards (e.g., `Html` in `PascalCase`, not `HTML`)
-  - An exception is granted for two letter acronyms (e.g., `ID`, `IO` in `PascalCase`) ([source](https://msdn.microsoft.com/en-us/library/ms229043(v=vs.110).aspx))
+  - An exception is granted for two-letter acronyms (e.g., `ID`, `IO` in `PascalCase`) ([source](https://msdn.microsoft.com/en-us/library/ms229043(v=vs.110).aspx))
 - Use consistent casing for identifiers of each type (e.g., all variables should be `camelCase`)
 - Do not use identifiers that conflict with keywords in commonly used programming languages ([source](https://msdn.microsoft.com/en-us/library/ms229045(v=vs.110).aspx))
 
 ## Spacing
 - Use soft tabs set to two spaces
 - Use tab stops set to eight spaces, when supported
-- Insert empty lines to create visual groupings among related code blocks
-- Consecutive variable or property assignments should have their values set at line 33 (indented 32 characters), e.g.,
+- Use rulers set to every thirty-two characters (e.g., 32, 64, 96...), when supported
+- Consecutive variable or property assignments should have their values set at line 33 (i.e., the 32 character ruler), e.g.,
 ```css
 body {
   background-color:             : rgba(255, 255, 255, 1);
@@ -59,7 +60,8 @@ body {
 }
 ```
 - Lines should be no longer than 96 characters, and must not exceed 128 (including indentation)
-- End files with a single newline character
+- Insert empty lines to create visual groupings among related code blocks
+- End files with a single newline character; this aids with diffs in source control
 
 ## Comments
 - Comments are always preceded by a blank line, unless they are on the same line as code
