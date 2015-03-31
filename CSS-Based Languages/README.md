@@ -1,6 +1,6 @@
 # CSS-Based Languages
 
-CSS-Based languages include CSS itself, as well as CSS preprocessors such as Sass, Less, and Stylus.
+CSS-Based languages include CSS itself, as well as CSS preprocessors such as Sass, Less, and Stylus. Ignia typically uses Less for Bootstrap projects, and Sass for highly-custom user interfaces.
 
 ## Style Guides
 - [Sass](./Sass.md)
@@ -21,25 +21,26 @@ CSS-Based languages include CSS itself, as well as CSS preprocessors such as Sas
 - [Acknowledgments](#acknowledgments)
 
 ## Performance
-With a few exceptions, maintainability trumps performance with CSS. While performance is a priority, CSS optimizations tend to be trivial in results compared to JavaScript and even HTML optimizations. That said, ancestor and wildcard selectors should be avoided, as should the `@import` directive.
+With a few exceptions, maintainability trumps performance with CSS. While performance is a priority, CSS optimizations tend to have minimal impact compared to JavaScript and even HTML optimizations. That said, ancestor and wildcard selectors should be avoided, as should the `@import` directive.
 
 ## Identifiers
-- Class identifiers should be in lisp-case (lowercase with hyphens)
+- Class identifiers should be in `lisp-case` (lowercase with hyphens)
 - Class identifiers should aim to be semantic (e.g., `important`) over presentational (e.g., `red`)
-- Hyphens should be use to distinguish concepts not words
+- Hyphens should be used to distinguish associated *concepts* not *words*
 - Be wary of compounding concepts via hyphens; cascading may provide more flexibility
 - Begin state classes with `.is-` (e.g., `.is-active`)
-- Begin JavaScript exclusive classes with `.js-`.
-- If lack of JavaScript support is a concern, use a `js-hidden` class to provide fallback content (and hide using JavaScript)
+- Begin JavaScript-exclusive classes with `.js-` (e.g., for selectors), and do *not* reference in stylesheets
+- If lack of JavaScript support is a concern, use a `js-hidden` utility class to provide fallback content (and hide using JavaScript)
 
 ### Capitalization
 - Class identifiers should be in lisp-case (lowercase with hyphens)
 - Declaration properties and values should be lowercase (e.g., `color: #f1f1f1`)
 
 ## Selectors
-- One selector per line (i.e., place a line-break after a `,` in a selector)
-- Do not use element identifiers (e.g., `#identifier`) in selectors outside of layout elements (e.g., #Navigation, #Header)
+- Place each selector on its own line (i.e., place a line-break after each `,` in a selector)
+- Do not use element identifiers (e.g., `#identifier`) in selectors outside of layout elements (e.g., `#Navigation`, `#Header`), page-specific namespaces (e.g., `#AboutPage`), or theme namespaces (e.g., `#AdminTheme`)
 - Avoid nesting selectors more than three levels deep; this introduces specificity issues
+  - By convention, nested selectors should follow the pattern: `[#namespace] *component*[.*modifier*] > *element*[.*modifer*]` (e.g., `#RightRail .login.inline .username.error`)
 - Target semantic elements and attributes instead of classes where practical (e.g., `button` not `.button`) to enforce semantic markup
   - Avoid assigning classes that duplicate semantic tags (e.g., `<button class="button" />`)
 - If class semantics are described by a [Schema.org](http://schema.org/) type, use `[typeof='Type']` and `[property='property'] instead of inventing new class names
