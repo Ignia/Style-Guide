@@ -46,7 +46,7 @@ As class libraries are typically intended to be used by a broad selection of dev
 - Do not expose setters for collection properties; this allows the *collection* to be overwritten, not just *records* ([source](https://msdn.microsoft.com/en-us/library/dn169389(v=vs.110).aspx))
 - For writable properties and method return values, prefer `Collection<>`, `ObservableCollection<>` (or a derived class); otherwise, use classes that implement `ICollection<>`, `IList<>`, or `IEnumerable<>` ([source](https://msdn.microsoft.com/en-us/library/dn169389(v=vs.110).aspx))
   - When practical, use a custom derived class for clarity of purpose, and to allow additional functionality to be added in the future
-  - When creating custom derived classes, prefer the naming convention `*Type*Collection` where `*Type*` maps to the item type (e.g., `AuthorCollection` is a collection of `Author` objects)
+  - When creating custom derived classes, prefer the naming convention `TypeCollection` where `Type` maps to the item type (e.g., `AuthorCollection` is a collection of `Author` objects)
   - When exposing collections as properties, do not include the `Collection` suffix; instead, pluralize the type name (e.g., `Book.Authors`)
 - For volatile collections (e.g., a file system object), return a snapshot (via a method) or an `IEnumerable<>` (via a property) to prevent exceptions during iteration
 - For read-only collections, always use `ReadOnlyCollection<>` (or a derived class)
