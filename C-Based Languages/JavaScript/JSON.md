@@ -11,11 +11,14 @@ JSON (JavaScript Object Notation) is a data format supported natively in JavaScr
 - [Spacing](#spacing)
 - [Formatting](#formatting)
 - [Comments](#comments)
-- [Language Features](#language-features)
 - [Acknowledgments](#acknowledgments)
 
+<!--
+- [Language Features](#language-features)
+-->
+
 ## Identifiers
-- Property names ("keys") must *always* be in double quotes (some libraries do not enforce this, but it is a requirement of the [specification](http://tools.ietf.org/html/rfc7159)); this is *not* a requirement for object literal notation
+- Property names ("keys") must *always* be in quotes quotes (some libraries do not enforce this, but it is a requirement of the [specification](http://tools.ietf.org/html/rfc7159)); this is *not* a requirement for object literal notation
 
 ## Spacing
 - Objects in arrays should each begin on a new line
@@ -23,13 +26,39 @@ JSON (JavaScript Object Notation) is a data format supported natively in JavaScr
 ## Formatting
 - Commas should immediately follow the closing brace (for objects) or bracket (for arrays)
 
+```js
+{
+  'name'                        : 'Jorge Luis Borges',
+  'genres'                      : ['Metafiction', 'Fantasy', 'Fantastical Realism']
+  'books'                       : [
+    {
+      'title'                   : 'Ficciones'
+    },
+    {
+      'title'                   : 'Labyrinths'
+    },
+    {
+      'title'                   : 'El Aleph'
+    },
+    {
+      'title'                   : 'Poesía completa'
+    }
+  ],
+  'born'                        : '1899-08-24',
+  'died'                        : '1986-06-14'
+}
+
+```
+
 > *Note:* While spacing and formatting rules should be maintained as part of any statically maintained JSON files, they are not enforced for JSON delivered externally (e.g., by a REST API); it is expected such JSON will be minified.
 
 ## Comments
 - Comments are *not* supported in JSON files; if comments are required, it is recommended that they be placed in a property with the name `__comment`
 - Comments *are* honored as part of JavaScript's object literal notation, and are welcome contributions for providing inline documentation
 
+<!--
 ## Language Features
+-->
 
 ## Acknowledgments
 - [RFC 7159](http://tools.ietf.org/html/rfc7159)
