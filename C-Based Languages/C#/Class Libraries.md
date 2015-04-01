@@ -50,7 +50,7 @@ As class libraries are typically intended to be used by a broad selection of dev
   - When exposing collections as properties, do not include the `Collection` suffix; instead, pluralize the type name (e.g., `Book.Authors`)
 - For volatile collections (e.g., a file system object), return a snapshot (via a method) or an `IEnumerable<>` (via a property) to prevent exceptions during iteration
 - For read-only collections, always use `ReadOnlyCollection<>` (or a derived class)
-- Never return a `null` value for collection types; always return an empty collection instead; this makes it easier to test
+- Always return an empty collection rather than a `null` value for collection types; this makes it easier to test
 
 ### Extensibility
 - Prefer events to callbacks (e.g., `Func<>`, `Action<>`, and `Expression<>`) as they are easier to understand and implement across languages ([source](https://msdn.microsoft.com/en-us/library/ms229041(v=vs.110).aspx))

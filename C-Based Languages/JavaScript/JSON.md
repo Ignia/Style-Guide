@@ -18,7 +18,7 @@ JSON (JavaScript Object Notation) is a data format supported natively in JavaScr
 -->
 
 ## Identifiers
-- Property names ("keys") must *always* be in quotes quotes (some libraries do not enforce this, but it is a requirement of the [specification](http://tools.ietf.org/html/rfc7159)); this is *not* a requirement for object literal notation
+- Property names ("keys") must *always* be in double quotes (some libraries do not enforce this, but it is a requirement of the [specification](http://tools.ietf.org/html/rfc7159)); this is *not* a requirement for object literal notation
 
 ## Spacing
 - Objects in arrays should each begin on a new line

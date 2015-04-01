@@ -39,7 +39,7 @@ While Angular follows best practices for [JavaScript](./Readme.md), it introduce
 - Routes should be placed in their own file (e.g., `app.Routes.js`) and be placed in the root of the application's `scripts` directory; this provides a convenient "manifest" of controllers
 
 ## Language Features
-- Only include jQuery if advanced features are needed; Angular include a "lite" version of jQuery which supports most basic features
+- Only include jQuery if advanced features are needed; Angular includes a "lite" version of jQuery which supports most basic features
   - If jQuery *is* needed, it must be included *before* the Angular scripts
 - Do not store modules in a global variable (e.g., `var module = angular.module(`module`, [])`); instead, instantiate them using `angular.module('module', [])` and extend them using `angular.module('module')`
 - Enclose Angular scripts in an immediately-invoked function expression (IIFE) in order to prevent unnecessary polluting of the global scope
