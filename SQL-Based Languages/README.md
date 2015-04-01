@@ -25,7 +25,7 @@ For relational databases, Ignia works primarily in Transact SQL (T-SQL) via Micr
 - Column names should be `PascalCase` and will typically be composed of singular nouns or noun phrases (e.g., `FirstName`, `Email`)
 - Column names should map to their names in corresponding code wherever possible
   - The exception is foreign key constraints which may be abstracted to (collections of) references in code
-- Consider prefixing column names with the singular entity type (e.g., `User`) *if* the column identifier is not otherwise unique (e.g., `ID`, `Name`) *and* it is likely to be joined with other tables with similar names (for this reason, identifiers *always* include the entity name)
+- Consider prefixing column names with the singular entity type (e.g., `User`) *if* the column identifier is not otherwise unique (e.g., `ID`, `Name`) *and* it is likely to be joined with other tables with similar names (for this reason, identifiers should *always* include the entity name)
 - Identity columns should begin with the singular entity name (e.g., `User`) followed by `ID` (e.g., `UserID`)
 - Foreign key constraints should be identical to the foreign key constraint they reference (e.g., `UserID`)
   - If a foreign key constraint represents a particular relationship, it should be prefixed by the relationship type and an underscore (e.g., `ApprovedBy_UserID`, `Announcement_ArticleID`)
@@ -63,16 +63,16 @@ and (
 - Prefer highly normalized data structures; only denormalize data as required by optimization
   - To denormalize commonly requested sets, rely on views; these do not provide execution optimization, but do simplify otherwise complex queries by centralizing joins
 - If there is a need for more than one item (e.g., `primary_Street1`, `secondary_Street1`) consider establishing a secondary table for a 1:n relationship (even if the number of relations is expected to be constrained to a fixed number)
-- For non-lookup tables, consider adding a `DateAdded` and `DateUpdated` column for basic auditing purposes
+- For non-lookup tables, consider adding `DateAdded` and `DateUpdated` columns for basic auditing purposes
   - For advanced auditing (e.g., with `Source`, `Type`, `Explanation`), prefer a centralized auditing table (e.g., `audit_History`)
 - Consider assigning a logical maximum limit to queries to prevent returning more data than the application is expected to use (e.g., `top 500`)
-- Consider creating lookup tables (with foreign key constraints) to map to enumerators to enforce data integrity and optionally provide friendly lookups (via joins)
+- Consider creating lookup tables (with foreign key constraints) to map to enumerators in order to enforce data integrity and optionally provide friendly lookups (via joins)
 
 ## Language Features
 - Data access should be restricted to stored procedures *unless* using an O/RM (e.g., `Entity Framework`, `NHibernate`)
 - For data persistence, prefer Code First approaches to Database First, but be aware of the schema it generates and aim to maintain consistency with Ignia's standards
 - Avoid use of dynamic SQL, either via `exec`, or by string concatenation in client code; this does not yield efficient execution plans and can expose vulnerability to SQL injection attacks
-- Avoid cursors and nested queries wherever possible; these are not a performant way for querying set-based data; prefer joins
+- Avoid cursors and nested queries wherever possible, as these are not a performant way for querying set-based data; prefer joins
 - For optional clauses, use the `where (@column is null or column = @column)` pattern
 - Consider setting seeds based on the expected number of values to ensure consistent digits (e.g., for states, set seed to 10; for countries, 100; for users, 1,000,000); this can make the data easier to "eyeball"
 
@@ -82,7 +82,7 @@ and (
 - Avoid excessive use of custom data types; prefer when relying on a set data type definition across a broad set of objects
 
 ### Primary Keys
-- In general, primary keys should use `int`; lookup tables with a predictable number of records (e.g., `lookup_States`) use `tinyint`
+- In general, primary keys should use `int`; for lookup tables with a predictably small number of records (e.g., `lookup_States`), use `tinyint`
 - Primary keys should *not* use `uniqueidentifier` unless it's absolutely necessary for the identity to be *globally unique* (e.g., it will be merged with remote data stores)
   - If records need a non-predictable public key, consider assigning a separate `PublicKey` field using `uniqueidentifier` for this purpose
 
