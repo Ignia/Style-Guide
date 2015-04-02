@@ -5,11 +5,10 @@ A primary focus of Ignia's is on developing APIs, be they class libraries or web
 > *Note:* This style guide inherits rules from the [Global Style Guide](../README.md). It also shares certain fundamental concepts with the [C# Class Library Style Guide](../C-Based%20Languages/C%23/Class%20Libraries.md). Finally, since REST APIs tend to utilize JSON as a serialization format, this guide acknowledges best practices from the [JSON Style Guide](../C-Based%20Languages/JavaScript/JSON.md) - although, it is not expected that web service output will adhere to JSON formatting standards (due to file minification).
 
 ## Contents
-- [Design](#design)
-  - [Method Conventions](#method-conventions)
-  - [URL Conventions](#url-conventions)
-  - [Query String Conventions](#query-string-conventions)
-  - [Message Body Conventions](#body-conventions)
+- [Method Conventions](#method-conventions)
+- [URL Conventions](#url-conventions)
+- [Query String Conventions](#query-string-conventions)
+- [Message Body Conventions](#body-conventions)
 
 <!--
 - [Identifiers](#identifiers)
@@ -20,9 +19,7 @@ A primary focus of Ignia's is on developing APIs, be they class libraries or web
 - [Acknowledgments](#acknowledgments)
 -->
 
-## Design
-
-### Overview
+## Overview
 The following is a broad overview of how different concepts map to different HTTP components; each of these will be covered in more depth below.
 
 | Concept       | HTTP Location | Example(s)
@@ -33,7 +30,7 @@ The following is a broad overview of how different concepts map to different HTT
 | Query         | Query String  | `/Authors?$top=10&$skip=30&orderBy=LastName`
 | Content       | Message Body  | `{ 'name': 'Ficcionnes', 'Author': 'Jorge Luis Borges' }`
 
-### Method Conventions
+## Method Conventions
 
 > *Important:* Methods should be used as the primary means of triggering actions; always prefer methods to URL conventions or query string parameters for defining actions.
 
@@ -52,7 +49,7 @@ The following is a broad overview of how different concepts map to different HTT
 
 > *Note:* Ideally, each entity and collection should support the above actions, although not all users will be authorized to execute these actions.
 
-### URL Conventions
+## URL Conventions
 
 > *Important:* The URL path should be used as the primary means of representing entities (e.g., `/Borges`) and collections of entities (e.g., `/Authors`). Avoid using the URL for other concepts.
 
@@ -71,7 +68,7 @@ The following is a broad overview of how different concepts map to different HTT
   - Developers should be able to quickly and intuitively understand the relationship between a web service, class library, and data structure
 - Consider using key/value pairs to support composite primary keys (e.g., `/Articles(ArticleID=5,Locale='en-US')`, as per OData conventions)
 
-### Query String Conventions
+## Query String Conventions
 
 > *Important:* The query string should be used as the primary means of querying collections (e.g., filtering, sorting, paging)
 
@@ -81,7 +78,7 @@ The following is a broad overview of how different concepts map to different HTT
 - Query string parameters should *not* be used for setting actions (e.g., `?Action=Add`) or content (e.g., `?Name=Borges`); instead, use the HTTP method and HTTP message body
 - The query string should provide an alternative means of defining HTTP Headers (e.g., `?$format=json`, as per OData conventions)
 
-### Message Body Conventions
+## Message Body Conventions
 - The message body should be used for delivering actual *content*, both when reading (i.e., the response body) and writing (i.e., the request body)
 - The message body should be formatted using a well-established data format, such as JSON or XML
   - If practical, the message body should be formatted with a well-established schema (e.g., `ATOM`, `OData`)
