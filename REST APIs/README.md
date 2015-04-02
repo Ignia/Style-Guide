@@ -21,6 +21,9 @@ A primary focus of Ignia's is on developing APIs, be they class libraries or web
 -->
 
 ## Overview
+
+> *Note:* Since the identifiers, syntax, and design of web services are tightly intertwined, this style guide is instead organized by feature area.
+
 The following is a broad overview of how different concepts map to different HTTP components; each of these will be covered in more depth below.
 
 | Concept       | HTTP Location                                 | Example(s)
@@ -31,7 +34,7 @@ The following is a broad overview of how different concepts map to different HTT
 | Query         | [Query String](#query-string-conventions)     | `/Authors?$top=10&$skip=30&orderBy=LastName`
 | Content       | [Message Body](#message-body-conventions)     | `{ 'name': 'Ficcionnes', 'Author': 'Jorge Luis Borges' }`
 
-> *Note:* Since the identifiers, syntax, and design of web services are tightly intertwined, this style guide is instead organized by feature area.
+> *Note:* Ignia strongly recommends use of the [Open Data Protocol](http://www.odata.org/) whenever practical, as it encapsulates most of the best practices documented below, while also providing well-established client libraries in a variety of languages (C#, JavaScript, Node.js, Java, etc).
 
 ## Method Conventions
 
