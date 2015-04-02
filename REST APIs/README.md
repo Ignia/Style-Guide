@@ -88,6 +88,7 @@ The following is a broad overview of how different concepts map to different HTT
 - If multiple data formats are available, the client should be able to specify the requested format using either the `Accepts` header
   - Ideally, the client should also be able to define the content type using an optional query string parameter (e.g., `?$format=json`, as per OData conventions)
   - The preferred default should always be JSON, when available
+- When links are included in the message body, they should be absolute URLs so the client doesn't need to interpret the root of the request
 - Consider providing a list of actions associated with the entity in the response body (as per [Hypermedia as the Engine of Application State (HATEOAS)](https://en.wikipedia.org/wiki/HATEOAS) constraints)
   - Ideally, this will reflect the current state of the entity as well as the authorization of the currently authenticated user
   - In XML, the preferred format is a `link` element with a `rel` and `href` attribute (as per [ATOM Standard](https://en.wikipedia.org/wiki/Atom_(standard)))
