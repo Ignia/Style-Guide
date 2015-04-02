@@ -34,7 +34,7 @@ The following is a broad overview of how different concepts map to different HTT
 | Query         | [Query String](#query-string-conventions)     | `/Authors?$top=10&$skip=30&orderBy=LastName`
 | Content       | [Message Body](#message-body-conventions)     | `{ 'name': 'Ficcionnes', 'Author': 'Jorge Luis Borges' }`
 
-> *Note:* Ignia strongly recommends use of the [Open Data Protocol](http://www.odata.org/) whenever practical, as it encapsulates most of the best practices documented below, while also providing well-established client libraries in a variety of languages (C#, JavaScript, Node.js, Java, etc).
+> *Note:* Ignia strongly recommends use of the [Open Data Protocol](http://www.odata.org/) whenever practical, as it encapsulates most of the best practices documented below, while also providing well-established client libraries in a variety of languages (C#, JavaScript, Node.js, Java, etc.).
 
 ## Method Conventions
 
