@@ -5,6 +5,7 @@ A primary focus of Ignia's is on developing APIs, be they class libraries or web
 > *Note:* This style guide inherits rules from the [Global Style Guide](../README.md). It also shares certain fundamental concepts with the [C# Class Library Style Guide](../C-Based%20Languages/C%23/Class%20Libraries.md). Finally, since REST APIs tend to utilize JSON as a serialization format, this guide acknowledges best practices from the [JSON Style Guide](../C-Based%20Languages/JavaScript/JSON.md) - although, it is not expected that web service output will adhere to JSON formatting standards (due to file minification).
 
 ## Contents
+- [Overview](#overview)
 - [Method Conventions](#method-conventions)
 - [URL Conventions](#url-conventions)
 - [Query String Conventions](#query-string-conventions)
