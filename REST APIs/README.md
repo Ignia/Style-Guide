@@ -9,7 +9,7 @@ A primary focus of Ignia's is on developing APIs, be they class libraries or web
   - [Method Conventions](#method-conventions)
   - [URL Conventions](#url-conventions)
   - [Query String Conventions](#query-string-conventions)
-  - [Body Conventions](#body-conventions)
+  - [Message Body Conventions](#body-conventions)
 
 <!--
 - [Identifiers](#identifiers)
