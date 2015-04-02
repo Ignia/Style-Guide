@@ -26,7 +26,7 @@ A primary focus of Ignia's is on developing APIs, be they class libraries or web
 The following is a broad overview of how different concepts map to different HTTP components; each of these will be covered in more depth below.
 
 | Concept       | HTTP Location | Example(s)
-| ------------------------------|---------------------------------------------------------------
+| --------------|---------------|---------------------------------------------------------------
 | Action        | Method        | `GET`, `POST`, `PUT`, `PATCH`
 | Collection    | URL           | `/Books`
 | Entity        | URL           | `/Books/Ficciones`
@@ -42,7 +42,7 @@ The following is a broad overview of how different concepts map to different HTT
 - HTTP methods should map to the following actions:
 
 | Action        | Scope         | Method        | Result
-| ------------------------------|---------------|-----------------------------------------------
+| --------------|---------------|---------------|-----------------------------------------------
 | Read          | Collection    | `GET`         | Lists a collection of entities
 | Read          | Entity        | `GET`         | Returns a single entity
 | Create        | Collection    | `POST`        | Adds a new entity to a collection
