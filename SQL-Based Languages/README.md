@@ -37,25 +37,25 @@ For relational databases, Ignia works primarily in Transact SQL (T-SQL) via Micr
 - Parameter names should generally correspond to column names unless they are intended exclusive for setting conditional logic (e.g., `@IsRecursive`)
 
 ## Formatting
-- Use lowercase keywords (e.g., `select`, `from`, `where`)
+- Use uppercase keywords (e.g., `SELECT`, `FROM`, `WHERE`)
 - Use hard tab stops set to four characters, for consistency with SQL Studio and Visual Studio (this is the exception to Ignia's general code formatting rules)
 - Align column names in queries to column 17 (16 characters indent), assignments to column 41 (40 character indent)
 - Place one column, clause per line in queries
-- For nested queries, place opening parenthesis next to the opening clause (e.g., `where`, `and`, `or`); indent first line (but not column names or values) two spaces
+- For nested queries, place opening parenthesis next to the opening clause (e.g., `WHERE`, `AND`, `OR`); indent first line (but not column names or values) two spaces
 
 ```sql
-select          Username                ,
+SELECT          Username                ,
                 Locale
-from            account_Users           Users
-where (         @UserID                 = null
-  or            UserID                  = 1234
+FROM            account_Users           Users
+WHERE (         @UserID                 = null
+  OR            UserID                  = 1234
 )
-and (
-  select        top 1
+AND (
+  SELECT        TOP 1
                 Email
-  from          account_Email           Email
-  where         Email.UserID            = Users.UserID
-  and           Type                    = 1
+  FROM          account_Email           Email
+  WHERE         Email.UserID            = Users.UserID
+  AND           Type                    = 1
 )
 ```
 
@@ -65,7 +65,7 @@ and (
 - If there is a need for more than one item (e.g., `primary_Street1`, `secondary_Street1`) consider establishing a secondary table for a 1:n relationship (even if the number of relations is expected to be constrained to a fixed number)
 - For non-lookup tables, consider adding `DateAdded` and `DateUpdated` columns for basic auditing purposes
   - For advanced auditing (e.g., with `Source`, `Type`, `Explanation`), prefer a centralized auditing table (e.g., `audit_History`)
-- Consider assigning a logical maximum limit to queries to prevent returning more data than the application is expected to use (e.g., `top 500`)
+- Consider assigning a logical maximum limit to queries to prevent returning more data than the application is expected to use (e.g., `TOP 500`)
 - Consider creating lookup tables (with foreign key constraints) to map to enumerators in order to enforce data integrity and optionally provide friendly lookups (via joins)
 
 ## Language Features
