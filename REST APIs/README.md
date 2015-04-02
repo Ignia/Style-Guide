@@ -48,7 +48,7 @@ The following is a broad overview of how different concepts map to different HTT
 | Update        | Entity        | `PATCH`       | Update individual properties of an entity
 | Delete        | Entity        | `DELETE`      | Delete an instance of an entity
 
-> *Note:* Ideally, each entity and collection should support the above actions, although not all users will be authorized to execute these actions.
+> *Note:* Ideally, each entity and collection should support the above actions, although not all users will be authorized to execute them.
 
 ## URL Conventions
 
