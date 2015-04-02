@@ -31,7 +31,7 @@ The following is a broad overview of how different concepts map to different HTT
 | Collection    | URL           | `/Books`
 | Entity        | URL           | `/Books/Ficciones`
 | Query         | Query String  | `/Authors?$top=10&$skip=30&orderBy=LastName`
-| Content       | Body          | `{ 'name': 'Ficcionnes', 'Author': 'Jorge Luis Borges' }`
+| Content       | Message Body  | `{ 'name': 'Ficcionnes', 'Author': 'Jorge Luis Borges' }`
 
 ### Method Conventions
 
@@ -78,10 +78,10 @@ The following is a broad overview of how different concepts map to different HTT
 - All entity collections should support, at minimum, filtering, sorting, and paging
   - Querying capabilities should not be applied inconsistently based on immediately foreseeable needs
 - Querying capabilities should be represented by a consistent vocabulary (e.g., `$filter`, `$orderby`, `$skip`, `$top`, as per OData conventions)
-- Query string parameters should *not* be used for setting actions (e.g., `?Action=Add`) or content (e.g., `?Name=Borges`); instead, use the HTTP method and HTTP body
+- Query string parameters should *not* be used for setting actions (e.g., `?Action=Add`) or content (e.g., `?Name=Borges`); instead, use the HTTP method and HTTP message body
 - The query string should provide an alternative means of defining HTTP Headers (e.g., `?$format=json`, as per OData conventions)
 
-### Body Conventions
+### Message Body Conventions
 - The body should be used for delivering actual *content*, both when reading (i.e., the response body) and writing (i.e., the request body)
 - The body should be formatted using a well-established data format, such as JSON or XML
   - If practical, the body should be formatted with a well-established schema (e.g., ``)
