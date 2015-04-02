@@ -23,13 +23,15 @@ A primary focus of Ignia's is on developing APIs, be they class libraries or web
 ## Overview
 The following is a broad overview of how different concepts map to different HTTP components; each of these will be covered in more depth below.
 
-| Concept       | HTTP Location | Example(s)
-| --------------|---------------|---------------------------------------------------------------
-| Action        | Method        | `GET`, `POST`, `PUT`, `PATCH`
-| Collection    | URL           | `/Books`
-| Entity        | URL           | `/Books/Ficciones`
-| Query         | Query String  | `/Authors?$top=10&$skip=30&orderBy=LastName`
-| Content       | Message Body  | `{ 'name': 'Ficcionnes', 'Author': 'Jorge Luis Borges' }`
+| Concept       | HTTP Location                                 | Example(s)
+| --------------|-----------------------------------------------|---------------------------------------------------------------
+| Action        | [Method](#method-conventions)                 | `GET`, `POST`, `PUT`, `PATCH`
+| Collection    | [URL](#url-conventions)                       | `/Books`
+| Entity        | [URL](#url-conventions)                       | `/Books/Ficciones`
+| Query         | [Query String](#query-string-conventions)     | `/Authors?$top=10&$skip=30&orderBy=LastName`
+| Content       | [Message Body](#message-body-conventions)     | `{ 'name': 'Ficcionnes', 'Author': 'Jorge Luis Borges' }`
+
+> *Note:* Since the identifiers, syntax, and design of web services are tightly intertwined, this style guide is instead organized by feature area.
 
 ## Method Conventions
 
