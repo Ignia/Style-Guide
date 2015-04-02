@@ -67,7 +67,7 @@ The following is a broad overview of how different concepts map to different HTT
 > For instance, `/Authors/Borges/Books/Ficciones/DatePublished/` and `/Users/Jeremy/Favorites/Books/Ficciones/DatePublished` should represent the same object.
 
 - Generally, public entity names (e.g., `/Books`) should map to server-side class names (e.g., `BookCollection`) and SQL table names (`catalog_Books`)
-  - E.g., Outside of established conventions (e.g., the `Collection` suffix, the `catalog_` namespace prefix), entity names should be consistently applied
+  - Outside of established conventions (e.g., the `Collection` suffix, the `catalog_` namespace prefix), entity names should be consistently applied
   - Developers should be able to quickly and intuitively understand the relationship between a web service, class library, and data structure
 - Consider using key/value pairs to support composite primary keys (e.g., `/Articles(ArticleID=5,Locale='en-US')`, as per OData conventions)
 
