@@ -82,9 +82,9 @@ The following is a broad overview of how different concepts map to different HTT
 - The query string should provide an alternative means of defining HTTP Headers (e.g., `?$format=json`, as per OData conventions)
 
 ### Message Body Conventions
-- The body should be used for delivering actual *content*, both when reading (i.e., the response body) and writing (i.e., the request body)
-- The body should be formatted using a well-established data format, such as JSON or XML
-  - If practical, the body should be formatted with a well-established schema (e.g., ``)
+- The message body should be used for delivering actual *content*, both when reading (i.e., the response body) and writing (i.e., the request body)
+- The message body should be formatted using a well-established data format, such as JSON or XML
+  - If practical, the message body should be formatted with a well-established schema (e.g., ``)
 - If multiple data formats are available, the client should be able to specify the requested format using either the `Accepts` header
   - Ideally, the client should also be able to define the content type using an optional query string parameter (e.g., `?$format=json`, as per OData conventions)
   - The preferred default should always be JSON, when available
