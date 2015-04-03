@@ -27,7 +27,7 @@ For relational databases, Ignia works primarily in Transact SQL (T-SQL) via Micr
   - The exception is foreign key constraints which may be abstracted to (collections of) references in code
 - Consider prefixing column names with the singular entity type (e.g., `User`) *if* the column identifier is not otherwise unique (e.g., `ID`, `Name`) *and* it is likely to be joined with other tables with similar names (for this reason, identifiers should *always* include the entity name)
 - Identity columns should begin with the singular entity name (e.g., `User`) followed by `ID` (e.g., `UserID`)
-- Foreign key constraints should be identical to the foreign key constraint they reference (e.g., `UserID`)
+- Foreign key constraints should be identical to the primary key constraint they reference (e.g., `UserID`)
   - If a foreign key constraint represents a particular relationship, it should be prefixed by the relationship type and an underscore (e.g., `ApprovedBy_UserID`, `Announcement_ArticleID`)
 - Bit fields should begin with a present indicative (e.g., `isEnabled`, `hasReplies`, etc.)
 - Only use underscores in column names to distinguish *concepts*; do not use underscores to separate words
