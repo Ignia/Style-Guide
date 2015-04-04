@@ -5,7 +5,7 @@ CSS-Based languages include CSS itself, as well as CSS preprocessors such as Sas
 ## Style Guides
 - [Sass](./Sass.md)
 
-> *Note:* This style guide inherits rules from the [Global Style Guide](../README.md)
+> *Note:* This style guide inherits rules from the [Global Style Guide](../README.md). For images, it also assumes compliance with the [Media Files Style Guide](../Media%20Files/README.md).
 
 ## Contents
 - [Performance](#performance)

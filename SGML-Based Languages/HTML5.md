@@ -1,13 +1,12 @@
 # HTML5 Style Guide
 
-> *Note:* This style guide inherits rules from the [SGML-Based Languages Style Guide](./README.md) and the [Global Style Guide](../README.md)
+> *Note:* This style guide inherits rules from the [SGML-Based Languages Style Guide](./README.md) and the [Global Style Guide](../README.md). For images, it also assumes compliance with the [Media Files Style Guide](../Media%20Files/README.md).
 
 ## Contents
 - [General Principles](#general-principles)
 - [Formatting](#formatting)
 - [Semantics](#semantics)
 - [Encoding](#encoding)
-- [Images](#images)
 - [Acknowledgments](#acknowledgments)
 
 ## General Principles
@@ -48,11 +47,6 @@
 ## Encoding
 - Always set encoding to UTF-8 (i.e., via `<meta charset="utf-8">`)
 - Take advantage of UTF-8 encoding; do not use entity-references unless required (e.g., for HTML escaping)
-
-## Images
-- For repeating images, smaller isn't necessarily better; a larger image may take more time to download, but less time to render
-- CSS sprites are recommended for commonly repeated UI elements, such as iconography and layout adornments (such as graphical backgrounds, borders, bullets, etc)
-- Never embed a color profile when exporting images; not all browsers honor these, resulting in inconsistent colors
 
 ## Acknowledgments
 - [Code Guide by @mdo](http://mdo.github.io/code-guide/) by [Mark Otto](http://markdotto.com/about/)
