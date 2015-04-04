@@ -122,10 +122,12 @@ input:active,
 
 ## Language Features
 - Use `rem` units for fonts with a `px` fallback for backward compatibility; do not use `em`
+- Prefer RGBA (e.g., `rgba(255, 255, 255, 1)` to hexadecimal color format (e.g., `#FFFFFF`); this is easier to manipulate, and supports transparencies
 - Do not use `@import`, unless using a preprocessor; it adds extra time to the page load
 - Avoid ancestor selectors when possible; these can be *very* slow
 - Only use Internet Explorer hacks like `_` and `*` if absolutely required for compatibility (rare)
 - Do not set height on elements containing text (and *especially* when used with a CMS or localization)
+- Place media queries alongside related classes; do not establish independent CSS files for each target device
 
 ## No Opinion
 - Indentation of related rule-sets
