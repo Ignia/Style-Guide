@@ -10,6 +10,10 @@ A primary focus of Ignia's is on developing APIs, be they class libraries or web
 - [URL Conventions](#url-conventions)
 - [Query String Conventions](#query-string-conventions)
 - [Message Body Conventions](#body-conventions)
+  - [Response Structure](#response-structure)
+    - [Wrapper](#wrapper)
+    - [Paging](#paging)
+    - [Errors](#errors)
 
 <!--
 - [Identifiers](#identifiers)
@@ -104,8 +108,8 @@ The following is a broad overview of how different concepts map to different HTT
   - In OData, the preferred format is to use OData metadata annotations (e.g., `@odata.editLink`)
 
 ### Response Structure
-- All REST responses should be wrapped in a consistent structure providing response metadata
-- When practical, the following structure and identifiers should be used
+- All REST responses should be wrapped in a consistent structure providing metadata (e.g., `id`), the result (e.g., `data`), and/or an error object (e.g., `error`)
+- In absence of a preferred schema (e.g., OData) the following structure and identifiers should be used
 
 #### Wrapper
 ```json
@@ -134,9 +138,8 @@ object {
 object {
   object {
     integer count?;
-    integer pageIndex?;
     integer pageSize?;
-    integer pageCurrent?;
+    integer pageIndex?;
     integer pageCount?;
     integer totalCount?;
     string pageLinkTemplate /^https?:/ ?;
