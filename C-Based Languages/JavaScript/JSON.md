@@ -11,6 +11,7 @@ JSON (JavaScript Object Notation) is a data format supported natively in JavaScr
 - [Spacing](#spacing)
 - [Formatting](#formatting)
 - [Comments](#comments)
+- [Language Features](#language-features)
 - [Acknowledgments](#acknowledgments)
 
 <!--
@@ -56,9 +57,11 @@ JSON (JavaScript Object Notation) is a data format supported natively in JavaScr
 - Comments are *not* supported in JSON files; if comments are required, it is recommended that they be placed in a property with the name `__comment`
 - Comments *are* honored as part of JavaScript's object literal notation, and are welcome contributions for providing inline documentation
 
-<!--
 ## Language Features
--->
+- Per the JSON specification, property values should be restricted to booleans, strings, numbers, arrays, objects, and `null`; expressions and functions should not be included
+- Enum values should be serialized as strings, not integers; flags should be serialized as comma-delimited lists
+- Dates should be formatted according to [RFC 3339](http://www.ietf.org/rfc/rfc3339.txt) (e.g., `2015-10-15T21:12:31.000Z`)
 
 ## Acknowledgments
 - [RFC 7159](http://tools.ietf.org/html/rfc7159)
+- [Google's JSON Style Guide](https://google-styleguide.googlecode.com/svn/trunk/jsoncstyleguide.xml)
