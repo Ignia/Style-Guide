@@ -21,6 +21,9 @@ The following provides guidelines for producing images produced for the web. Fut
   - `/Sprites` for composite images that contain multiple graphics which will be positioned using CSS
   - `/Tiles` for background images such as textures
 - Images that are specific to a particular section or feature should be placed in a corresponding images directory (e.g., `/Account/Images` for the `/Account` feature)
+- Prefer placing source files (e.g., `*.psd`, `*.ai`) next to output files so they're easy to maintain; these can be filtered out by build automation
+  - When working from one large source file, consider creating smaller templates for commonly modified images (e.g., an image that requires localization)
+  - Alternatively, consider providing shortcut files to original source locations (e.g., Ignia's `Projects` file share, a partner's [Box](http://box.com) share)
 
 ### Naming Conventions
 - Image file names should use `PascalCase` and separate *concepts* (not words) by periods (e.g., `AmazonFresh.Logo.png`, not `Amazon.Fresh.Logo.png`)
@@ -28,7 +31,7 @@ The following provides guidelines for producing images produced for the web. Fut
   - `{Key}` is the unique (base) identifier for the image (e.g., `Logo`)
   - `{Modifier}` is a modifier for content variations of an image (e.g., `StandAlone`, `Landscape`, `Portrait`, `FullScreen`, `Background`)
   - `{Width}` and `{Height}` represent the physical image dimensions (e.g., `500x250`); see note below
-  - `{TargetWidth}` represents the minimum screen size this image should be used on (e.g., `500` represents 500px+ screens)
+  - `{TargetWidth}` represents the *minimum* screen size this image should be used on (e.g., `500` represents 500px+ screens); this should be smaller than the image width
   - `{PixelDensity}` represents the minimum pixel density targeted by the image (e.g., `@1x`, `@1.5x`, `@2x`)
   - e.g., `Logo.StandAlone.w500.@2x.png`
 - Target width pixel density should only be included in a file name if multiple sizes of a file are provided
@@ -39,6 +42,7 @@ The following provides guidelines for producing images produced for the web. Fut
 
 ## Production Standards
 - By convention, icons should be sized by multiples of 16x16 (e.g., 16x16, 32x32, 64x64, etc.)
+- When including images in HTML, always specify the `alt` attribute; for layout "glyphs" this may be set to `*`
 - Prefer removing metadata from images to reduce file size and, in some cases, preserve privacy
 - Avoid placing text in images; this is difficult to maintain and localize, decentralizes styling, reduces accessibility, and increases page load
   - Prefer positioning text on top of images using CSS positioning or SVG compositions
@@ -53,7 +57,7 @@ The following provides guidelines for producing images produced for the web. Fut
 - For tiling images, smaller isn't necessarily better; a larger image may take more time to download, but less time to render
 
 ### Formats
-- SVG should be used for vector-sourced content (e.g., scalable icons) as it is scalable, generally smaller, and can be independently styled
+- SVG should be used for vector-sourced content as it is scalable, generally smaller, and can be independently styled
 - JPEG should be used primarily for photographs
   - JPEGs should target a quality level ~60, although this will need to vary by application
   - JPEGs should *not* be exported with a color profile; if a color profile exists, it should be converted to RGB
