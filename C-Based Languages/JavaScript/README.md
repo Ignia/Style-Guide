@@ -38,6 +38,7 @@
 - Assign methods to the prototype object, instead of overwriting the prototype with a new object
 - Use proper feature detection instead of relying on user agents; use of [Modernizr](http://modernizr.com/) is encouraged
 - Prefer loading third-party libraries from CDNs; this can decrease page load times by relying on caching
+- Generate source maps during compilation and minification to simplify debugging
 
 > *Note:* The guidance for several of the above rules change with ECMAScript 6; please refer to the [ECMAScript 6 Style Guide](./ECMAScript%206.md) for details.
 

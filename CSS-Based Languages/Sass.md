@@ -75,4 +75,4 @@ Sass provides a preprocessor environment for simplifying the creating and mainte
 ## Language Features
 - Do not manually prefix declarations or use mixins exclusively for this purpose; this is a task best suited for build tools
 - Be wary of excessive nesting; this is a useful feature, but can lead to excessive specificity or granularity
-
+- Generate source maps during compilation and minification to simplify debugging
