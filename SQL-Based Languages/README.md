@@ -19,7 +19,10 @@ For relational databases, Ignia works primarily in Transact SQL (T-SQL) via Micr
 ## Identifiers
 - Tables, views, and stored procedures should begin with a brief, `lowercase` namespace followed by an underscore to separate related objects (e.g., `account_Users`)
 - Table and view names should be represented by pluralized `PascalCase` noun phrases representing the entity type (e.g., `account_Logins`, `content_Articles`)
+- Views should be prefixed by `vw_` to clearly indicate that they are not writable (e.g., `vw_account_Logins`)
 - Stored procedures should be named using a verb (e.g., `set`, `get`, `delete`) followed by a noun representing the entity type (e.g., `account_setUser`, `account_getLogins`, `content_deleteArticle`)
+- Stored procedures should *not* be prefixed with `sp_`; this is reserved for system stored procedures, and influences database search order
+- While permitted, object identifiers should not include periods, as this requires quoted identifiers to distinguish from SQL's object notation
 
 ### Columns
 - Column names should be `PascalCase` and will typically be composed of singular nouns or noun phrases (e.g., `FirstName`, `Email`)
@@ -102,11 +105,25 @@ AND (
 - Consider regular (e.g., quarterly) analysis of indexes based on profile data to ensure indexes are well-tuned based on actual queries
 
 ## Comments
+- A header with an inline history should be included for every stored procedure and user defined function
+- Nesting should be limited within SQL scripts and, as such, only two tiers of comments are defined
+
 
 ```sql
------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
+-- [NAME]
+-- Purpose                      [Purpose]
+-- Parameters
+--   Input                      See Below
+--   Output                     [Output Variable(s)]
+--
+-- History
+--  [FName][LName]              MMDDYYYY                        [Update Description]
+--------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------
 -- TIER 1 COMMENT
------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
 
 -- Tier 2 comment
 
