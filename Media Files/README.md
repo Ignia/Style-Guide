@@ -51,8 +51,8 @@ The following provides guidelines for producing images produced for the web. Fut
   - Use multiple image files if the graphic:
     - Will vary based on dimensions (e.g., removing logotype on smaller screens), or
     - Requires fine production control (e.g., with transparent PNG-8 icons)
-- Always compress images prior to production using an image processing tool (e.g., [PNGSlim](#))
-  - This should ideally be automated as part of the build process (e.g., [gulp-imgmin](#))
+- Always compress images prior to production using an image processing tool (e.g., [TinyPNG](https://tinypng.com/))
+  - This should ideally be automated as part of the build process (e.g., [gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin))
 - CSS sprites are recommended for commonly repeated UI elements, such as iconography and layout adornments (such as graphical backgrounds, borders, bullets, etc)
 - For tiling images, smaller isn't necessarily better; a larger image may take more time to download, but less time to render
 
