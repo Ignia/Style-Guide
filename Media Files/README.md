@@ -64,4 +64,4 @@ The following provides guidelines for producing images produced for the web. Fut
   - JPEGs should *not* be exported with a color profile; if a color profile exists, it should be converted to RGB
 - PNG-8 (with 256 indexed colors) should be used for text or icons that contain a limited color palette are *not* anti-aliased
 - PNG-24 (with full transparency) should be used for text, icons, or illustrations that require full transparency support
-- GIF should be used *exclusively* for short animations (e.g., "spinners"); otherwise prefer PNG-8
+- GIF should be used *exclusively* for short animations (e.g., "spinners"), in cases where the animation cannot be accomplished via CSS; otherwise prefer PNG-8
