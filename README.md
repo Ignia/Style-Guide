@@ -22,7 +22,7 @@ Code needs to be executed by computers, but it also needs to be maintained by hu
 - [SQL-Based Languages](./SQL-Based%20Languages/)
 - [Legacy Style Guides](./Legacy/)
 
- <!-- [TypeScript](./C-Based%20Languages/JavaScript/TypeScript.md) -->
+<!-- [TypeScript](./C-Based%20Languages/JavaScript/TypeScript.md) -->
 
 ## Contents
 - [General Principles](#general-principles)
