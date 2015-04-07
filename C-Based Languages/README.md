@@ -5,8 +5,9 @@ While C#, Java, and JavaScript are very different languages, they do share one t
 ## Style Guides
 - [JavaScript](./JavaScript)
   - [Angular](./JavaScript/Angular.md)
-  - [TypeScript](./JavaScript/TypeScript.md)
+  - [ECMAScript 6](./JavaScript/ECMAScript%206.md)
   - [JSON](./JavaScript/JSON.md)
+  - [TypeScript](./JavaScript/TypeScript.md)
 - [C#](./C%23)
   - [Class Libraries](./C%23/Class%20Libraries.md)
 
