@@ -4,7 +4,7 @@
 - [Angular](./Angular.md)
 - [ECMAScript 6](./ECMAScript%206.md)
 - [JSON](./JSON.md) (and JavaScript object literal notation)
-- [TypeScript](./TypeScript.md)
+<!-- [TypeScript](./TypeScript.md) -->
 
 > *Note:* This style guide inherits rules from the [C-Based Languages Style Guide](../README.md), and the [Global Style Guide](../../README.md).
 
