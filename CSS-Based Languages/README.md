@@ -69,8 +69,8 @@ With a few exceptions, maintainability trumps performance with CSS. While perfor
 input:focus,
 input:active,
 .is-active {
-  color: #ff0000;
-  border: 1px solid #ff0000;
+  color: #f00;
+  border: 1px solid #f00;
 }
 
 ```
