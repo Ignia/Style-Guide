@@ -58,7 +58,7 @@ AND (
                 Email
   FROM          account_Email           Email
   WHERE         Email.UserID            = Users.UserID
-  AND           Type                    = 1
+    AND         Type                    = 1
 )
 ```
 
