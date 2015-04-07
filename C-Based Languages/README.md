@@ -10,7 +10,7 @@ While C#, Java, and JavaScript are very different languages, they do share one t
 - [C#](./C%23)
   - [Class Libraries](./C%23/Class%20Libraries.md)
 
-> *Note:* This style guide inherits rules from the [Global Style Guide](../README.md)
+> *Note:* This style guide inherits rules from the [Global Style Guide](../README.md).
 
 ## Contents
 - [Identifiers](#identifiers)
