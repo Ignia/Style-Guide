@@ -2,7 +2,8 @@
 
 The following provides guidelines for producing images produced for the web. Future iterations will also cover audio, video, and animation.
 
-> *Note:* This style guide inherits rules from the [Global Style Guide](../README.md). It is also expected, in particular, to be used in conjunction with the [CSS-Based Languages Style Guide](../CSS-Based%20Languages/README.md) and [HTML5 Style Guide](../SGML-Based%Languages/HTML5.md)
+> *Note:* This style guide inherits rules from the [Global Style Guide](../README.md). It is also expected, in particular, to be used in conjunction with the [CSS-Based Languages Style Guide](../CSS-Based%20Languages/README.md) and [HTML5 Style Guide](../SGML-Based%Languages/HTML5.md). This document supersedes our legacy [Production Standards](../Legacy/Production.Standards.doc) (Microsoft Word).
+
 
 ## Contents
 - [Identifiers](#identifiers)

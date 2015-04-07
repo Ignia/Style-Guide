@@ -5,7 +5,7 @@ While most of Ignia's front-end code is written exclusively in HTML5 (without an
 ## Style Guides
 - [Class Libraries](../C%23/Class%20Libraries.md)
 
-> *Note:* This style guide inherits rules from the [C-Based Languages Style Guide](../README.md) and the [Global Style Guide](../../README.md)
+> *Note:* This style guide inherits rules from the [C-Based Languages Style Guide](../README.md) and the [Global Style Guide](../../README.md). This document supersedes our legacy [C# Style Guide](../Legacy/C%23.StyleGuide.doc) (Microsoft Word).
 
 ## Contents
 - [Identifiers](#identifiers)

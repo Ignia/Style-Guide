@@ -2,7 +2,7 @@
 Ignia's internal style guide for languages and formats we work in most frequently. For brevity, this style guide focuses more on guidelines and less on the reasons.
 
 ## Motivation
-Code needs to be executed by computers, but it also needs to be maintained by humans. For this reason, Ignia places high value on code that is readable, uniformly formatted, and consistent with emerging conventions. This is especially important since Ignia works with a diverse set of clients, partners, and contractors. Ignia has not only maintained rigid coding standards since our inception in 1998, but continues to evolve them to keep pace with both technology and market trends.
+Code needs to be executed by computers, but it also needs to be maintained by humans. For this reason, Ignia places high value on code that is readable, uniformly formatted, and consistent with emerging conventions. This is especially important since Ignia works with a diverse set of clients, partners, and contractors. Ignia has not only [maintained rigid coding standards since our inception in 1998](./Legacy/), but continues to evolve them to keep pace with both technology and market trends.
 
 ## Style Guides
 - [Common Rules](#contents) (see below)
@@ -19,6 +19,7 @@ Code needs to be executed by computers, but it also needs to be maintained by hu
 - [SGML-Based Languages](./SGML-Based%20Languages/)
   - [HTML5](./SGML-Based%20Languages/HTML5.md)
 - [SQL-Based Languages](./SQL-Based%20Languages/)
+- [Legacy Style Guides](./Legacy/)
 
 ## Contents
 - [General Principles](#general-principles)
