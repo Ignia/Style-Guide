@@ -144,7 +144,6 @@ let books                       = [ 'Ficciones',
                                     'Poesía completa'
                                   ];
 let birthday                    = '1899-08-24';
-
 ```
 
 - If function arguments cannot fit on a single line, each should be placed on its own line and indented two spaces
