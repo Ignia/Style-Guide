@@ -37,7 +37,7 @@ For relational databases, Ignia works primarily in Transact SQL (T-SQL) via Micr
 - Prefer beginning date fields with `Date` (e.g., `DateAdded`, `DateStart`, `DateEnd`)
 - For collecting contact information, prefer the field names `Province` (over `State`) and `PostalCode` (over `ZipCode`) in anticipation of internationalization
 - Columns representing URLs should end with `URL`
-- Parameter names should generally correspond to column names unless they are intended exclusive for setting conditional logic (e.g., `@IsRecursive`)
+- Parameter names should generally correspond to column names unless they are intended exclusively for setting conditional logic (e.g., `@IsRecursive`)
 
 ## Formatting
 - Use uppercase keywords (e.g., `SELECT`, `FROM`, `WHERE`)
