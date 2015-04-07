@@ -11,7 +11,6 @@ Code needs to be executed by computers, but it also needs to be maintained by hu
     - [Angular](./C-Based%20Languages/JavaScript/Angular.md)
     - [ECMAScript 6](./C-Based%20Languages/JavaScript/ECMAScript%206.md)
     - [JSON](./C-Based%20Languages/JavaScript/JSON.md) (and JavaScript object literal notation)
- <!-- [TypeScript](./C-Based%20Languages/JavaScript/TypeScript.md) -->
   - [C#](./C-Based%20Languages/C%23)
     - [Class Libraries](./C-Based%20Languages/C%23/Class%20Libraries.md)
 - [CSS-Based Languages](./CSS-Based%20Languages/)
@@ -22,6 +21,8 @@ Code needs to be executed by computers, but it also needs to be maintained by hu
   - [HTML5](./SGML-Based%20Languages/HTML5.md)
 - [SQL-Based Languages](./SQL-Based%20Languages/)
 - [Legacy Style Guides](./Legacy/)
+
+ <!-- [TypeScript](./C-Based%20Languages/JavaScript/TypeScript.md) -->
 
 ## Contents
 - [General Principles](#general-principles)
