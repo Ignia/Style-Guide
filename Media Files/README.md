@@ -46,7 +46,7 @@ The following provides guidelines for producing images produced for the web. Fut
 - Prefer removing metadata from images to reduce file size and, in some cases, preserve privacy
 - Avoid placing text in images; this is difficult to maintain and localize, decentralizes styling, reduces accessibility, and increases page load
   - Prefer positioning text on top of images using CSS positioning or SVG compositions
-  - If necessary, prefer compositing variable text into graphics dynamically using `<canvas>` or server-side components (e.g., GDI+, ImageMagik)
+  - If necessary, prefer compositing variable text into graphics dynamically using `<canvas>` or server-side components (e.g., [GDI+](https://msdn.microsoft.com/en-us/library/windows/desktop/ms533798%28v=vs.85%29.aspx), [ImageMagick](http://www.imagemagick.org/))
 - Prefer providing one image file per graphic, based on the largest anticipated size requirement
   - Use multiple image files if the graphic:
     - Will vary based on dimensions (e.g., removing logotype on smaller screens), or
