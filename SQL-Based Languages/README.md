@@ -65,7 +65,7 @@ AND (
 ## Design
 - Prefer highly normalized data structures; only denormalize data as required by optimization
   - To denormalize commonly requested sets, rely on views; these do not provide execution optimization, but do simplify otherwise complex queries by centralizing joins
-- If there is a need for more than one item (e.g., `primary_Street1`, `secondary_Street1`) consider establishing a secondary table for a 1:n relationship (even if the number of relations is expected to be constrained to a fixed number)
+- If there is a need for more than one related item (e.g., `primary_Street1`, `secondary_Street1`) consider establishing a secondary table for a 1:n relationship (even if the number of relations is expected to be constrained to a fixed number)
 - For non-lookup tables, consider adding `DateAdded` and `DateUpdated` columns for basic auditing purposes
   - For advanced auditing (e.g., with `Source`, `Type`, `Explanation`), prefer a centralized auditing table (e.g., `audit_History`)
 - Consider assigning a logical maximum limit to queries to prevent returning more data than the application is expected to use (e.g., `TOP 500`)
