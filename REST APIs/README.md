@@ -111,9 +111,10 @@ The following is a broad overview of how different concepts map to different HTT
 - All REST responses should be wrapped in a consistent structure providing metadata (e.g., `id`), the result (e.g., `data`), and/or an error object (e.g., `error`)
 - In absence of a preferred schema (e.g., OData) the following structure and identifiers should be used
 
-#### Wrapper
-```json
+> *Note:* The schemas below are presented in [Orderly format](http://orderly-json.org/), and are based loosely on the [Google JSON Style Guide](https://google-styleguide.googlecode.com/svn/trunk/jsoncstyleguide.xml)'s [JSON Structure & Reserved Property Names](https://google-styleguide.googlecode.com/svn/trunk/jsoncstyleguide.xml?showone=apiVersion#JSON_Structure_&_Reserved_Property_Names).
 
+#### Wrapper
+```
 object {
   string apiVersion?;
   string id?;
@@ -134,8 +135,7 @@ object {
 ```
 
 #### Paging
-```json
-object {
+```
   object {
     integer count?;
     integer pageSize?;
@@ -153,7 +153,7 @@ object {
 ```
 
 #### Errors
-```json
+```
 object {
   object {
     integer code?;
