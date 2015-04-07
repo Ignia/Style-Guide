@@ -1,6 +1,6 @@
 # HTML5 Style Guide
 
-> *Note:* This style guide inherits rules from the [SGML-Based Languages Style Guide](./README.md) and the [Global Style Guide](../README.md). For images, it also assumes compliance with the [Media Files Style Guide](../Media%20Files/README.md). This document supersedes our legacy [Production Standards](../Legacy/Production.Standards.doc) and [HTML Style Guide](../Legacy/HTML.StyleGuide.doc) documents (Microsoft Word).
+> *Note:* This style guide inherits rules from the [SGML-Based Languages Style Guide](./README.md) and the [Global Style Guide](../README.md). For images, it also assumes compliance with the [Media Files Style Guide](../Media%20Files/README.md). This document supersedes our legacy [Production Standards](../Legacy/Production.Standards.doc?raw=true) and [HTML Style Guide](../Legacy/HTML.StyleGuide.doc?raw=true) documents (Microsoft Word).
 
 
 ## Contents

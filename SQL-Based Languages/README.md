@@ -2,7 +2,7 @@
 
 For relational databases, Ignia works primarily in Transact SQL (T-SQL) via Microsoft SQL Server, although many of the guidelines below should apply to most SQL variants.
 
-> *Note:* This style guide inherits rules from the [Global Style Guide](../README.md). This document supersedes our legacy [SQL Style Guide](../Legacy/SQL.StyleGuide.doc) and [SQL Standards](../Legacy/SQL.Standards.doc) documents (Microsoft Word).
+> *Note:* This style guide inherits rules from the [Global Style Guide](../README.md). This document supersedes our legacy [SQL Style Guide](../Legacy/SQL.StyleGuide.doc?raw=true) and [SQL Standards](../Legacy/SQL.Standards.doc?raw=true) documents (Microsoft Word).
 
 ## Contents
 - [Identifiers](#identifiers)
