@@ -5,7 +5,7 @@ SGML is, loosely speaking, the parent language of HTML and XML. While HTML5 tech
 ## Style Guides
 - [HTML5](./HTML5.md)
 
-> *Note:* This style guide inherits rules from the [Global Style Guide](../README.md)
+> *Note:* This style guide inherits rules from the [Global Style Guide](../README.md).
 
 ## Contents
 - [Spacing](#spacing)

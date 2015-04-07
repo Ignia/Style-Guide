@@ -2,7 +2,7 @@
 
 As class libraries are typically intended to be used by a broad selection of developers who may not have insight into (or access to) the internal workings of the library, they introduce their own unique challenges. That said, while these are documented separately from our general [C# Style Guide](../C%23/README.md), Ignia considers these guidelines a best practice for all C# development.
 
-> *Note:* This style guide inherits rules from the [C# Style Guide](../C%23/README.md), [C-Based Languages Style Guide](../README.md), and the [Global Style Guide](../../README.md)
+> *Note:* This style guide inherits rules from the [C# Style Guide](../C%23/README.md), [C-Based Languages Style Guide](../README.md), and the [Global Style Guide](../../README.md).
 
 > *Note:* The majority of the items below are from the (excellent) book "[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries (2nd Edition)](http://www.amazon.com/Framework-Design-Guidelines-Conventions-Libraries/dp/0321545613) (Krzysztof Cwalina, Brad Abrams; 2008) which is required reading for all developers at Ignia. The items highlighted below are some of the most important and common conventions from the book.
 

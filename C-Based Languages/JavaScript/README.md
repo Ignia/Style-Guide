@@ -6,7 +6,7 @@
 - [TypeScript](./TypeScript.md)
 - [JSON](./JSON.md) (and JavaScript object literal notation)
 
-> *Note:* This style guide inherits rules from the [C-Based Languages Style Guide](../README.md), and the [Global Style Guide](../../README.md)
+> *Note:* This style guide inherits rules from the [C-Based Languages Style Guide](../README.md), and the [Global Style Guide](../../README.md).
 
 ## Contents
 - [Identifiers](#identifiers)

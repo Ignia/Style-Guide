@@ -2,7 +2,7 @@
 
 Sass provides a preprocessor environment for simplifying the creating and maintenance of CSS.
 
-> *Note:* This style guide inherits rules from the [CSS-Based Languages Style Guide](./README.md) and the [Global Style Guide](../README.md)
+> *Note:* This style guide inherits rules from the [CSS-Based Languages Style Guide](./README.md) and the [Global Style Guide](../README.md).
 
 ## Contents
 - [Structure](#structure)

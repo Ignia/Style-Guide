@@ -2,7 +2,7 @@
 
 JSON (JavaScript Object Notation) is a data format supported natively in JavaScript, but also used across other languages. While it is integrated deeply with JavaScript, it follows some formatting rules and limitations that are unique to it and merit separate evaluation. In addition, while some of the characteristics of JSON also apply to other JavaScript objects (such as arrays containing other arrays or objects), these are best evaluated as part of JSON, where these scenarios are most common.
 
-> *Note:* This style guide inherits rules from the [JavaScript Style Guide](./README.md), [C-Based Languages Style Guide](../README.md), and the [Global Style Guide](../../README.md)
+> *Note:* This style guide inherits rules from the [JavaScript Style Guide](./README.md), [C-Based Languages Style Guide](../README.md), and the [Global Style Guide](../../README.md).
 
 > *Note:* Technically, JSON is a subset of the object literal notation that appears within JavaScript. This style guide addressed both. Where the two diverge, the differences will be noted.
 

@@ -2,7 +2,7 @@
 
 ECMAScript is the standard behind JavaScript. ECMAScript 6.0 (sometimes, incorrectly, referred to as JavaScript 6.0) is a significant update - arguably the most significant in the history of the language - and introduces a lot of new syntax, types, and capabilities. While most browsers do not yet support ECMAScript 6, Ignia is developing for it today using transpilers such as [Google Traceur](https://github.com/google/traceur-compiler) and [Babel](https://babeljs.io/).
 
-> *Note:* This style guide inherits rules from the [JavaScript Style Guide](./README.md), [C-Based Languages Style Guide](../README.md), and the [Global Style Guide](../../README.md)
+> *Note:* This style guide inherits rules from the [JavaScript Style Guide](./README.md), [C-Based Languages Style Guide](../README.md), and the [Global Style Guide](../../README.md).
 
 > *Note:* The ECMAScript 6 standard is not yet finalized, and some implementation details are expected to change before publication; the guidance below will be reevaluated at that point to ensure consistency with the final specification.
 
