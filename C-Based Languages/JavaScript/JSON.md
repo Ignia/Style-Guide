@@ -6,6 +6,8 @@ JSON (JavaScript Object Notation) is a data format supported natively in JavaScr
 
 > *Note:* Technically, JSON is a subset of the object literal notation that appears within JavaScript. This style guide addressed both. Where the two diverge, the differences will be noted.
 
+> *Note:* This style guide does not currently cover [Jsonnet](http://google.github.io/jsonnet/doc/).
+
 ## Contents
 - [Identifiers](#identifiers)
 - [Spacing](#spacing)
