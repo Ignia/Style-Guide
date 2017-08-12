@@ -53,7 +53,9 @@ While MVC  applications typically use C# and HTML, they also introduce their own
 
 ### Caching
 - If the contents of a page are not dynamic, or vary based on limited parameters, consider using `OutputCache` to improve performance
+
+<!--
 - `OutputCache` should always use the `CacheProfile` unless the parameters are truly page specific
 - Pages that are rarely accessed should not use output caching as it increases memory requirements
 - For pages that vary by state variables (e.g., cookies, session, user profile properties, etc) use `VaryByCustom`
-
+-->
