@@ -43,7 +43,7 @@ While Ignoa Ontopic applications typically use C#, HTML, and MVC, they also intr
 - Rely on the out-of-the-box views functionality to provide different templates for the same data model
   - Views should be follow the convention `/Views/ContentType/ViewName.cshtml` (e.g., `/Views/ContentList/Accordion.cshtml`)
   - For a default view to be used independent of content type, follow the convention `/Views/ViewName.cshtml` (e.g., `/Views/JSON.cshtml`)
-- Use includes (e.g., `@Html.Partial("~/Views/ContentList/Accordion.cshtml")') to centralize presentation with common data models
+- Use includes (e.g., `@Html.Partial("~/Views/ContentList/Accordion.cshtml")`) to centralize presentation with common data models
 
 <!--
 ## Language Features
