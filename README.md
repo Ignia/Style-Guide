@@ -71,6 +71,7 @@ body {
 ```
 - Lines should be no longer than 96 characters, and must not exceed 128 (including indentation)
 - Insert empty lines to create visual groupings among related code blocks
+- Set editor to remove trailing spaces to avoid false positives in source control
 - End files with a single newline character; this aids with diffs in source control
 
 ## Comments
