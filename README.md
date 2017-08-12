@@ -35,7 +35,6 @@ Code needs to be executed by computers, but it also needs to be maintained by hu
 - [Spacing](#spacing)
 - [Comments](#comments)
 - [Encoding](#encoding)
-- [No Opinion](#no-opinion)
 
 ## General Principles
 - Do not be afraid of whitespace; it greatly enhances readability
@@ -88,9 +87,7 @@ body {
 
 ## Encoding
 - Use UTF-8 encoding
-
-## No Opinion
-- Unix-style carriage returns (i.e., `\n`) v. Windows-style (`\r\n`)
+- Set editor to use Windows-style carriage returns (`\r\n`) to avoid false positives in source control
 
 ## Feedback
 If you find errors in this guide, or feel we should reevaluate a particular standard, feel free to [open an issue](https://github.com/Ignia/Style-Guide/issues). We welcome feedback.
