@@ -13,6 +13,7 @@ Sass provides a preprocessor environment for simplifying the creating and mainte
 - [Declaration Order](#declaration-order)
 
 ## Structure
+- Establish a `/_variables.scss` for establishing variables
 - Break up styles into logically organized files; e.g.,
   - Base (for global overrides for elements)
   - Components (for styling reusable components or controls)
@@ -24,6 +25,7 @@ Sass provides a preprocessor environment for simplifying the creating and mainte
 - When practical, separate mixins, placeholders, and functions into their own files
 - Compile distinct themes, layouts, and page-level CSS independent of the main CSS file
 - Do *not* group media queries into a single file (e.g., `_mobile.scss`); they should be associated with the styles they affect
+- `_*.scss` files should _either_ be manifests (with `@import` statements) _or_ stylesheets; they should not include both
 
 > *Note:* For more information, see [Ignia's Sass Structure](https://github.com/Ignia/Sass-Structure).
 
@@ -34,6 +36,7 @@ Sass provides a preprocessor environment for simplifying the creating and mainte
 
 ## Variables
 - When introducing a new variable, also add it to the `_variables.scss` in the Sass root directory
+  - Also use this file to override variables defaults, as appropriate, from third-party libraries (e.g., Foundation)
 - When introducing a new variable in a file, declare the variable at the top of the file with a `!default` flag
 
 > *Note:* The `!default` value will only be used if the variable isn't otherwise defined; this ensures that the styles will work correctly even if their corresponding variables are removed from `_variables.scss`.
