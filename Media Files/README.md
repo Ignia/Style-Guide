@@ -35,8 +35,9 @@ The following provides guidelines for producing images produced for the web. Fut
   - `{TargetWidth}` represents the *minimum* screen size this image should be used on (e.g., `500` represents 500px+ screens); this should be smaller than the image width
   - `{PixelDensity}` represents the minimum pixel density targeted by the image (e.g., `@1x`, `@1.5x`, `@2x`)
   - e.g., `Logo.StandAlone.w500.@2x.png`
-- Target width and pixel density should only be included in a file name if multiple sizes of a file are provided
+- `{TargetWidth}` and `{PixelDensity}` should only be included in a file name if multiple sizes of a file are provided
   - These values can be used by automated tools to generate CSS Media Queries of HTML5 `<picture>` elements
+  - If using a grid-based framework, break point names (e.g. `small`) can be used in place of pixels for `{TargetWidth}`
 - Avoid encoding image dimensions into the file name *unless* multiple sizes may be used for the same screen size (e.g., a small logo and a large logo)
 - For icons that represent particular content types and are not stored in a sprite, use the file extension for the key (e.g., `docx.16x16.png`, `pdf.16x16.png`)
   - Targets for these can be automated in CSS using, for instance, `src[~.docx]`
