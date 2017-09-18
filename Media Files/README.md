@@ -59,7 +59,8 @@ The following provides guidelines for producing images produced for the web. Fut
 - For tiling images, smaller isn't necessarily better; a larger image may take more time to download, but less time to render
 
 ### Formats
-- SVG should be used for vector-sourced content as it is scalable, generally smaller, and can be independently styled
+- SVG should be preferred for vector-sourced content as it is scalable, can be independently styled, and is _generally_ smaller
+  - Be aware that SVGs _can_ be considerably larger than PNGs, if sufficiently complicated; in these cases, consider PNG
 - JPEG should be used primarily for photographs
   - JPEGs should target a quality level ~60, although this will need to vary by application
   - JPEGs should *not* be exported with a color profile; if a color profile exists, it should be converted to RGB
