@@ -15,13 +15,13 @@ Sass provides a preprocessor environment for simplifying the creating and mainte
 ## Structure
 - Establish a `/_variables.scss` for establishing variables
 - Break up styles into logically organized files; e.g.,
-  - Base (for global overrides for elements)
-  - Components (for styling reusable components or controls)
-  - Helpers (for functional code, such as mixins, placeholders, and functions)
-  - Layout (for structural code, such as grids, positioning, and dimensions)
-  - Overrides (for any overrides required of third-party stylesheets)
-  - Vendor (for any third-party stylesheets)
-  - Views (for any page-specific styles)
+  - `/Base` (for global overrides for elements)
+  - `/Components` (for styling reusable components or controls)
+  - `/Helpers` (for functional code, such as mixins, placeholders, and functions)
+  - `/Layout` (for structural code, such as grids, positioning, and dimensions)
+  - `/Overrides` (for any overrides required of third-party stylesheets)
+  - `/Vendor` (for any third-party stylesheets)
+  - `/Views` (for any page-specific styles)
 - When practical, separate mixins, placeholders, and functions into their own files
 - Compile distinct themes, layouts, and page-level CSS independent of the main CSS file
 - Do *not* group media queries into a single file (e.g., `_mobile.scss`); they should be associated with the styles they affect
