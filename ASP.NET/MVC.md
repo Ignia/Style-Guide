@@ -62,6 +62,7 @@ While MVC  applications typically use C# and HTML, they also introduce their own
 - Prefer using `@helper` or `@functions` over multiline inline code blocks
   - Prefer helpers for code responsible for outputting markup
   - Follow Ignia's [C# Style Guide](../C-Based%20Languages/C%23/) for these
+- Use `@Html.Partial()` to alias views (i.e., by using one `csthtml` for two view names)
 
 ### Controllers
 - Each Controller should use _constructor injection_
