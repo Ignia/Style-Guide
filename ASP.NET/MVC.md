@@ -26,11 +26,8 @@ While MVC  applications typically use C# and HTML, they also introduce their own
 -->
 
 ## General
-- Prefer Razor parsing engine for views
 - Use Dependency Injection
   - Use site-specific `ControllerFactory` (e.g., `/ControllerFactory.cs`) as _composition root_
-  - Each Controller should use _constructor injection_
-    - This will include e.g. data repositories (say, `IUserRepository`, `IPostRepository`)
   - Consider using an Inversion of Control (IoC) container for finding controllers by conventions
     - For sites with few controllers, manually establishing dependencies is preferred
 
@@ -46,17 +43,27 @@ While MVC  applications typically use C# and HTML, they also introduce their own
   - Consider treating each view as a "component" in the [SASS structure](https://github.com/Ignia/Sass-Structure)
 
 ## Language Features
-- Strongly type page templates when practical
-  - Prefer specialized view models to entity classes
-- Prefer specialized view models for reusable partial classes
+
+### Models
+- Strongly type views when practical
+- Prefer specialized view models for reusable partial views
   - This allows partial views to be parameterized
   - This also helps standardize the model despite disparate parent views
+
+### Views
+- Prefer Razor parsing engine for views
 - Consider explicitly defining `@{ Layout }` property for clarity
-- Use (or extend) the ASP.NET Identity libraries for authentication (including single-sign-on), roles-based authorization, and, where practical, profile management
-  - If a custom database is necessary, it is preferred to write providers for the ASP.NET Identity libraries than to create a completely novel system
 - Prefer using `@helper` or `@functions` over multiline inline code blocks
   - Prefer helpers for code responsible for outputting markup
   - Follow Ignia's [C# Style Guide](../C-Based%20Languages/C%23/) for these
+
+### Controllers
+- Each Controller should use _constructor injection_
+  - This will include e.g. data repositories (say, `IUserRepository`, `IPostRepository`)
+
+### Authentication
+- Use (or extend) the ASP.NET Identity libraries for authentication (including single-sign-on), roles-based authorization, and, where practical, profile management
+  - If a custom database is necessary, it is preferred to write providers for the ASP.NET Identity libraries than to create a completely novel system
 
 ### Caching
 - If the contents of a page are not dynamic, or vary based on limited parameters, consider using `OutputCache` to improve performance
