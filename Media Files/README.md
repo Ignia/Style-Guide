@@ -43,7 +43,7 @@ The following provides guidelines for producing images produced for the web. Fut
   - Targets for these can be automated in CSS using, for instance, `src[~.docx]`
 
 ## Production Standards
-- By convention, icons should be sized by multiples of 16x16 (e.g., 16x16, 32x32, 64x64, etc.)
+- By convention, icons should be sized using base-2 squares (e.g., 16x16, 32x32, 64x64, etc.)
 - When including images in HTML, always specify the `alt` attribute; for layout "glyphs" this may be set to `*`
 - Prefer removing metadata from images to reduce file size and, in some cases, preserve privacy
 - Avoid placing text in images; this is difficult to maintain and localize, decentralizes styling, reduces accessibility, and increases page load
