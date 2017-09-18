@@ -11,7 +11,10 @@ While MVC  applications typically use C# and HTML, they also introduce their own
 - [General](#general)
 - [Organization](#organization)
 - [Language Features](#language-features)
-  - [Caching](#caching)
+  - [Models](#models)
+  - [Views](#views)
+  - [Controllers](#controllers)
+  - [Authentication](#authentication)
 
 <!--
 ## Contents
@@ -60,13 +63,11 @@ While MVC  applications typically use C# and HTML, they also introduce their own
 ### Controllers
 - Each Controller should use _constructor injection_
   - This will include e.g. data repositories (say, `IUserRepository`, `IPostRepository`)
+- If the contents of a page are not dynamic, or vary based on limited parameters, consider using `OutputCache` to improve performance
 
 ### Authentication
 - Use (or extend) the ASP.NET Identity libraries for authentication (including single-sign-on), roles-based authorization, and, where practical, profile management
   - If a custom database is necessary, it is preferred to write providers for the ASP.NET Identity libraries than to create a completely novel system
-
-### Caching
-- If the contents of a page are not dynamic, or vary based on limited parameters, consider using `OutputCache` to improve performance
 
 <!--
 - `OutputCache` should always use the `CacheProfile` unless the parameters are truly page specific
