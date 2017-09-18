@@ -67,6 +67,8 @@ While MVC  applications typically use C# and HTML, they also introduce their own
 - Each Controller should use _constructor injection_
   - This will include e.g. data repositories (say, `IUserRepository`, `IPostRepository`)
 - If the contents of a page are not dynamic, or vary based on limited parameters, consider using `OutputCache` to improve performance
+- Consider using (attribute routing](https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/routing#attribute-routing) for sites with complex routing rules
+  - This makes it easier to understand how each action maps to the URL conventions
 
 ### Authentication
 - Use (or extend) the ASP.NET Identity libraries for authentication (including single-sign-on), roles-based authorization, and, where practical, profile management
