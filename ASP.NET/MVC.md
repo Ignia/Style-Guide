@@ -36,7 +36,7 @@ While MVC  applications typically use C# and HTML, they also introduce their own
   - Store controllers in `/Controllers` folder
   - Store views in `/Views` folder
 - Only store site-specific view models in `/Models`
-  - All other models should be e.g. entity objects in separate assembly
+  - All other models should be e.g. entity objects in separate application assembly
 - Break site layout into multiple partial views
   - Establish `LayoutController` for managing partial views
   - Consider a `/Layout/` folder with `_Layout.cshtml`, `Menu.cshtml`, `Footer.cshtml`, etc.
@@ -45,12 +45,15 @@ While MVC  applications typically use C# and HTML, they also introduce their own
 ## Language Features
 
 ### Models
-- Strongly type views when practical
 - Prefer specialized view models for reusable partial views
   - This allows partial views to be parameterized
   - This also helps standardize the model despite disparate parent views
+- View model classes should be suffixed with `ViewModel` (e.g., `NavigationViewModel`)
+- View models should simply be data transfer objects (DTOs); they should not have methods
+  - Properties on view models should be read only; all values should be assigned via the constructor
 
 ### Views
+- Strongly type views when practical
 - Prefer Razor parsing engine for views
 - Consider explicitly defining `@{ Layout }` property for clarity
 - Suffix markup sections with "Section" (e.g., `@RenderSection("HeaderSection")`)
