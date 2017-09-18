@@ -4,9 +4,6 @@ While MVC  applications typically use C# and HTML, they also introduce their own
 
 > *Note:* This style guide inherits rules from the [C# Style Guide](../C-Based%20Languages/C%23/), [C-Based Languages Style Guide](../C-Based%20Languages/), [SGML-Based Languages](../SGML-Based%20Languages/), [HTML5](../SGML-Based%20Languages/HTML5.md), and the [Global Style Guide](../README.md).
 
-> # Placeholder Content
-> This page is a placeholder; additional content will be provided at a later date.
-
 ## Contents
 - [General](#general)
 - [Organization](#organization)
