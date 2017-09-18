@@ -56,6 +56,9 @@ While MVC  applications typically use C# and HTML, they also introduce their own
 ### Views
 - Prefer Razor parsing engine for views
 - Consider explicitly defining `@{ Layout }` property for clarity
+- Suffix markup sections with "Section" (e.g., `@RenderSection("HeaderSection")`)
+  - Common meta sections include: `Head`, `Scripts`
+  - Common sections include: `HeaderSection`, `TitleSection`, `PageBodySection`, `FooterSection`
 - Prefer using `@helper` or `@functions` over multiline inline code blocks
   - Prefer helpers for code responsible for outputting markup
   - Follow Ignia's [C# Style Guide](../C-Based%20Languages/C%23/) for these
