@@ -14,6 +14,7 @@ As class libraries are typically intended to be used by a broad selection of dev
   - [Extensibility](#extensibility)
   - [Exceptions](#exceptions)
   - [Enums](#enums)
+  - [Unit Tests](#unit-tests)
 - [Acknowledgments](#acknowledgments)
 
 ## Identifiers
@@ -76,6 +77,12 @@ As class libraries are typically intended to be used by a broad selection of dev
 - Only set enum values for capabilities currently supported; do not reserve values for future use ([source](https://msdn.microsoft.com/en-us/library/ms229058(v=vs.110).aspx))
 - Always provide an enum value for `None` (or the semantic equivalent) ([source](https://msdn.microsoft.com/en-us/library/ms229058(v=vs.110).aspx))
 - Flag enums can be used to allow multiple values; assigned integers should be based on powers of two (2, 4, 8...) to allow proper integer serialization ([source](https://msdn.microsoft.com/en-us/library/ms229058(v=vs.110).aspx))
+
+### Unit Tests
+- Consider establishing a distinct unit test class for each class (e.g., `MyClassTest` for tests related to `MyClass`)
+  - It is appropriate to combine related classes (e.g., collections, derived classes, &c.)
+- Where appropriate, name unit tests `{Class}_{Member}{Test}`; e.g., `MyClass_SetValueTest` to test `MyClass.SetValue()`
+- Be sure to test both with correct and incorrect input; e.g., ensuring the members fail as expected
 
 ## Acknowledgments
 - [Microsoft Framework Design Guidelines](https://msdn.microsoft.com/en-us/library/ms229042(v=vs.110).aspx)
